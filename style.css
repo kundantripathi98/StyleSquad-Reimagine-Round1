@@ -7,6 +7,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: nb;
 }
 
 html,
@@ -20,16 +21,28 @@ body {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: #222222;
 	display: flex;
-	position: fixed;
-	z-index: 99;
 }
 
 .loader .box {
 	height: 100%;
 	width: 20%;
-	border: 1px solid white;
+	background-color: #222222;
+}
+
+.dark1{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	
+	/* padding-left: 2vw;
+	padding-bottom: 1vw; */
+
+}
+.dark1 p{
+	transform: translateY(-1vw);
+	font-size: 20px;
+	color: #e4e1d9;
 }
 
 .dark3 {
@@ -49,9 +62,8 @@ body {
 }
 
 .dark5 p {
-	font-size: 8vw;
+	font-size: 7vw;
 	color: #e4e1d9;
-	font-family: nb;
 }
 
 

@@ -24,12 +24,20 @@ gsap.to(".loaderNum",{
 	opacity: 0,
 });
 
+gsap.to(".dark1 p",{
+	opacity: 0,
+    duration: 0.4,
+    ease: Power4,
+    yoyo: true,
+    repeat: 6,
+});
+
 gsap.from("#loaderImage",{
     opacity: 0,
     duration: 0.9,
     ease: Power4,
     yoyo: true,
-    repeat: 3
+    repeat: 3,
 });
 
 
@@ -37,12 +45,12 @@ gsap.to(".box", 1.5, {
 	delay: 3,
 	height: 0,
 	stagger: {
-		amount: 0.8,
+		amount: 0.5,
 	},
 	ease: "power4.Out",
 });
 
 gsap.to(".loader", {
-    delay: 4.9,
-    zIndex: -1
+    delay: 5,
+    y: "-=100%"
 });
