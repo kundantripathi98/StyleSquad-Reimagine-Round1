@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // function loaderAnimation() {
 // 	let loadingElement = document.querySelector(".loading");
 // 	let current = 0;
@@ -34,3 +35,6 @@ gsap.to(".box", 1.5, {
 	},
 	ease: "power4.Out",
 });
+=======
+console.log("hello");
+>>>>>>> 9a50be9b13d455288f6b4960f49be799892ca4b3
