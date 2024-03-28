@@ -1,3 +1,8 @@
+@font-face {
+	font-family: nb;
+	src: url(fonts/NBInternationalProBook.woff2);
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -17,6 +22,8 @@ body {
 	width: 100%;
 	background-color: #222222;
 	display: flex;
+	position: fixed;
+	z-index: 99;
 }
 
 .loader .box {
@@ -42,8 +49,9 @@ body {
 }
 
 .dark5 p {
-	font-size: 7vw;
+	font-size: 8vw;
 	color: #e4e1d9;
+	font-family: nb;
 }
 
 

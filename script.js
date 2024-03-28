@@ -1,20 +1,3 @@
-// const loaderNumAnimation = ()=>{
-//     let i = 0;
-//       if (i == 0) {
-//         i = 1;
-//         let loaderNum = document.querySelector('.loaderNum');
-//         let num = 1;
-//         let id = setInterval(()=>{
-//             if (num >= 100) {
-//               clearInterval(id);
-//               i = 0;
-//             }
-//             else{
-//               num++;
-//               loaderNum.innerHTML = num + "%";
-//             }
-//           }, 15);
-//       }
 
 	let loaderNum = document.querySelector(".loaderNum");
 	let current = 0;
@@ -35,14 +18,6 @@
 		setTimeout(updateLoading, delay);
 	}
 	updateLoading();
-// }
-
-// loaderNumAnimation();
-
-// function loaderAnimation() {
-
-// }
-// loaderAnimation();
 
 gsap.to(".loaderNum",{
 	delay: 3.2,
