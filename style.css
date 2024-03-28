@@ -1,0 +1,44 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.loader {
+	height: 100%;
+	width: 100%;
+	background-color: #222222;
+	display: flex;
+}
+
+.loader .box {
+	height: 100%;
+	width: 20%;
+}
+
+.dark3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dark3 img {
+	object-fit: cover;
+}
+
+.dark5 {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.dark5 p {
+	font-size: 7vw;
+	color: #e4e1d9;
+}
