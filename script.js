@@ -1,4 +1,3 @@
-  console. log("Hello World");
 	let loaderNum = document.querySelector(".loaderNum");
 	let current = 0;
 
