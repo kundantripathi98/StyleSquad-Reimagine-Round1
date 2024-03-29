@@ -53,4 +53,3 @@ gsap.to(".loader", {
 	y: "-=100%",
 });
 
-console.log("hello world");

@@ -34,10 +34,6 @@ body {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
-	
-	/* padding-left: 2vw;
-	padding-bottom: 1vw; */
-
 }
 .dark1 p{
 	transform: translateY(-1vw);
