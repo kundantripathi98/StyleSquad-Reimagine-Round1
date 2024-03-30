@@ -1,6 +1,6 @@
 @font-face {
 	font-family: nb;
-	src: url(fonts/NBInternationalProBook.woff2);
+	src: url(./assets/fonts/NBInternationalProBook.woff2);
 }
 
 * {
@@ -31,7 +31,7 @@ a {
 .loader .box {
 	height: 100%;
 	width: 20%;
-	background-color: #222222;
+	background-color: rgb(23, 24, 26);
 }
 
 .dark1 {
@@ -70,8 +70,8 @@ a {
 }
 
 main {
-	height: 100vw;
 	width: 100%;
+	height: 100vh;
 	background-color: red;
 }
 
