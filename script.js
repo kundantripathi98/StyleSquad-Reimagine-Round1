@@ -53,15 +53,11 @@ gsap.to(".loader", {
 	y: "-=100%",
 });
 
-<<<<<<< HEAD
-
-=======
-
 
 document.addEventListener("DOMContentLoaded", ()=>{
 	const menu = document.querySelector(".menu");
 	const toggleBtn = document.querySelector(".toggle");
-	const closeBtn = document.querySelector(".title");
+	const closeBtn = document.querySelector(".closeBtn");
 	let isOpen = false;
 
 	const timeline = gsap.timeline({paused: true});
@@ -122,9 +118,9 @@ rolling.forEach((element) => {
 	element.appendChild(textContainer);
 	element.appendChild(textContainer.cloneNode(true));
 });
+
 rolling.forEach((element) => {
 	element.addEventListener("mousemove", () => {
 		element.classList.remove("play");
 	});
 });
->>>>>>> 022ce5c82408fa356d8956fe2f7c0b590f5bcf39

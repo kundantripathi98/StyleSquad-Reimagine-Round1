@@ -69,22 +69,95 @@ a {
 	color: #e4e1d9;
 }
 
-main {
+main{
+	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-color: red;
+	background-image: url("./assets/images/wallpaperflare.com_wallpaper\ \(4\).jpg");
+	background-position: center;
+	background-size: cover;
 }
+
+nav{
+	width: 100%;
+	height: fit-content;
+	padding: 1% 2%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-columns{
+	display: flex;
+	gap: 50px;
+	align-items: center;
+}
+
+.logo{
+	width: 85px;
+	height: 85px;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.nav-links{
+	display: flex;
+	gap: 20px;
+}
+
+.nav-links a{
+	color: white;
+	letter-spacing: 1.5px;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.toggle{
+	width: 85px;
+}
+.toggle img{
+	width: 100%;
+	height: 100%;
+}
+
+.search-chat{
+	display: flex;
+	gap: 20px;
+}
+.fa-comments, .fa-magnifying-glass{
+	color: white;
+	font-size: 22px;
+}
+
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(199, 244, 151);
+	clip-path: polygon(
+		49.75% 49.75%,
+		50.25% 49.75%,
+		50.25% 49.75%,
+		49.75% 50.25%,
+	);
+	pointer-events: none;
+	opacity: 0;
+}
+
 
 /* Hamburger Menu */
 
-.menu-inner {
+.menu{
 	height: 100vh;
 	width: 100%;
 	background-color: #baea54;
 	position: fixed;
 	z-index: 59;
-	/* top: -100%;
-	transition: all ease 0.5s; */
 }
 
 /* Navigation Head */
@@ -280,4 +353,9 @@ video {
 }
 .letter:nth-child(13) {
 	transition-delay: 0.18s;
+}
+
+
+.closeBtn{
+	background-color: red;
 }
