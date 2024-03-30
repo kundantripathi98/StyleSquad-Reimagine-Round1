@@ -52,3 +52,79 @@ gsap.to(".loader", {
 	delay: 5,
 	y: "-=100%",
 });
+
+<<<<<<< HEAD
+
+=======
+
+
+document.addEventListener("DOMContentLoaded", ()=>{
+	const menu = document.querySelector(".menu");
+	const toggleBtn = document.querySelector(".toggle");
+	const closeBtn = document.querySelector(".title");
+	let isOpen = false;
+
+	const timeline = gsap.timeline({paused: true});
+
+	timeline.to(menu, {
+		duration: 0.3,
+		opacity: 1
+	});
+
+	timeline.to(menu, {
+		duration: 1,
+		ease: "power3.inOut",
+		clipPath: "polygon(49.75% 0%, 50.25% 0%, 50.25% 100%, 49.75% 100%)"
+	},"-=0.3");
+
+	timeline.to(menu, {
+		duration: 1,
+		ease: "power3.inOut",
+		clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+		pointerEvents: "all"
+	});
+
+	toggleBtn.addEventListener("click", ()=>{
+		if(isOpen){
+			timeline.reverse();
+		} else{
+			timeline.play();
+		}
+
+		isOpen = !isOpen;
+	});
+
+	closeBtn.addEventListener("click", ()=>{
+		if(isOpen){
+			timeline.reverse();
+		} else{
+			timeline.play();
+		}
+
+		isOpen = !isOpen;
+	});
+})
+
+// Rolling Text Effect
+
+let rolling = document.querySelectorAll(".text-rolling");
+rolling.forEach((element) => {
+	let innerText = element.innerText;
+	element.innerHTML = "";
+	let textContainer = document.createElement("div");
+	textContainer.classList.add("block");
+	for (let letter of innerText) {
+		let span = document.createElement("span");
+		span.innerText = letter.trim() === "" ? "\xa0" : letter;
+		span.classList.add("letter");
+		textContainer.appendChild(span);
+	}
+	element.appendChild(textContainer);
+	element.appendChild(textContainer.cloneNode(true));
+});
+rolling.forEach((element) => {
+	element.addEventListener("mousemove", () => {
+		element.classList.remove("play");
+	});
+});
+>>>>>>> 022ce5c82408fa356d8956fe2f7c0b590f5bcf39
