@@ -160,7 +160,7 @@ nav{
 }
 
 /* Navigation Head */
-.navigation-head {
+/* .navigation-head {
 	display: flex;
 	justify-content: space-between;
 	height: 13%;
@@ -180,11 +180,11 @@ nav{
 	margin-right: auto;
 	height: 0.1vh;
 	background-color: #222222;
-}
+} */
 
 /* Navigation-Content */
 
-.navigation-content {
+/* .navigation-content {
 	display: flex;
 	gap: 18%;
 	height: 47%;
@@ -217,10 +217,10 @@ nav{
 	justify-content: flex-end;
 	flex-direction: column;
 	margin-top: 3vw;
-}
+} */
 
 /* End-menu */
-.video-socials {
+/* .video-socials {
 	height: 47%;
 	width: 100%;
 	padding: 3vw 1vw 0 4vw;
@@ -251,11 +251,11 @@ video {
 
 .playreel img {
 	margin-top: 1vw;
-}
+} */
 
 /* Socials */
 
-.socials p {
+/* .socials p {
 	margin-top: 5vw;
 	padding-bottom: 1.5vw;
 	padding-left: 3.1vw;
@@ -277,11 +277,11 @@ video {
 .links-left-right a {
 	font-size: 1.3vw;
 	color: #222222;
-}
+} */
 
 /* nav Logo */
 
-.logo-img {
+/* .logo-img {
 	height: 65%;
 	width: 19%;
 	display: flex;
@@ -289,11 +289,11 @@ video {
 	align-items: center;
 	margin-top: 2vw;
 	margin-left: 1vw;
-}
+} */
 
 /* Rolling Text Effect */
 
-.text-rolling {
+/* .text-rolling {
 	display: inline-block;
 	overflow: hidden;
 }
@@ -352,4 +352,4 @@ video {
 }
 .letter:nth-child(13) {
 	transition-delay: 0.18s;
-} */
+}  */
