@@ -3,6 +3,11 @@
 	src: url(./assets/fonts/NBInternationalProBook.woff2);
 }
 
+@font-face {
+	font-family: formulaCondensed;
+	src: url(./assets/fonts/FormulaCondensed-Bold.woff);
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -26,6 +31,7 @@ a {
 	height: 100%;
 	width: 100%;
 	display: flex;
+	z-index: 1000;
 }
 
 .loader .box {
@@ -70,19 +76,53 @@ a {
 }
 
 main{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.videoDiv{
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Adjust the alpha value to change the opacity */
+}
+
+video{
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* main{
 	position: relative;
 	width: 100%;
 	height: 100vh;
 	background-image: url("./assets/images/wallpaperflare.com_wallpaper\ \(4\).jpg");
 	background-position: center;
 	background-size: cover;
-}
+} */
 
 nav{
 	width: 100%;
 	height: fit-content;
-	padding: 1% 2%;
+	padding: 3% 1%;
 	display: flex;
+	position: relative;
+	align-items: center;
 	justify-content: space-between;
 }
 
@@ -93,8 +133,12 @@ nav{
 }
 
 .logo{
-	width: 85px;
-	height: 85px;
+	width: 80px;
+	height: 80px;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
 }
 .logo img{
 	width: 100%;
@@ -104,13 +148,14 @@ nav{
 
 .nav-links{
 	display: flex;
-	gap: 20px;
+	gap: 50px;
 }
 
 .nav-links a{
-	color: white;
+	color: rgb(190,200,199);
+	font-family: formulaCondensed;
 	letter-spacing: 1.5px;
-	font-size: 16px;
+	font-size: 25px;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -123,16 +168,12 @@ nav{
 	height: 100%;
 }
 
-.search-chat{
-	display: flex;
-	gap: 20px;
-}
-.fa-comments, .fa-magnifying-glass{
+.fa-magnifying-glass{
 	color: white;
 	font-size: 22px;
 }
 
-.menu{
+/* .menu{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -147,12 +188,12 @@ nav{
 	);
 	pointer-events: none;
 	opacity: 0;
-}
+} */
 
 
 /* Hamburger Menu */
 
-/* .menu{
+ .menu{
 	height: 100vh;
 	width: 100%;
 	background-color: #baea54;
@@ -160,7 +201,7 @@ nav{
 }
 
 /* Navigation Head */
-/* .navigation-head {
+.navigation-head {
 	display: flex;
 	justify-content: space-between;
 	height: 13%;
@@ -180,7 +221,7 @@ nav{
 	margin-right: auto;
 	height: 0.1vh;
 	background-color: #222222;
-} */
+}
 
 /* Navigation-Content */
 
@@ -293,7 +334,7 @@ video {
 
 /* Rolling Text Effect */
 
-/* .text-rolling {
+ /* .text-rolling {
 	display: inline-block;
 	overflow: hidden;
 }

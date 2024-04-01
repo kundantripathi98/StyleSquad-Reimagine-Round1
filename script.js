@@ -1,4 +1,11 @@
-let loaderNum = document.querySelector(".loaderNum");
+const loaderNum = document.querySelector(".loaderNum"),
+	  menu = document.querySelector(".menu"),
+	  toggleBtn = document.querySelector(".toggle"),
+	  closeBtn = document.querySelector(".closeBtn"),
+	  video = document.querySelector("video");
+
+	
+let isOpen = false;
 let current = 0;
 
 function updateLoading() {
@@ -39,13 +46,13 @@ gsap.from("#loaderImage", {
 	repeat: 3,
 });
 
-gsap.to(".box", 1.5, {
+gsap.to(".box", 0.8, {
 	delay: 3,
 	height: 0,
 	stagger: {
-		amount: 0.5,
+		amount: 0.2,
 	},
-	ease: "power4.Out",
+	ease: "easeInOut",
 });
 
 gsap.to(".loader", {
@@ -53,11 +60,16 @@ gsap.to(".loader", {
 	y: "-=100%",
 });
 
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.querySelector(".menu");
 	const toggleBtn = document.querySelector(".toggle");
 	const closeBtn = document.querySelector(".closeBtn");
 	let isOpen = false;
+=======
+setTimeout(()=>{video.play()}, 4000);
+	
+>>>>>>> 80fa9fd (update)
 
 	const timeline = gsap.timeline({ paused: true });
 
@@ -102,9 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		isOpen = !isOpen;
 	});
+<<<<<<< HEAD
 });
+=======
+>>>>>>> 80fa9fd (update)
 
-// Rolling Text Effect
+// // Rolling Text Effect
 
 let rolling = document.querySelectorAll(".text-rolling");
 rolling.forEach((element) => {
