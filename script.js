@@ -53,53 +53,56 @@ gsap.to(".loader", {
 	y: "-=100%",
 });
 
-
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.querySelector(".menu");
 	const toggleBtn = document.querySelector(".toggle");
 	const closeBtn = document.querySelector(".closeBtn");
 	let isOpen = false;
 
-	const timeline = gsap.timeline({paused: true});
+	const timeline = gsap.timeline({ paused: true });
 
 	timeline.to(menu, {
 		duration: 0.3,
-		opacity: 1
+		opacity: 1,
 	});
 
-	timeline.to(menu, {
-		duration: 1,
-		ease: "power3.inOut",
-		clipPath: "polygon(49.75% 0%, 50.25% 0%, 50.25% 100%, 49.75% 100%)"
-	},"-=0.3");
+	timeline.to(
+		menu,
+		{
+			duration: 1,
+			ease: "power3.inOut",
+			clipPath: "polygon(49.75% 0%, 50.25% 0%, 50.25% 100%, 49.75% 100%)",
+		},
+		"-=0.3"
+	);
 
 	timeline.to(menu, {
 		duration: 1,
 		ease: "power3.inOut",
 		clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-		pointerEvents: "all"
+		pointerEvents: "all",
 	});
 
-	toggleBtn.addEventListener("click", ()=>{
-		if(isOpen){
+	toggleBtn.addEventListener("click", () => {
+		if (isOpen) {
 			timeline.reverse();
-		} else{
+		} else {
 			timeline.play();
 		}
 
 		isOpen = !isOpen;
 	});
 
-	closeBtn.addEventListener("click", ()=>{
-		if(isOpen){
+	closeBtn.addEventListener("click", () => {
+		if (isOpen) {
 			timeline.reverse();
-		} else{
+		} else {
 			timeline.play();
 		}
 
 		isOpen = !isOpen;
 	});
-})
+});
 
 // Rolling Text Effect
 
