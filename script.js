@@ -26,7 +26,7 @@ gsap.to(".loaderNum", {
 gsap.to(".dark1 p", {
 	opacity: 0,
 	duration: 0.4,
-	ease: Power4,
+	ease: "power4.Out",
 	yoyo: true,
 	repeat: 6,
 });
@@ -34,7 +34,7 @@ gsap.to(".dark1 p", {
 gsap.from("#loaderImage", {
 	opacity: 0,
 	duration: 0.9,
-	ease: Power4,
+	ease: "power4.Out",
 	yoyo: true,
 	repeat: 3,
 });
@@ -56,7 +56,8 @@ gsap.to(".loader", {
 document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.querySelector(".menu");
 	const toggleBtn = document.querySelector(".toggle");
-	const closeBtn = document.querySelector(".closeBtn");
+	const closeBtn = document.querySelector(".cross-icon");
+	const text = document.querySelectorAll(".nav-text");
 	let isOpen = false;
 
 	const timeline = gsap.timeline({ paused: true });
@@ -82,6 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 		pointerEvents: "all",
 	});
+
+	// timeline.to(
+	// 	text,
+	// 	{
+	// 		duration: 0.7,
+	// 		opacity: 1,
+	// 		stagger: 0.3,
+	// 	},
+	// 	"+=0.1"
+	// );
 
 	toggleBtn.addEventListener("click", () => {
 		if (isOpen) {
@@ -127,3 +138,4 @@ rolling.forEach((element) => {
 		element.classList.remove("play");
 	});
 });
+

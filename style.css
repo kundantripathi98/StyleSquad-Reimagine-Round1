@@ -22,10 +22,11 @@ a {
 }
 
 .loader {
-	position: absolute;
+	position: fixed;
 	height: 100%;
 	width: 100%;
 	display: flex;
+	z-index: 999;
 }
 
 .loader .box {
@@ -69,98 +70,126 @@ a {
 	color: #e4e1d9;
 }
 
-main{
+main {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-image: url("./assets/images/wallpaperflare.com_wallpaper\ \(4\).jpg");
-	background-position: center;
-	background-size: cover;
 }
 
-nav{
+.videoDiv {
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.65
+	); /* Adjust the alpha value to change the opacity */
+}
+
+video {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: center;
+}
+
+nav {
 	width: 100%;
 	height: fit-content;
-	padding: 1% 2%;
+	padding: 3% 1%;
 	display: flex;
+	position: relative;
+	align-items: center;
 	justify-content: space-between;
 }
 
-.nav-columns{
+.nav-columns {
 	display: flex;
 	gap: 50px;
 	align-items: center;
 }
 
-.logo{
-	width: 85px;
-	height: 85px;
+.logo {
+	width: 80px;
+	height: 80px;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
 }
-.logo img{
-	width: 100%;
-	height: 100%;
+.logo img {
+	height: 6vw;
 	object-fit: cover;
 }
 
-.nav-links{
+.nav-links {
 	display: flex;
-	gap: 20px;
+	gap: 50px;
+	height: 2vw;
 }
 
-.nav-links a{
-	color: white;
+.nav-links a {
+	color: rgb(190, 200, 199);
+	font-family: nb;
 	letter-spacing: 1.5px;
-	font-size: 16px;
+	font-size: 25px;
 	text-decoration: none;
 	text-transform: uppercase;
+	overflow: hidden;
 }
 
-.toggle{
+.nav-links .text-rolling .block:nth-child(2) {
+	color: rgb(190, 200, 199);
+}
+
+.toggle {
 	width: 85px;
 }
-.toggle img{
+.toggle img {
 	width: 100%;
 	height: 100%;
 }
 
-.search-chat{
-	display: flex;
-	gap: 20px;
-}
-.fa-comments, .fa-magnifying-glass{
+.fa-magnifying-glass {
 	color: white;
 	font-size: 22px;
 }
+/* Hamburger Menu */
 
-.menu{
+.menu {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	background-color: rgb(199, 244, 151);
 	clip-path: polygon(
 		49.75% 49.75%,
 		50.25% 49.75%,
 		50.25% 49.75%,
-		49.75% 50.25%,
+		49.75% 50.25%
 	);
 	pointer-events: none;
 	opacity: 0;
-}
-
-
-/* Hamburger Menu */
-
-/* .menu{
-	height: 100vh;
-	width: 100%;
-	background-color: #baea54;
-	position: fixed;
+	z-index: 99;
 }
 
 /* Navigation Head */
-/* .navigation-head {
+.navigation-head {
 	display: flex;
 	justify-content: space-between;
 	height: 13%;
@@ -180,11 +209,11 @@ nav{
 	margin-right: auto;
 	height: 0.1vh;
 	background-color: #222222;
-} */
+}
 
 /* Navigation-Content */
 
-/* .navigation-content {
+.navigation-content {
 	display: flex;
 	gap: 18%;
 	height: 47%;
@@ -192,6 +221,10 @@ nav{
 	padding-top: 2vw;
 	padding-left: 4vw;
 }
+
+/* .nav-text {
+	opacity: 0;
+} */
 
 .nav-text a {
 	color: #000000;
@@ -217,17 +250,17 @@ nav{
 	justify-content: flex-end;
 	flex-direction: column;
 	margin-top: 3vw;
-} */
+}
 
 /* End-menu */
-/* .video-socials {
+.video-socials {
 	height: 47%;
 	width: 100%;
 	padding: 3vw 1vw 0 4vw;
 	display: flex;
 	gap: 15vw;
 }
-video {
+.video-socials video {
 	height: 63%;
 	width: 100%;
 	object-fit: cover;
@@ -251,11 +284,11 @@ video {
 
 .playreel img {
 	margin-top: 1vw;
-} */
+}
 
 /* Socials */
 
-/* .socials p {
+.socials p {
 	margin-top: 5vw;
 	padding-bottom: 1.5vw;
 	padding-left: 3.1vw;
@@ -274,14 +307,28 @@ video {
 	flex-direction: column;
 }
 
+.links-division img {
+	height: 0.7vw;
+}
+
+.links-division a span {
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect to rotate the image by 45 degrees */
+.links-division a:hover span {
+	transform: rotate(45deg);
+}
+
 .links-left-right a {
 	font-size: 1.3vw;
 	color: #222222;
-} */
+}
 
 /* nav Logo */
 
-/* .logo-img {
+.logo-img {
 	height: 65%;
 	width: 19%;
 	display: flex;
@@ -289,11 +336,11 @@ video {
 	align-items: center;
 	margin-top: 2vw;
 	margin-left: 1vw;
-} */
+}
 
 /* Rolling Text Effect */
 
-/* .text-rolling {
+.text-rolling {
 	display: inline-block;
 	overflow: hidden;
 }
@@ -352,4 +399,90 @@ video {
 }
 .letter:nth-child(13) {
 	transition-delay: 0.18s;
-}  */
+}
+
+.letter:nth-child(14) {
+	transition-delay: 0.195s;
+}
+
+.letter:nth-child(15) {
+	transition-delay: 0.21s;
+}
+
+.letter:nth-child(16) {
+	transition-delay: 0.225s;
+}
+
+.letter:nth-child(17) {
+	transition-delay: 0.25s;
+}
+
+.letter:nth-child(18) {
+	transition-delay: 0.255s;
+}
+
+/* Column 1 Width Adjustment */
+
+.column1 a:nth-child(1).text-rolling {
+	width: 75%;
+}
+
+.column1 a:nth-child(2).text-rolling {
+	width: 63%;
+}
+
+.column1 a:nth-child(3).text-rolling {
+	width: 95%;
+}
+
+.column1 a:nth-child(4).text-rolling {
+	width: 100%;
+}
+
+.column1 a:nth-child(5).text-rolling {
+	width: 58%;
+}
+
+/* Column 2 Width Adjustment */
+
+.column2 a:nth-child(1).text-rolling {
+	width: 57%;
+}
+
+.column2 a:nth-child(2).text-rolling {
+	width: 58%;
+}
+
+.column2 a:nth-child(3).text-rolling {
+	width: 100%;
+}
+
+.column2 a:nth-child(4).text-rolling {
+	width: 59%;
+}
+
+.column2 a:nth-child(5).text-rolling {
+	width: 67%;
+}
+
+/* Column 3 Width Adjustment */
+
+.column3 a:nth-child(1).text-rolling {
+	width: 60%;
+}
+
+.column3 a:nth-child(2).text-rolling {
+	width: 70%;
+}
+
+.column3 a:nth-child(3).text-rolling {
+	width: 90%;
+}
+
+.column3 a:nth-child(4).text-rolling {
+	width: 100%;
+}
+
+.column3 a:nth-child(5).text-rolling {
+	width: 100%;
+}
