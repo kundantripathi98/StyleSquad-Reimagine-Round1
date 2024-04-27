@@ -160,12 +160,54 @@ nav {
 	color: rgb(190, 200, 199);
 }
 
-.toggle {
-	width: 85px;
+#menuBtn{
+    width: 95px;
+    height: 40px;
+    background-color: #dadada;
+     position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
-.toggle img {
-	width: 100%;
-	height: 100%;
+
+.left{
+    width: 43%;
+    height: 100%;
+    background-color: #001514;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 1px;
+    border: 1px solid #dadada;
+}
+
+
+.left .line{
+    height: 2px;
+    width: 38%;
+    background-color: #FFFF00;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .4s;
+}
+
+.right{
+    width:57%;
+    height: 100%;
+    padding:8px;
+    padding-left: 12px;
+}
+.right h4{
+    text-transform: uppercase;
+    font-family: Neu;
+    Font-size: 20px;
+    letter-spacing: -0.05rem;
+    color: black;
+
 }
 
 .fa-magnifying-glass {
