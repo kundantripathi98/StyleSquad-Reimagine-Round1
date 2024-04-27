@@ -5,66 +5,70 @@ const loaderNum = document.querySelector(".loaderNum"),
 	  video = document.querySelector("video");
 
 	
-let isOpen = false;
-let current = 0;
+		let isOpen = false;
+		let current = 0;
 
-function updateLoading() {
-	if (current === 100) {
-		return;
+let loadingAnimation = ()=>{
+	function updateLoading() {
+		if (current === 100) {
+			return;
+		}
+	
+		current += Math.floor(Math.random() * 10) + 1;
+	
+		if (current > 100) {
+			current = 100;
+		}
+	
+		loaderNum.textContent = current + "%";
+		let delay = Math.floor(Math.random() * 200) + 50;
+		setTimeout(updateLoading, delay);
 	}
-
-	current += Math.floor(Math.random() * 10) + 1;
-
-	if (current > 100) {
-		current = 100;
-	}
-
-	loaderNum.textContent = current + "%";
-	let delay = Math.floor(Math.random() * 200) + 50;
-	setTimeout(updateLoading, delay);
+	updateLoading();
+	
+	gsap.to(".loaderNum", {
+		delay: 3.2,
+		opacity: 0,
+	});
+	
+	gsap.to(".dark1 p", {
+		opacity: 0,
+		duration: 0.4,
+		ease: "power4.Out",
+		yoyo: true,
+		repeat: 6,
+	});
+	
+	gsap.from("#loaderImage", {
+		opacity: 0,
+		duration: 0.9,
+		ease: "power4.Out",
+		yoyo: true,
+		repeat: 3,
+	});
+	
+	gsap.to(".box", 0.8, {
+		delay: 3,
+		height: 0,
+		stagger: {
+			amount: 0.2,
+		},
+		ease: "easeInOut",
+	});
+	
+	gsap.to(".loader", {
+		delay: 5,
+		y: "-=100%",
+	});
 }
-updateLoading();
 
-gsap.to(".loaderNum", {
-	delay: 3.2,
-	opacity: 0,
-});
-
-gsap.to(".dark1 p", {
-	opacity: 0,
-	duration: 0.4,
-	ease: "power4.Out",
-	yoyo: true,
-	repeat: 6,
-});
-
-gsap.from("#loaderImage", {
-	opacity: 0,
-	duration: 0.9,
-	ease: "power4.Out",
-	yoyo: true,
-	repeat: 3,
-});
-
-gsap.to(".box", 0.8, {
-	delay: 3,
-	height: 0,
-	stagger: {
-		amount: 0.2,
-	},
-	ease: "easeInOut",
-});
-
-gsap.to(".loader", {
-	delay: 5,
-	y: "-=100%",
-});
+loadingAnimation()
 
 
 document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.querySelector(".menu");
 	// const menuBtn = document.querySelector(".menuBtn");
-	const closeBtn = document.querySelector(".cross-icon");
+	// const closeBtn = document.querySelector(".closeBtn");
 	const text = document.querySelectorAll(".nav-text");
 	let isOpen = false;
 
@@ -95,15 +99,15 @@ setTimeout(()=>{video.play()}, 4000);
 		pointerEvents: "all",
 	});
 
-	// timeline.to(
-	// 	text,
-	// 	{
-	// 		duration: 0.7,
-	// 		opacity: 1,
-	// 		stagger: 0.3,
-	// 	},
-	// 	"+=0.1"
-	// );
+	timeline.to(
+		text,
+		{
+			duration: 0.3,
+			opacity: 1,
+			stagger: 0.1,
+		},
+		"+=0.1"
+	);
 
 	menuBtn.addEventListener("click", () => {
 		if (isOpen) {
@@ -153,11 +157,11 @@ rolling.forEach((element) => {
 	});
 });
 
-var menuBtn = document.querySelector("#menuBtn");
-var line = document.querySelector(".line");
-var line1 = document.querySelector("#line1");
-var line2 = document.querySelector("#line2");
-var line3 = document.querySelector("#line3");
+
+ let line = document.querySelector(".line"),
+	line1 = document.querySelector("#line1"),
+	line2 = document.querySelector("#line2"),
+	line3 = document.querySelector("#line3");
 
 
 menuBtn.addEventListener("mouseover",function(){

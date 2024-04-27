@@ -161,7 +161,7 @@ nav {
 }
 
 #menuBtn{
-    width: 95px;
+    width: 110px;
     height: 40px;
     background-color: #dadada;
      position: absolute;
@@ -202,11 +202,13 @@ nav {
     padding-left: 12px;
 }
 .right h4{
+	height: 20px;
     text-transform: uppercase;
-    font-family: Neu;
-    Font-size: 20px;
-    letter-spacing: -0.05rem;
-    color: black;
+    font-family: formulaCondensed;
+    font-size: 20px;
+	font-weight: 100;
+    letter-spacing: 1px;
+    color: #001514;
 
 }
 
@@ -273,9 +275,9 @@ nav {
 	padding-left: 4vw;
 }
 
-/* .nav-text {
+.nav-text {
 	opacity: 0;
-} */
+}
 
 .nav-text a {
 	color: #000000;
@@ -402,9 +404,21 @@ nav {
 	overflow: hidden;
 }
 
-.text-rolling .block:last-child {
-	color: #000000;
+#menuBtn:hover .letter,
+.text-rolling.play .letter {
+	transform: translateY(-125%);
+	overflow: hidden;
 }
+
+/* .block{
+	color: white;
+} */
+.nav-links a .block:nth-child(2) .letter{
+	color: white;
+}
+/* .text-rolling .block:last-child {
+	color: #000000;
+} */
 
 .text-rolling .letter {
 	display: inline-block;
