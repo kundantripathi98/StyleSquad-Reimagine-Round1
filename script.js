@@ -1,6 +1,6 @@
 const loaderNum = document.querySelector(".loaderNum"),
 	  menu = document.querySelector(".menu"),
-	  toggleBtn = document.querySelector(".toggle"),
+	  menuBtn = document.querySelector("#menuBtn"),
 	  closeBtn = document.querySelector(".closeBtn"),
 	  video = document.querySelector("video");
 
@@ -63,7 +63,7 @@ gsap.to(".loader", {
 
 document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.querySelector(".menu");
-	const toggleBtn = document.querySelector(".toggle");
+	// const menuBtn = document.querySelector(".menuBtn");
 	const closeBtn = document.querySelector(".cross-icon");
 	const text = document.querySelectorAll(".nav-text");
 	let isOpen = false;
@@ -105,7 +105,7 @@ setTimeout(()=>{video.play()}, 4000);
 	// 	"+=0.1"
 	// );
 
-	toggleBtn.addEventListener("click", () => {
+	menuBtn.addEventListener("click", () => {
 		if (isOpen) {
 			timeline.reverse();
 		} else {
