@@ -153,3 +153,18 @@ rolling.forEach((element) => {
 	});
 });
 
+var menuBtn = document.querySelector("#menuBtn");
+var line = document.querySelector(".line");
+var line1 = document.querySelector("#line1");
+var line2 = document.querySelector("#line2");
+var line3 = document.querySelector("#line3");
+
+
+menuBtn.addEventListener("mouseover",function(){
+    line1.style.width = "19%";
+    line3.style.width = "19%";
+})
+menuBtn.addEventListener("mouseleave",function(){
+    line1.style.width = "38%";
+    line3.style.width = "38%";
+})
