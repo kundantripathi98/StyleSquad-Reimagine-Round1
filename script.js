@@ -2,11 +2,11 @@ const loaderNum = document.querySelector(".loaderNum"),
 	  menu = document.querySelector(".menu"),
 	  menuBtn = document.querySelector("#menuBtn"),
 	  closeBtn = document.querySelector(".closeBtn"),
-	  video = document.querySelector("video");
+	  video = document.querySelector("video"),
+	  text = document.querySelectorAll(".nav-text");
 
-	
-		let isOpen = false;
-		let current = 0;
+let isOpen = false;
+let current = 0;
 
 let loadingAnimation = ()=>{
 	function updateLoading() {
@@ -62,19 +62,7 @@ let loadingAnimation = ()=>{
 	});
 }
 
-loadingAnimation()
-
-
-document.addEventListener("DOMContentLoaded", () => {
-	const menu = document.querySelector(".menu");
-	// const menuBtn = document.querySelector(".menuBtn");
-	// const closeBtn = document.querySelector(".closeBtn");
-	const text = document.querySelectorAll(".nav-text");
-	let isOpen = false;
-
-setTimeout(()=>{video.play()}, 4000);
-	
-
+let innerMenuAnimation = () => {
 	const timeline = gsap.timeline({ paused: true });
 
 	timeline.to(menu, {
@@ -128,15 +116,12 @@ setTimeout(()=>{video.play()}, 4000);
 
 		isOpen = !isOpen;
 	});
-
-});
-
-
+}
 
 // // Rolling Text Effect
-
-let rolling = document.querySelectorAll(".text-rolling");
-rolling.forEach((element) => {
+let textAnimation = () => {
+	let rolling = document.querySelectorAll(".text-rolling");
+	rolling.forEach((element) => {
 	let innerText = element.innerText;
 	element.innerHTML = "";
 	let textContainer = document.createElement("div");
@@ -157,8 +142,11 @@ rolling.forEach((element) => {
 	});
 });
 
+}
 
- let line = document.querySelector(".line"),
+let buttonAnimation = () => {
+
+	let line = document.querySelector(".line"),
 	line1 = document.querySelector("#line1"),
 	line2 = document.querySelector("#line2"),
 	line3 = document.querySelector("#line3");
@@ -172,3 +160,14 @@ menuBtn.addEventListener("mouseleave",function(){
     line1.style.width = "38%";
     line3.style.width = "38%";
 })
+}
+
+loadingAnimation();
+
+setTimeout(()=>{video.play()}, 4000);
+
+innerMenuAnimation();
+
+textAnimation();
+
+buttonAnimation();
