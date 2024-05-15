@@ -1,11 +1,11 @@
 @font-face {
 	font-family: nb;
-	src: url(./assets/fonts/NBInternationalProBook.woff2);
+	src: url(../assets/fonts/NBInternationalProBook.woff2);
 }
 
 @font-face {
 	font-family: formulaCondensed;
-	src: url(./assets/fonts/FormulaCondensed-Bold.woff);
+	src: url(../assets/fonts/FormulaCondensed-Bold.woff);
 }
 
 * {
