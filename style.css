@@ -169,6 +169,8 @@ nav {
 	color: rgb(190, 200, 199);
 }
 
+
+
 #menuBtn{
     width: 110px;
     height: 40px;
@@ -649,3 +651,4 @@ img{
 	z-index: 100;
 	box-shadow: 1px 1px 1px hsl( 0,  50%,  2%, .5);
 }
+
