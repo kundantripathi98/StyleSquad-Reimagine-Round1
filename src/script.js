@@ -162,6 +162,12 @@ menuBtn.addEventListener("mouseleave",function(){
 })
 }
 
+const container = document.querySelector(".container");
+
+document.querySelector(".slider").addEventListener('input', (e) => {
+    container.style.setProperty('--position', `${e.target.value}%`);
+})
+
 loadingAnimation();
 
 setTimeout(()=>{video.play()}, 4000);
