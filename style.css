@@ -295,6 +295,32 @@ nav {
 	font-size: 3vw;
 }
 
+/* Hero section  */
+
+/* .hero-text h1{
+	color: #fff;
+	border: 2px solid red;	
+}  */
+
+.hero-text h1{
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: linear-gradient(#fff,#000 );
+  font-size: 100px;  
+  background-size: 400%; /*100% can be done*/
+	text-transform: uppercase;
+	font-family: poppins;
+  letter-spacing: 20px;
+	text-align: center;
+  word-spacing: 5px;
+  font-weight: 900;  
+  -webkit-text-fill-color:transparent ;
+  -webkit-background-clip:text ;
+  /* animation: animate 10s linear infinite; */
+}
+
 .column1 {
 	display: flex;
 	justify-content: flex-start;
@@ -627,7 +653,7 @@ img{
 .slider-line{
 	position: absolute;
 	inset: 0;
-	width: .2rem;
+	width: .1rem;
 	height: 100%;
 	background-color: #fff;
 	z-index: 10;
@@ -640,7 +666,7 @@ img{
 	position: absolute;
 	background-color: #fff;
 	color: black;
-	padding: .5rem;
+	padding: .2rem;
 	border-radius: 100vw;
 	display: grid;
 	place-items: center;
