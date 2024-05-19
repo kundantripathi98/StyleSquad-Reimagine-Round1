@@ -622,6 +622,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 }
 
 .carSliderSide{
@@ -630,6 +631,7 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 999;
 }
 
 .container{
@@ -641,7 +643,7 @@ nav {
 }
   
 .image-container{
-	aspect-ratio: 16/9;
+	width: fit-content;
 }
   
 .slider-image{
@@ -681,7 +683,7 @@ img{
 	inset: 0;
 	width: .1rem;
 	height: 100%;
-	background-color: #fff;
+	background-color: transparent;
 	z-index: 10;
 	left: var(--position);
 	transform: translateX(-50%);
@@ -696,7 +698,7 @@ img{
 	border-radius: 100vw;
 	display: grid;
 	place-items: center;
-	top: 50%;
+	top: 55%;
 	left: var(--position);
 	transform: translate(-50%,-50%);
 	pointer-events: none;
@@ -704,3 +706,18 @@ img{
 	box-shadow: 1px 1px 1px hsl( 0,  50%,  2%, .5);
 }
 
+.carTitle{
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0%;
+}
+
+.carName{
+	font-size: 380px;
+	z-index: -999;
+	color: rgb(63, 63, 63);
+}
