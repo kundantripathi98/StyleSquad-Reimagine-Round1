@@ -618,8 +618,7 @@ nav {
 
 .secondSection{
 	width: 100%;
-	background-color:  red;
-	min-height: 100vh;
+ 	min-height: 100vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
