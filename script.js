@@ -162,7 +162,7 @@ menuBtn.addEventListener("mouseleave",function(){
 })
 }
 
-const container = document.querySelector(".container");
+const container = document.querySelector(".carSliderSide");
 
 document.querySelector(".slider").addEventListener('input', (e) => {
     container.style.setProperty('--position', `${e.target.value}%`);
