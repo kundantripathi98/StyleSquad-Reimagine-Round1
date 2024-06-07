@@ -23,17 +23,22 @@ html,
 body {
 	height: 100%;
 	width: 100%;
-	position: relative;
 }
 
 a {
 	text-decoration: none;
 }
 
+main {
+	width: 100%;
+	height: fit-content;
+	position: relative;
+}
+
 .loader {
 	position: absolute;
 	top: 0%;
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 	display: flex;
 	z-index: 999;
@@ -46,9 +51,6 @@ a {
 	background-color: rgb(23, 24, 26);
 }
 
-/* .loader .box p{
-	color: blue;
-} */
 
 .dark1 {
 	display: flex;
@@ -82,11 +84,6 @@ a {
 	font-size: 7vw;
 	color: #e4e1d9;
 	font-family: nb;
-}
-
-main {
-	width: 100%;
-	height: fit-content;
 }
 
 .heroSection{
@@ -191,6 +188,7 @@ nav {
     transform: translate(-50%,-50%);
     border-radius: 2px;
     cursor: pointer;
+	z-index: 99;
     display: flex;
     justify-content: space-between;
 }
@@ -255,7 +253,7 @@ nav {
 	);
 	pointer-events: none;
 	opacity: 0;
-	z-index: 99;
+	z-index: 9999;
 }
 
 
@@ -321,7 +319,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(#878787,#000000 );
+	background: linear-gradient(#878787,#1b1b1b );
 	transform: translateY(100px);
   	font-size: 120px;  
 	text-transform: uppercase;
@@ -618,7 +616,7 @@ nav {
 
 
 .secondSection{
-	background-color: #f0952e;
+	background-color: rgb(92, 34, 12);
 	width: 100%;
  	min-height: 100vh;
 	display: flex;
@@ -627,7 +625,32 @@ nav {
 	position: relative;
 }
 
-.carSliderSide{
+.overlay2{
+	width: 100%;
+	height: 300px;
+	background: linear-gradient(#000, rgb(92, 34, 12));
+	position: absolute;
+	top: 0;
+	z-index: 50;
+}
+
+.carTitle{
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 200;
+	top: -7%;
+}
+
+.carTitle h1{
+	font-size: 380px;
+	color: #fff;
+}
+
+.carSlider{
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -703,19 +726,3 @@ img{
 	box-shadow: 1px 1px 1px hsl( 0,  50%,  2%, .5);
 }
 
-.carTitle{
-	width: 100%;
-	height: fit-content;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	z-index: 200;
-	top: -7%;
-}
-
-.carTitle h1{
-	font-size: 380px;
-	z-index: -999;
-	color: rgb(63, 63, 63);
-}
