@@ -3,7 +3,8 @@ const loaderNum = document.querySelector(".loaderNum"),
 	  menuBtn = document.querySelector("#menuBtn"),
 	  closeBtn = document.querySelector(".closeBtn"),
 	  video = document.querySelector("video"),
-	  text = document.querySelectorAll(".nav-text");
+	  text = document.querySelectorAll(".nav-text"),
+	  secondSection = document.querySelector(".secondSection");
 
 let isOpen = false;
 let current = 0;
@@ -168,6 +169,15 @@ document.querySelector(".slider").addEventListener('input', (e) => {
     container.style.setProperty('--position', `${e.target.value}%`);
 })
 
+function cursor(){
+    Shery.mouseFollower({
+        //Parameters are optional.
+        skew: false,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+      });
+}
+
 loadingAnimation();
 
 setTimeout(()=>{video.play()}, 4000);
@@ -177,3 +187,11 @@ innerMenuAnimation();
 textAnimation();
 
 buttonAnimation();
+
+
+setTimeout(()=>{
+	secondSection.classList.remove('hidden');
+	secondSection.classList.add('visible');
+	cursor();
+	console.log("hello");
+},4000)

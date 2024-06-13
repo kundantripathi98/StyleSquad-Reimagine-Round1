@@ -9,30 +9,32 @@
 			href="./assets/images/FavIcon.png"
 			type="image/x-icon" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" /> -->
+		 <link rel="stylesheet" href="mouseFollower.css">
 		<link rel="stylesheet" href="style.css" />
 		
 	</head>
 	<body>
 		<!-- Loader -->
-		
+		<div class="loader">
+			<div class="dark1 box"><p class="text-[blue]">loading...</p></div>
+			<div class="dark2 box"></div>
+			<div class="dark3 box">
+				<img
+					id="loaderImage"
+					src="./assets/images/loader-icon.svg"
+					alt="lemborghini" />
+			</div>
+			<div class="dark4 box"></div>
+			<div class="dark5 box">
+				<p class="loaderNum">1%</p>
+			</div>
+		</div>
 
 		<!-- Main Content starts -->
 		<main>
 
-			<div class="loader">
-				<div class="dark1 box"><p class="text-[blue]">loading...</p></div>
-				<div class="dark2 box"></div>
-				<div class="dark3 box">
-					<img
-						id="loaderImage"
-						src="./assets/images/loader-icon.svg"
-						alt="lemborghini" />
-				</div>
-				<div class="dark4 box"></div>
-				<div class="dark5 box">
-					<p class="loaderNum">1%</p>
-				</div>
-			</div>
+			
 
 			<section class="heroSection">
 				<div class="videoDiv">
@@ -204,7 +206,7 @@
 
       <!------------ second section ------------->
 
-			<section class="secondSection">
+			<section class="secondSection hidden">
 				<div class="overlay2"></div>
 
 				<div class="carTitle">
@@ -228,7 +230,7 @@
 		</main>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script><script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
 		<script src="script.js"></script>
 	</body>
 </html>
