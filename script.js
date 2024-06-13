@@ -1,15 +1,10 @@
-const loaderNum = document.querySelector(".loaderNum"),
-	  menu = document.querySelector(".menu"),
-	  menuBtn = document.querySelector("#menuBtn"),
-	  closeBtn = document.querySelector(".closeBtn"),
-	  video = document.querySelector("video"),
-	  text = document.querySelectorAll(".nav-text"),
-	  secondSection = document.querySelector(".secondSection");
-
-let isOpen = false;
-let current = 0;
+const menuBtn = document.querySelector("#menuBtn");
+const video = document.querySelector("video");
 
 let loadingAnimation = ()=>{
+	const loaderNum = document.querySelector(".loaderNum");
+	let current = 0;
+
 	function updateLoading() {
 		if (current === 100) {
 			return;
@@ -25,46 +20,65 @@ let loadingAnimation = ()=>{
 		let delay = Math.floor(Math.random() * 200) + 50;
 		setTimeout(updateLoading, delay);
 	}
+	
+	function gsapAnimation(){
+		gsap.to(".loaderNum", {
+			delay: 3.2,
+			opacity: 0,
+		});
+		
+		gsap.to(".dark1 p", {
+			opacity: 0,
+			duration: 0.4,
+			ease: "power4.Out",
+			yoyo: true,
+			repeat: 6,
+		});
+		
+		gsap.from("#loaderImage", {
+			opacity: 0,
+			duration: 0.9,
+			ease: "power4.Out",
+			yoyo: true,
+			repeat: 3,
+		});
+		
+		gsap.to(".box", 0.8, {
+			delay: 3,
+			height: 0,
+			stagger: {
+				amount: 0.2,
+			},
+			ease: "easeInOut",
+		});
+		
+		gsap.to(".loader", {
+			delay: 5,
+			y: "-=100%",
+		});
+	}
+
 	updateLoading();
-	
-	gsap.to(".loaderNum", {
-		delay: 3.2,
-		opacity: 0,
-	});
-	
-	gsap.to(".dark1 p", {
-		opacity: 0,
-		duration: 0.4,
-		ease: "power4.Out",
-		yoyo: true,
-		repeat: 6,
-	});
-	
-	gsap.from("#loaderImage", {
-		opacity: 0,
-		duration: 0.9,
-		ease: "power4.Out",
-		yoyo: true,
-		repeat: 3,
-	});
-	
-	gsap.to(".box", 0.8, {
-		delay: 3,
-		height: 0,
-		stagger: {
-			amount: 0.2,
-		},
-		ease: "easeInOut",
-	});
-	
-	gsap.to(".loader", {
-		delay: 5,
-		y: "-=100%",
-	});
+	gsapAnimation();
+}
+
+function afterLoadingAnimation(){
+	setTimeout(()=>{video.play()}, 3500);
+
+	setTimeout(()=>{
+		const secondSection = document.querySelector(".secondSection");
+		secondSection.classList.remove('hidden');
+		secondSection.classList.add('visible');
+		cursor();
+	},4000)
 }
 
 let innerMenuAnimation = () => {
-	const timeline = gsap.timeline({ paused: true });
+	let isOpen = false;
+	const timeline = gsap.timeline({ paused: true }),
+	closeBtn = document.querySelector(".closeBtn"),
+	text = document.querySelectorAll(".nav-text"),
+	menu = document.querySelector(".menu");
 
 	timeline.to(menu, {
 		duration: 0.3,
@@ -163,11 +177,13 @@ menuBtn.addEventListener("mouseleave",function(){
 })
 }
 
-const container = document.querySelector(".carSlider");
+function carSliderAnimation(){
+	const container = document.querySelector(".carSlider");
 
-document.querySelector(".slider").addEventListener('input', (e) => {
-    container.style.setProperty('--position', `${e.target.value}%`);
-})
+	document.querySelector(".slider").addEventListener('input', (e) => {
+		container.style.setProperty('--position', `${e.target.value}%`);
+	});
+}
 
 function cursor(){
     Shery.mouseFollower({
@@ -179,8 +195,9 @@ function cursor(){
 }
 
 loadingAnimation();
+video.pause();
 
-setTimeout(()=>{video.play()}, 4000);
+afterLoadingAnimation();
 
 innerMenuAnimation();
 
@@ -188,10 +205,4 @@ textAnimation();
 
 buttonAnimation();
 
-
-setTimeout(()=>{
-	secondSection.classList.remove('hidden');
-	secondSection.classList.add('visible');
-	cursor();
-	console.log("hello");
-},4000)
+carSliderAnimation();
