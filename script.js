@@ -199,7 +199,7 @@ function cursor(){
     Shery.mouseFollower({
         //Parameters are optional.
         skew: false,
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        ease: "cubic-bezier(1, 1, 1, 1)",
         duration: 1,
       });
 }
