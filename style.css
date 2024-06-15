@@ -782,6 +782,10 @@ img{
 
 .info button{
     padding: 16px 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
 	border: 1px solid black;
 	color: black;
     background-color: #FFCC00;
