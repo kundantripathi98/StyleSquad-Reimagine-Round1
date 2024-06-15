@@ -1,6 +1,32 @@
 const menuBtn = document.querySelector("#menuBtn");
 const video = document.querySelector("video");
 
+let customCursor = ()=>{
+	const cursorDot = document.querySelector(".cursor-dot");
+	const cursorOutline = document.querySelector(".cursor-outline");
+
+	setTimeout(()=>{
+		cursorDot.style.opacity = 1;
+		cursorOutline.style.opacity = 1;
+	},4000)
+
+	window.addEventListener("mousemove", (e)=>{
+		const posX =e.clientX;
+		const posY =e.clientY;
+
+		cursorDot.style.left = `${posX}px`;
+		cursorDot.style.top = `${posY}px`;
+
+		cursorOutline.style.left = `${posX}px`;
+		cursorOutline.style.top = `${posY}px`;
+
+		cursorOutline.animate({
+			left: `${posX}px`,
+			top: `${posY}px`
+		}, {duration: 500, fill: "forwards"})
+	})
+}
+
 let loadingAnimation = ()=>{
 	const loaderNum = document.querySelector(".loaderNum");
 	let current = 0;
@@ -67,9 +93,13 @@ function afterLoadingAnimation(){
 
 	setTimeout(()=>{
 		const secondSection = document.querySelector(".secondSection");
+		const thirdSection = document.querySelector(".thirdSection");
 		secondSection.classList.remove('hidden');
 		secondSection.classList.add('visible');
-		cursor();
+
+		thirdSection.classList.remove('hidden');
+		thirdSection.classList.add('visible');
+		// cursor();
 	},4000)
 }
 
@@ -195,14 +225,16 @@ function carSliderAnimation(){
 	});
 }
 
-function cursor(){
-    Shery.mouseFollower({
-        //Parameters are optional.
-        skew: false,
-        ease: "cubic-bezier(1, 1, 1, 1)",
-        duration: 1,
-      });
-}
+// function cursor(){
+//     Shery.mouseFollower({
+//         //Parameters are optional.
+//         skew: false,
+//         ease: "cubic-bezier(1, 1, 1, 1)",
+//         duration: 1,
+//       });
+// }
+
+customCursor();
 
 loadingAnimation();
 video.pause();
@@ -216,3 +248,4 @@ textAnimation();
 buttonAnimation();
 
 carSliderAnimation();
+

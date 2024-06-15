@@ -14,12 +14,13 @@ body{
     height: 35px;
     border-radius: 50%;
     z-index: 99999;
+    border: 1px solid white;
     mix-blend-mode: exclusion;
     background-color: var(--mousefollowercolor);
 }
 
 #behindmouse {
-    background-color: white;
+    background-color: transparent;
 }
 
 .mask {

@@ -23,6 +23,30 @@ html,
 body {
 	width: 100%;
 	position: relative;
+	cursor: none;
+}
+
+.cursor-dot{
+	width: 5px;
+	height: 5px;
+	background-color: white;
+}
+
+.cursor-outline{
+	width: 45px;
+	height: 45px;
+	border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+
+.cursor-dot, .cursor-outline{
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	z-index: 999999;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .hidden{
@@ -55,6 +79,7 @@ main {
 .loader .box {
 	height: 100%;
 	width: 20%;
+	border: none;
 	background-color: rgb(23, 24, 26);
 }
 
@@ -76,7 +101,6 @@ main {
 	justify-content: center;
 	align-items: center;
 }
-
 .dark3 img {
 	object-fit: cover;
 }
@@ -86,7 +110,6 @@ main {
 	align-items: flex-end;
 	justify-content: center;
 }
-
 .dark5 p {
 	font-size: 7vw;
 	color: #e4e1d9;
@@ -733,3 +756,8 @@ img{
 	box-shadow: 1px 1px 1px hsl( 0,  50%,  2%, .5);
 }
 
+.thirdSection{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}

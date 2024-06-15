@@ -10,7 +10,7 @@
 			type="image/x-icon" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" /> -->
-		 <link rel="stylesheet" href="./other css files/mouseFollower.css">
+		 <!-- <link rel="stylesheet" href="./other css files/mouseFollower.css"> -->
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="./other css files/responsive.css">
 		
@@ -18,7 +18,7 @@
 	<body>
 		<!-- Loader -->
 		<div class="loader">
-			<div class="dark1 box"><p class="text-[blue]">loading...</p></div>
+			<div class="dark1 box"><p>loading...</p></div>
 			<div class="dark2 box"></div>
 			<div class="dark3 box">
 				<img
@@ -34,8 +34,8 @@
 
 		<!-- Main Content starts -->
 		<main>
-
-			
+			<div class="cursor-dot"></div>
+			<div class="cursor-outline"></div>
 
 			<section class="heroSection">
 				<div class="videoDiv">
@@ -210,7 +210,7 @@
 
       <!------------ second section ------------->
 
-			<!-- <section class="secondSection hidden">
+			<section class="secondSection hidden">
 				<div class="overlay2"></div>
 
 				<div class="carTitle">
@@ -230,7 +230,18 @@
 						<div class="slider-button" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentcolor" viewBox="0 0 256 256"><path d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path></svg></div>
 				  
 				</div>
-			</section> -->
+			</section>
+
+			<section class="thirdSection hidden">
+				<div class="videoDiv">
+					<video src="./assets/videos/museum video (online-video-cutter.com).mp4" autoplay loop muted></video>
+					<div class="overlay"></div>
+				</div>
+
+				<div class="info">
+					<h1></h1>
+				</div>
+			</section>
 		</main>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
