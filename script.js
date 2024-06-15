@@ -213,16 +213,6 @@ function carSliderAnimation(){
 	document.querySelector(".slider").addEventListener('input', (e) => {
 		container.style.setProperty('--position', `${e.target.value}%`);
 	});
-
-	container.addEventListener("mouseenter", ()=>{
-		document.querySelector(".mousefollower").style.opacity = 0;
-		document.querySelector(".mousefollower").style.transition = 'all cubic-bezier(0.19, 1, 0.22, 1) 1s';
-	});
-
-	container.addEventListener("mouseleave", ()=>{
-		document.querySelector(".mousefollower").style.opacity = 1;
-		document.querySelector(".mousefollower").style.transition = 'all cubic-bezier(0.19, 1, 0.22, 1) 1s';
-	});
 }
 
 // function cursor(){
@@ -233,6 +223,7 @@ function carSliderAnimation(){
 //         duration: 1,
 //       });
 // }
+
 
 customCursor();
 
