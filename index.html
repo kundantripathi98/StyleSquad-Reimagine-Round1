@@ -10,8 +10,17 @@
 			type="image/x-icon" />
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+			href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" /> -->
+		<!-- <link rel="stylesheet" href="./other css files/mouseFollower.css"> -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+			rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./other css files/responsive.css" />
 	</head>
 	<body>
 		<!-- Loader -->
@@ -32,164 +41,258 @@
 
 		<!-- Main Content starts -->
 		<main>
-			<!-- Hero Page Video -->
-			<div class="videoDiv">
-				<video
-					autoplay
-					loop
-					muted
-					src="videos/hero-bg-video.webm"
-					loop
-					muted></video>
-				<div class="overlay"></div>
-			</div>
+			<div class="cursor-dot"></div>
+			<div class="cursor-outline"></div>
 
-			<!-- Navbar -->
-			<nav>
-				<div class="nav-links">
-					<a href="#" class="text-rolling">models</a>
-					<a href="#" class="text-rolling">ownership</a>
-					<a href="#" class="text-rolling">motorsport</a>
+			<section class="heroSection">
+				<div class="videoDiv">
+					<video
+						src="./assets/videos/hero-bg-video.webm"
+						autoplay
+						loop
+						muted></video>
+					<div class="overlay"></div>
+				</div>
+				<nav>
+					<div class="nav-links">
+						<a href="#model" class="text-rolling hide">models</a>
+						<a href="#" class="text-rolling hide">ownership</a>
+						<a href="#" class="text-rolling">motorsport</a>
+					</div>
+
+					<div class="logo">
+						<img src="./assets/images/Lamborghini-logo.svg" alt="logo" />
+					</div>
+					<div class="mob-logo">
+						<img src="./assets/images/Lamborghini-logo.svg" alt="logo" />
+					</div>
+
+					<!-- <div class="toggle"><img src="./assets/images/Menu-icon.svg" alt=""></div> -->
+
+					<div class="nav-links">
+						<a href="#dealership" class="text-rolling">dealerships</a>
+						<a href="#" class="text-rolling hide">museum</a>
+						<a href="#" class="text-rolling hide">store</a>
+					</div>
+
+					<!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+				</nav>
+
+				<div class="hero-text">
+					<h1>expect the <span>unexpected</span></h1>
 				</div>
 
-				<div class="logo">
-					<img src="./assets/images/Lamborghini-logo.svg" alt="video" />
-				</div>
-
-				<!-- <div class="toggle"><img src="./assets/images/Menu-icon.svg" alt=""></div> -->
-
-				<div class="nav-links">
-					<a href="#" class="text-rolling">dealerships</a>
-					<a href="#" class="text-rolling">museum</a>
-					<a href="#" class="text-rolling">store</a>
-				</div>
-
-				<!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-			</nav>
-
-			<!-- Ham Menu -->
-			<div class="menu">
-				<!-- Navigation head -->
-				<div class="navigation-head">
-					<p>NAVIGATION</p>
-					<div class="cross-icon">
-						<a href="#"><img src="assets/icons/cross-icon.svg" alt="Cut" /></a>
+				<div class="menuContent">
+					<div id="menuBtn">
+						<div class="left">
+							<div class="line" id="line1"></div>
+							<div class="line" id="line2"></div>
+							<div class="line" id="line3"></div>
+						</div>
+						<div class="right">
+							<h4 class="text-rolling">Menu</h4>
+						</div>
 					</div>
-				</div>
-				<div class="seperator-line"></div>
-				<!-- Navigation-content -->
-				<div class="navigation-content">
-					<div class="column1 nav-text">
-						<a href="#" class="text-rolling">Customization</a>
-						<a href="#" class="text-rolling">Accessories</a>
-						<a href="#" class="text-rolling">Financial Services</a>
-						<a href="#" class="text-rolling">Warranty Extension</a>
-						<a href="#" class="text-rolling">Dealership</a>
-					</div>
-					<div class="column2 nav-text">
-						<a href="#" class="text-rolling">Design</a>
-						<a href="#" class="text-rolling">History</a>
-						<a href="#" class="text-rolling">Sustainability</a>
-						<a href="#" class="text-rolling">Driving</a>
-						<a href="#" class="text-rolling">Program</a>
-					</div>
-					<div class="column3 nav-text">
-						<a href="#" class="text-rolling">Club</a>
-						<a href="#" class="text-rolling">News</a>
-						<a href="#" class="text-rolling">Lounge</a>
-						<a href="#" class="text-rolling">Museum</a>
-						<a href="#" class="text-rolling">Podcast</a>
-					</div>
-				</div>
 
-				<!-- Video& Socials -->
-				<div class="video-socials">
-					<div class="video-section">
-						<!-- <div class="playreel">
-							<img src="images/Play Button 1.svg" alt="Play-Button" />
-							<p>Play reel</p>
-						</div> -->
-
-						<video
-							autoplay
-							loop
-							muted
-							src="videos/lemborghini Showcase.mp4"></video>
-					</div>
-					<div class="socials">
-						<p>SOCIALS</p>
-						<div class="links-division">
-							<div class="left-links links-left-right">
+					<!-- This div opens after menuBtn is clicked -->
+					<div class="menu">
+						<!-- Navigation head -->
+						<div class="navigation-head">
+							<p>NAVIGATION</p>
+							<div class="closeBtn">
 								<a href="#"
-									>X
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
-								<a href="#"
-									>TIKTOK
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
-								<a href="#"
-									>YOUTUBE
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
-								<a href="#"
-									>THREADS
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
+									><img src="./assets/icons/cross-icon.svg" alt="Cut"
+								/></a>
 							</div>
-							<div class="right-links links-left-right">
-								<a href="#"
-									>DISCORD
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
-								<a href="#"
-									>INSTAGRAM
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
-								<a href="#"
-									>LINKEDIN
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
-								<a href="#"
-									>FACEBOOK
-									<span
-										><img
-											src="assets/icons/Socials-arrow-icon.svg"
-											alt="link-icon" /></span
-								></a>
+						</div>
+						<div class="seperator-line"></div>
+						<!-- Navigation-content -->
+						<div class="navigation-content">
+							<div class="column1 nav-text">
+								<a href="#" class="text-rolling">Customization</a>
+								<a href="#" class="text-rolling">Accessories</a>
+								<a href="#" class="text-rolling">Financial Services</a>
+								<a href="#" class="text-rolling">Warranty Extension</a>
+								<a href="#" class="text-rolling">Dealership</a>
+							</div>
+							<div class="column2 nav-text">
+								<a href="#" class="text-rolling">Design</a>
+								<a href="#" class="text-rolling">History</a>
+								<a href="#" class="text-rolling">Sustainability</a>
+								<a href="#" class="text-rolling">Driving</a>
+								<a href="#" class="text-rolling">Program</a>
+							</div>
+							<div class="column3 nav-text">
+								<a href="#" class="text-rolling">Club</a>
+								<a href="#" class="text-rolling">News</a>
+								<a href="#" class="text-rolling">Lounge</a>
+								<a href="#" class="text-rolling">Museum</a>
+								<a href="#" class="text-rolling">Podcast</a>
+							</div>
+						</div>
+
+						<!-- Video& Socials -->
+						<div class="video-socials">
+							<!-- <div class="video-section">
+								<div class="playreel">
+									<img src="images/Play Button 1.svg" alt="Play-Button" />
+									<p>Play reel</p>
+								</div>
+		
+								<video
+									autoplay
+									loop
+									muted
+									src="/assets/videos/ Showcase.mp4"></video>
+							</div> -->
+
+							<div class="socials">
+								<p>SOCIALS</p>
+								<div class="links-division">
+									<div class="left-links links-left-right">
+										<a href="#"
+											>X
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+										<a href="#"
+											>TIKTOK
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+										<a href="#"
+											>YOUTUBE
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+										<a href="#"
+											>THREADS
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+									</div>
+									<div class="right-links links-left-right">
+										<a href="#"
+											>DISCORD
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+										<a href="#"
+											>INSTAGRAM
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+										<a href="#"
+											>LINKEDIN
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+										<a href="#"
+											>FACEBOOK
+											<span
+												><img
+													src="./assets/icons/Socials-arrow-icon.svg"
+													alt="link-icon" /></span
+										></a>
+									</div>
+								</div>
+							</div>
+							<div class="logo-img">
+								<img src="./assets/icons/lemborghini-logo.svg" alt="icon" />
 							</div>
 						</div>
 					</div>
-					<div class="logo-img">
-						<img src="assets/icons/lemborghini-logo.svg" alt="icon" />
+				</div>
+			</section>
+
+			<!------------ second section ------------->
+
+			<section id="model" class="secondSection hidden">
+				<div class="overlay2"></div>
+
+				<div class="carTitle">
+					<h1>Revuelto</h1>
+				</div>
+
+				<div class="carSlider">
+					<div class="image-container">
+						<img
+							class="image-before slider-image"
+							src="./assets/images/pixelcut-export.png"
+							alt="before-image" />
+
+						<img
+							class="image-after slider-image"
+							src="./assets/images/orangeLambo.png"
+							alt="after-image" />
+					</div>
+
+					<input
+						type="range"
+						min="0"
+						max="100"
+						value="50"
+						class="slider"
+						aria-label="percentage of before photo shown" />
+					<div class="slider-line"></div>
+					<div class="slider-button" aria-hidden="true">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="30"
+							height="30"
+							fill="currentcolor"
+							viewBox="0 0 256 256">
+							<path
+								d="M136,40V216a8,8,0,0,1-16,0V40a8,8,0,0,1,16,0ZM96,120H35.31l18.35-18.34A8,8,0,0,0,42.34,90.34l-32,32a8,8,0,0,0,0,11.32l32,32a8,8,0,0,0,11.32-11.32L35.31,136H96a8,8,0,0,0,0-16Zm149.66,2.34-32-32a8,8,0,0,0-11.32,11.32L220.69,120H160a8,8,0,0,0,0,16h60.69l-18.35,18.34a8,8,0,0,0,11.32,11.32l32-32A8,8,0,0,0,245.66,122.34Z"></path>
+						</svg>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<section id="dealership" class="thirdSection hidden">
+				<div class="videoDiv">
+					<video
+						src="./assets/videos/museum video (online-video-cutter.com).mp4"
+						autoplay
+						loop
+						muted></video>
+					<div class="overlay"></div>
+				</div>
+
+				<div class="info">
+					<h1>
+						Unleash Your,<br />
+						Dream Drive
+					</h1>
+
+					<button>
+						<p>Explore Now</p>
+						<i class="fas fa-long-arrow-alt-right"></i>
+					</button>
+				</div>
+			</section>
 		</main>
 
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"></script>
 		<script src="script.js"></script>
 	</body>
 </html>
