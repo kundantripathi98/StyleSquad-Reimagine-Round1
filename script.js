@@ -7,7 +7,7 @@ let scrollTrigger = () =>{
 			trigger: '#dealership',
 			start: '10% 50%',
 			end: '60% 50%',
-			markers: true,
+			// markers: true,
 			scrub: 1,
 		},
 	})
