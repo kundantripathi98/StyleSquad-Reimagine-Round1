@@ -20,18 +20,15 @@
         display: none;
     }
 
-	/* .hero-text h1{
-	transform: translateY(160px);
-  	font-size: 42px;  
-	text-transform: uppercase;
-	font-family: molitor;
-  	letter-spacing: 10px;
-  	word-spacing: 5px;
-  	font-weight: 900;  
-	-webkit-text-fill-color:transparent ;
-	-webkit-background-clip:text ;
-	} */
+    .dark1 p {
+        transform: translate(20px,-60px);
+    }
 
+    .dark5 p {
+        font-size: 45px;
+        transform: translate(-20px,-50px);
+    }
+    
     .hero-text h1{
         transform: translate(5px,160px);
         font-size: 52px;  
