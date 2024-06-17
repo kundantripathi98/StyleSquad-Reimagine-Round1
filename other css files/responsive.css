@@ -42,4 +42,34 @@
         -webkit-text-fill-color:transparent ;
         -webkit-background-clip:text ;
     } 
+
+    .text-area, .text-area-hover{
+        left: 19%;
+        font-size: 22px;
+        line-height: 220%;
+    }
+
+    .cursor-dot, .cursor-outline{
+        display: none;
+    }
+
+    .thirdSection{
+        height: 400px;
+    }
+
+    .info{
+        width: 400px;
+        gap: 130px;
+    }
+
+    .info button{
+        padding: 16px 75px;
+        font-size: 14px;
+    }
+
+    .test{
+        width: 100%;
+        height: 100vh;
+        background: #000;
+    }
   }

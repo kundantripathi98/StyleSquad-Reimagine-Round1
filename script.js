@@ -1,6 +1,46 @@
 const menuBtn = document.querySelector("#menuBtn");
 const video = document.querySelector("video");
 
+let scrollTrigger = () =>{
+	let tl = gsap.timeline({
+		scrollTrigger:{
+			trigger: '#dealership',
+			start: '10% 50%',
+			end: '60% 50%',
+			markers: true,
+			scrub: 1,
+		},
+	})
+	
+	tl.to(".text-area-hover",{
+		width: '100%',
+		duration: 1
+	})
+	tl.from("#dealership button",{
+		opacity: 0,
+		scale: .2,
+		ease: "power4.inOut",
+		duration: 2
+	})
+}
+
+
+
+let smoothScroll = () => {
+	const lenis = new Lenis()
+
+	lenis.on('scroll', (e) => {
+	console.log(e)
+	})
+
+	function raf(time) {
+	lenis.raf(time)
+	requestAnimationFrame(raf)
+	};
+
+	requestAnimationFrame(raf);
+}
+
 let customCursor = ()=>{
 	const cursorDot = document.querySelector(".cursor-dot");
 	const cursorOutline = document.querySelector(".cursor-outline");
@@ -100,6 +140,7 @@ function afterLoadingAnimation(){
 		thirdSection.classList.remove('hidden');
 		thirdSection.classList.add('visible');
 		// cursor();
+		scrollTrigger();
 	},4000)
 }
 
@@ -224,6 +265,7 @@ function carSliderAnimation(){
 //       });
 // }
 
+// smoothScroll();
 
 customCursor();
 
