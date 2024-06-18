@@ -13,6 +13,21 @@
 	src: url(./assets/fonts/molitor-displaybold-webfont.woff);
 }
 
+@font-face {
+	font-family: Pp;
+	src: url(assets/fonts/ppneuemontrealMedium.woff2);
+}
+
+@font-face {
+	font-family: Pp2;
+	src: url(assets/fonts/ppneuemontrealBook.woff2);
+}
+
+@font-face {
+	font-family: grotesk;
+	src: url(assets/fonts/PPRightGrotesk-CompactDark.woff2);
+}
+
 ::-webkit-scrollbar {
 	width: 5px;
 	border-radius: 10px;
@@ -172,7 +187,7 @@ video {
 nav {
 	width: 100%;
 	height: fit-content;
-	padding: 3% 1%;
+	padding: 3% 2%;
 	display: flex;
 	position: relative;
 	align-items: center;
@@ -295,7 +310,7 @@ nav {
 	width: 100%;
 	height: 100vh;
 	/* background-color: rgb(199, 244, 151); */
-	background-color: #baea54;
+	background-color: #aede46;
 	clip-path: polygon(
 		49.75% 49.75%,
 		50.25% 49.75%,
@@ -322,6 +337,7 @@ nav {
 	padding: 3vw;
 	padding-left: 3.1vw;
 	color: #504e4e;
+	font-family: grotesk;
 }
 
 .seperator-line {
@@ -337,7 +353,7 @@ nav {
 .navigation-content {
 	display: flex;
 	gap: 18%;
-	height: 47%;
+	height: 61%;
 	width: 100%;
 	padding-top: 2vw;
 	padding-left: 4vw;
@@ -345,11 +361,14 @@ nav {
 
 .nav-text {
 	opacity: 0;
+	/* background-color: red; */
 }
 
 .nav-text a {
 	color: #000000;
 	font-size: 3vw;
+	font-family: Pp;
+	line-height: 3.3vw;
 }
 
 /* Hero section  */
@@ -383,30 +402,34 @@ nav {
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-	margin-top: 1.3vw;
+	margin-top: 1vw;
+	height: 18vw;
 }
 
 .column2 {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin-top: 2vw;
+	margin-top: 3.6vw;
+	height: 18vw;
 }
 
 .column3 {
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: column;
-	margin-top: 3vw;
+	margin-top: 6.1vw;
+	height: 18vw;
 }
 
 /* End-menu */
 .video-socials {
 	height: 47%;
 	width: 100%;
-	padding: 3vw 1vw 0 4vw;
+	padding: 0vw 1vw 0 1.5vw;
 	display: flex;
 	gap: 15vw;
+	justify-content: space-between;
 }
 .video-socials video {
 	height: 63%;
@@ -437,10 +460,11 @@ nav {
 /* Socials */
 
 .socials p {
-	margin-top: 5vw;
+	margin-top: 1vw;
 	padding-bottom: 1.5vw;
 	padding-left: 3.1vw;
 	color: #504e4e;
+	font-family: grotesk;
 }
 
 .links-division {
@@ -472,18 +496,23 @@ nav {
 .links-left-right a {
 	font-size: 1.3vw;
 	color: #222222;
+	font-family: Pp2;
 }
 
 /* nav Logo */
 
 .logo-img {
-	height: 65%;
+	height: 1%;
 	width: 19%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 2vw;
+	margin-top: 6.3vw;
 	margin-left: 1vw;
+}
+
+.logo-img img {
+	height: 11vw;
 }
 
 /* Rolling Text Effect */
@@ -593,7 +622,7 @@ nav {
 }
 
 .column1 a:nth-child(2).text-rolling {
-	width: 63%;
+	width: 67%;
 }
 
 .column1 a:nth-child(3).text-rolling {
