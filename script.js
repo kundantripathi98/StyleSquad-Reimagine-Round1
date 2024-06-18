@@ -184,6 +184,17 @@ let innerMenuAnimation = () => {
 	);
 
 	menuBtn.addEventListener("click", () => {
+	timeline.to(
+		text,
+		{
+			duration: 0.3,
+			opacity: 1,
+			stagger: 0.1,
+		},
+		"+=0.1"
+	);
+
+	menuBtn.addEventListener("click", () => {
 		if (isOpen) {
 			timeline.reverse();
 		} else {
