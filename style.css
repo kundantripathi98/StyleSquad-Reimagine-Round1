@@ -347,6 +347,9 @@ nav {
 	height: 0.1vh;
 	background-color: #222222;
 }
+.closeBtn a img {
+	height: 7vw;
+}
 
 /* Navigation-Content */
 
