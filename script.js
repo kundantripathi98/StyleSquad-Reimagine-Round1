@@ -134,8 +134,12 @@ function afterLoadingAnimation(){
 	setTimeout(()=>{
 		const secondSection = document.querySelector(".secondSection");
 		const thirdSection = document.querySelector(".thirdSection");
+		const  circleDiv = document.querySelector("#circle");
 		secondSection.classList.remove('hidden');
 		secondSection.classList.add('visible');
+
+		circleDiv.classList.remove('hidden');
+		circleDiv.classList.add('visible');
 
 		thirdSection.classList.remove('hidden');
 		thirdSection.classList.add('visible');
