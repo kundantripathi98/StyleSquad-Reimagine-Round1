@@ -408,7 +408,7 @@ nav {
 
  
 #circle {
-  position: absolute;
+  /* position: absolute; */
   top: 24vh;
   left: -2.1vw; /* left: -3.7vw; */
   position: relative;
