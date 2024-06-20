@@ -517,7 +517,7 @@ nav {
 	margin-top: 1vw;
 	padding-bottom: 1.5vw;
 	padding-left: 3.1vw;
-	color: #504e4e;
+	color: #C0CAC9;
 	font-family: grotesk;
 }
 
@@ -549,11 +549,25 @@ nav {
 
 .links-left-right a {
 	font-size: 1.3vw;
-	color: #222222;
+	/* color: #222222; */
+	color: #C0CAC9;
 	font-family: Pp2;
 }
 
 /* nav Logo */
+
+/* .logo-img {
+	height: 47%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6.3vw;
+	margin-left: 1vw;
+}
+
+.logo-img img {
+	height: 11vw;
+} */
 
 .logo-img {
 	height: 1%;
