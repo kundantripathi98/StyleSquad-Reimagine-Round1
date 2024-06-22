@@ -389,7 +389,7 @@ let horizontalScroll = () => {
             end: `+=${sectionWidth}px`,
             pin: true,
             scrub: 1,
-            markers: true
+            // markers: true
         },
     });
 }
