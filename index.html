@@ -19,6 +19,7 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
 			rel="stylesheet" />
+			<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="./other css files/responsive.css" />
 	</head>
@@ -45,14 +46,14 @@
 			<div class="cursor-outline"></div>
 
 			<section class="heroSection">
-				<div class="videoDiv">
+				<!-- <div class="videoDiv">
 					<video
 						src="./assets/videos/hero-bg-video.webm"
 						autoplay
 						loop
 						muted></video>
 					<div class="overlay"></div>
-				</div>
+				</div> -->
 				<nav>
 					<div class="nav-links">
 						<a href="#model" class="text-rolling hide">models</a>
@@ -78,44 +79,71 @@
 					<!-- <i class="fa-solid fa-magnifying-glass"></i> -->
 				</nav>
 
+				
+
+				<div class="hero-tagline">
+					<p>Redefining Boundaries with</p>
+					<p>Unparalleled Innovation</p>
+					<p>and Performance - Thrills</p>
+				</div>
+
+				<div class="cover-heroText">
+					
+					<div class="hero-text">
+						
+						<h1>expect the</h1>
+						<h1>Unexpected</h1>
+
+						
+						<div class="enlarge" id="circle">
+							<svg
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								x="0px"
+								y="0px"
+								width="300px"
+								height="300px"
+								viewBox="0 0 300 300"
+								enable-background="new 0 0 300 300"
+								xml:space="preserve"
+							>
+								<defs>
+									<path
+										id="circlePath"
+										d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+									/>
+								</defs>
+								<circle cx="150" cy="100" r="75" fill="none" />
+								<g>
+									<use xlink:href="#circlePath" fill="none" />
+									<text fill="#fff">
+										<textPath xlink:href="#circlePath">
+											Show me more * Show me more * Show me more *  
+										</textPath>
+									</text>
+								</g>
+							</svg>
+						</div>
+						<div class="hero-video">
+							<video
+								autoplay
+								loop
+								muted
+								src="assets/videos/hero-bg-video.webm"></video>
+						</div>
+					</div>
+				</div>
+
 				<!----------- scroll ----------->
 				
-				<div class="enlarge hidden" id="circle">
-					<svg
-						version="1.1"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
-						x="0px"
-						y="0px"
-						width="300px"
-						height="300px"
-						viewBox="0 0 300 300"
-						enable-background="new 0 0 300 300"
-						xml:space="preserve"
-					>
-						<defs>
-							<path
-								id="circlePath"
-								d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-							/>
-						</defs>
-						<circle cx="150" cy="100" r="75" fill="none" />
-						<g>
-							<use xlink:href="#circlePath" fill="none" />
-							<text fill="#fff">
-								<textPath xlink:href="#circlePath">
-									Show me more * Show me more * Show me more *  
-								</textPath>
-							</text>
-						</g>
-					</svg>
-				</div>
+				
 
 				<!-------- Hero Sction Text-------->
 				 
-				<div class="hero-text">
+				<!-- <div class="hero-text">
 					<h1>expect the <span>unexpected</span></h1>
-				</div>
+				</div> -->
 
 				
 				<div class="menuContent">
@@ -258,7 +286,7 @@
 
 			<!------------ second section ------------->
 
-			<section id="model" class="secondSection hidden">
+			<!-- <section id="model" class="secondSection">
 				<div class="overlay2"></div>
 
 				<div class="carTitle">
@@ -298,9 +326,45 @@
 						</svg>
 					</div>
 				</div>
-			</section>
+			</section> -->
 
-			<section id="dealership" class="thirdSection hidden">
+			<div id="model" class="modelSlider">
+				<div class="slide-titles">
+					<div class="title"><h1>Huracán STO</h1></div>
+		
+					<div class="title"><h1>Revuelto</h1></div>
+		
+					<div class="title"><h1>Urus</h1></div>
+		
+					<div class="title"><h1>Countach LPI 800-4</h1></div>
+		
+					<div class="title"><h1>Sián FKP 37</h1></div>
+		
+					<div class="title"><h1>Sián Roadster</h1></div>
+		
+					<div class="title"><h1>Terzo Millennio</h1></div>
+		
+					<div class="title"><h1>Asterion</h1></div>
+		
+					<div class="title"><h1>Estoque</h1></div>
+		
+					<div class="title"><h1>Huracán STO</h1></div>
+		
+					<div class="title"><h1>Revuelto</h1></div>
+				</div>
+		
+				<div class="slide-images">
+					<div class="img-top">
+		
+					</div>
+		
+					<div class="img-bottom">
+		
+					</div>
+				</div>
+			</div>
+
+			<section id="dealership" class="thirdSection">
 				<div class="videoDiv">
 					<video
 						src="./assets/videos/museum video (online-video-cutter.com).mp4"
