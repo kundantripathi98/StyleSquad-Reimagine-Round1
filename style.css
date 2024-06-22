@@ -1099,8 +1099,11 @@ img {
 }
 
 .thirdSection {
-	width: 100%;
+	width: 98%;
+	margin: auto;
 	height: 100vh;
+	border-radius: 10px;
+	overflow: hidden;
 	justify-content: center;
 	align-items: center;
 	position: relative;
