@@ -1176,3 +1176,49 @@ img {
 .info button:hover::after {
 	left: 0;
 }
+
+.fifthSection{
+    overflow: hidden;
+}
+
+.fifthSection h1{
+    color: white;
+    font-size: 45px;
+}
+
+.scroll-section-inner{
+    height: 100vh;
+    width: 300vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.scroll-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide1{
+    background-color: red;
+}
+
+.slide2{
+    background-color: green;
+}
+
+.slide3{
+    background-color: yellow;
+}
+
+footer{
+	background-color: #e45959;
+}
+
+footer h1{
+    color: white;
+    font-size: 45px;
+}

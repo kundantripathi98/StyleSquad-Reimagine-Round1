@@ -373,6 +373,27 @@ function carSliderAnimation() {
 	});
 }
 
+let horizontalScroll = () => {
+	gsap.registerPlugin(ScrollTrigger);
+
+	const sectionWidth = document.querySelector(".scroll-section-inner").offsetWidth;
+	let amountToScroll = sectionWidth - window.innerWidth;
+
+	gsap.to(".scroll-section-inner",{
+        x: -amountToScroll,
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".scroll-section-inner",
+            start: "top top",
+            end: `+=${sectionWidth}px`,
+            pin: true,
+            scrub: 1,
+            markers: true
+        },
+    });
+}
+
 // function cursor(){
 //     Shery.mouseFollower({
 //         //Parameters are optional.
@@ -396,5 +417,7 @@ modelSlider();
 textAnimation();
 
 buttonAnimation();
+
+horizontalScroll();
 
 // carSliderAnimation();
