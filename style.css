@@ -565,7 +565,7 @@ nav {
 
 #circle {
   position: absolute;
-  top: -10%;
+  top: -7%;
   left: 0%; /* left: -3.7vw; */
   position: relative;
   width: 52vw;
@@ -1186,12 +1186,43 @@ img {
     font-size: 45px;
 }
 
+
 .scroll-section-inner{
     height: 100vh;
     width: 300vw;
     display: flex;
+	gap: 70px;
     flex-direction: row;
     position: relative;
+}
+
+
+
+.newsCard{
+	width: 517px;
+	height: 658px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px solid black;
+}
+
+.description{
+	display: flex;
+	background-color: green;
+	gap: 30px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.reverse{
+	flex-direction: column-reverse;
+}
+
+.image{
+	width: 100%;
+	height: 250px;
+	background-color: yellow;
 }
 
 .scroll-section{
