@@ -1179,10 +1179,12 @@ img {
 
 .fifthSection{
     overflow: hidden;
+	padding: 60px 0;
 }
 
 .scroll-section-inner{
-    height: 100vh;
+    height: 110vh;
+	padding-right: 30px;
     width: fit-content;
     display: flex;
 	gap: 90px;
@@ -1191,10 +1193,20 @@ img {
     position: relative;
 }
 
+.fifthSection .title{
+	padding-left: 50px;
+	padding-right: 100px;
+	color: white;
+	font-size: 6vw;
+	font-weight: 900;
+	line-height: 100%;
+	font-family: "Archivo Black";
+}
+
 .newsCard{
 	position: relative;
 	width: 517px;
-	/* height: 658px; */
+	height: 678px;
 	padding-left: 10px;
 	padding: 10px;
 	display: flex;
