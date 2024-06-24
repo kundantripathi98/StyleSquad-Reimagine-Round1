@@ -394,6 +394,21 @@ let horizontalScroll = () => {
     });
 }
 
+let horizontalScrollCardAnimation = () => {
+	let cards = document.querySelectorAll(".newsCard");
+
+	cards.forEach((card)=>{
+		card.addEventListener("mouseenter", ()=>{
+			// card.style.backgroundColor = "green";
+
+		})
+
+		card.addEventListener("mouseleave", ()=>{
+			// card.style.backgroundColor = "black";
+		})
+	})
+}
+
 // function cursor(){
 //     Shery.mouseFollower({
 //         //Parameters are optional.
@@ -417,6 +432,8 @@ modelSlider();
 textAnimation();
 
 buttonAnimation();
+
+horizontalScrollCardAnimation()
 
 horizontalScroll();
 
