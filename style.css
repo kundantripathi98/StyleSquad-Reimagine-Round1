@@ -1181,38 +1181,60 @@ img {
     overflow: hidden;
 }
 
-.fifthSection h1{
-    color: white;
-    font-size: 45px;
-}
-
-
 .scroll-section-inner{
     height: 100vh;
     width: 300vw;
     display: flex;
 	gap: 70px;
     flex-direction: row;
+	align-items: center;
     position: relative;
 }
-
-
 
 .newsCard{
 	width: 517px;
 	height: 658px;
 	display: flex;
 	flex-direction: column;
+	gap: 50px;
 	justify-content: space-between;
-	border: 1px solid black;
+
 }
 
 .description{
 	display: flex;
-	background-color: green;
 	gap: 30px;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.description .no{
+	color: white;
+	font-family: "Syne";
+	font-size: ;
+}
+
+.description h1{
+	font-size: 42px;
+	font-family: "Big Shoulders Text";
+	font-weight: 900;
+	color: white;
+	letter-spacing: 1.4px;
+	line-height: 110%;
+}
+
+.description p{
+	color: white;
+	font-family: ;
+}
+
+.date{
+	font-size: 18px;
+	text-align: end;
+	margin-top: 5px;
+	font-family: "Big Shoulders Text";
+	font-weight: 700;
+	color: rgb(194, 190, 190);
 }
 
 .reverse{
@@ -1221,8 +1243,13 @@ img {
 
 .image{
 	width: 100%;
-	height: 250px;
-	background-color: yellow;
+	overflow: hidden;
+}
+
+.image img{
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
 }
 
 .scroll-section{
