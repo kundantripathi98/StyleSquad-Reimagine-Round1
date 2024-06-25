@@ -427,7 +427,7 @@ let horizontalScroll = () => {
 
 customCursor();
 
-// loadingAnimation();
+loadingAnimation();
 video.pause();
 
 afterLoadingAnimation();
