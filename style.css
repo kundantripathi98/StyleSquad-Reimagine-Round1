@@ -1194,19 +1194,33 @@ img {
 }
 
 .fifthSection .title{
+	display: flex;
+	gap: 20px;
 	padding-left: 50px;
 	padding-right: 100px;
+	flex-direction: column;
+	align-items: start;
+}
+
+.fifthSection .title h4{
+	font-size: 22px;
+	font-family: "Syne";
+	color: rgb(161, 156, 156);
+}
+
+.fifthSection .title h1{
+	text-align: left;
 	color: white;
-	font-size: 6vw;
+	font-size: 7vw;
 	font-weight: 900;
 	line-height: 100%;
-	font-family: "Archivo Black";
+	font-family: "Space Mono";
 }
 
 .newsCard{
 	position: relative;
 	width: 517px;
-	height: 678px;
+	height: 700px;
 	padding-left: 10px;
 	padding: 10px;
 	margin-bottom: 60px;
