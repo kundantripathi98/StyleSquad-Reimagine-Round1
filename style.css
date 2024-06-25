@@ -1209,7 +1209,7 @@ img {
 	height: 678px;
 	padding-left: 10px;
 	padding: 10px;
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
@@ -1229,11 +1229,11 @@ img {
 	transition: all 0.5s cubic-bezier(0.5, 1, 0.75, 1);
 }
 
+.newsCard:hover .description h1, .newsCard:hover .description .no, .newsCard:hover .description p, .newsCard:hover #date{color: #0E0E0C;}
+
 .newsCard:hover .colorDiv{
 	transform: translateY(0%);
 }
-
-.newsCard:hover .description h1, .newsCard:hover .description .no, .newsCard:hover .description p, .newsCard:hover #date{color: #0E0E0C;}
 
 .description{
 	display: flex;
