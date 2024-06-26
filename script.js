@@ -1,6 +1,18 @@
 const menuBtn = document.querySelector("#menuBtn");
 const video = document.querySelector("video");
 
+window.addEventListener('load', () => {
+	if (window.location.hash) {
+	  // Remove the hash from the URL
+	  history.replaceState(null, null, window.location.href.split('#')[0]);
+	  
+	  // Ensure the scroll to top happens after the browser finishes loading
+	  setTimeout(() => {
+		window.scrollTo(0, 0);
+	  }, 0);
+	}
+  });
+
 let scrollTrigger = () =>{
 	let tl = gsap.timeline({
 		scrollTrigger:{

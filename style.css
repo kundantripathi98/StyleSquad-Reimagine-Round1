@@ -925,6 +925,7 @@ nav {
 .modelTitle h1{
 	padding-left: 35px;
 	color: white;
+	font-family: "Oswald";
 	text-transform: uppercase;
 	font-size: 35px;
 }
@@ -1239,6 +1240,13 @@ img {
 }
 
 .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner video{
     width: 100%;
     height: 100%;
     object-fit: cover;
