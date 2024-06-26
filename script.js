@@ -380,7 +380,7 @@ function thirdSectionAnimation(){
         design.style.color = "white";
         project.style.color = "rgb(80,74,69)";
         execution.style.color = "rgb(80,74,69)";
-        para.textContent = "Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to 3D renderings.";
+        para.textContent = "Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
         image.src = "./assets/images/news/news1.webp";
         gsap.from(".para",{
             opacity: 0,
