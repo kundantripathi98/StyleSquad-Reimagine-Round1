@@ -218,21 +218,19 @@ video {
 } */
 
 nav {
-	width: 75%;
+	width: auto;
 	height: fit-content;
 	padding: 0 1%;
-	z-index: 999;
 	display: flex;
 	position: fixed;
+	z-index: 999;
 	align-items: center;
 	flex-grow: 0;
+	gap: 48vw;
 	justify-content: center;
-	gap: 40vw;
 	background-color: #dadada;
-	margin-left: auto;
-	margin-right: auto;
 	height: 4vw;
-	margin-top: 0.6vw;
+	margin-top: 0.4vw;
 	border-radius: 10px;
 }
 
@@ -999,7 +997,7 @@ nav {
 }
 
 .seperatorLine{
-	width: 95%;
+	width: 97%;
 	margin: auto;
 	height: 1px;
 	background-color: #b8b7b7;
@@ -1116,9 +1114,25 @@ img {
 }
 
 .thirdSection{
-    width: 98%;
+    width: 97%;
     margin: auto;
     height: fit-content;
+}
+
+.thirdSection .seperatorLine{
+	width: 100%;
+	height: 0.2px;
+	margin-bottom: 6vw;
+	background-color: #b8b7b7;
+}
+
+.thirdSection-title{
+	padding-left: 20px;
+	color: white;
+	padding-bottom: 2vw;
+	text-transform: uppercase;
+	font-size: 35px;
+	font-family: "Oswald";
 }
 
 .thirdSection .about{
@@ -1134,10 +1148,13 @@ img {
 }
 
 .center{
-    width: 45%;
+    width: 55%;
     height: 100%;
-    display: grid;
-    place-items: center;
+	padding-left: 50px;
+	display: flex;
+	align-items: center;
+    /* display: grid;
+    place-items: center; */
 }
 
 .information{
@@ -1146,7 +1163,8 @@ img {
 
 .infoTitle{
     display: flex;
-    justify-content: space-around;
+	gap: 30px;
+    /* justify-content: space-around; */
     align-items: center;
 }
 
@@ -1168,7 +1186,7 @@ img {
 
 .information h1{
     text-transform: capitalize;
-    font-family: neuhassmediu;
+    font-family: "Big Shoulders Text";
     line-height: 1;
     font-size: 4.6vw;
     color: rgb(80,74,69);
@@ -1199,7 +1217,7 @@ img {
 }
 
 .fourthSection {
-	width: 98%;
+	width: 97%;
 	margin: auto;
 	height: 100vh;
 	border-radius: 10px;
@@ -1411,18 +1429,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.slide1{
-    background-color: red;
-}
-
-.slide2{
-    background-color: green;
-}
-
-.slide3{
-    background-color: yellow;
 }
 
 footer{
