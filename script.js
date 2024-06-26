@@ -365,6 +365,78 @@ let buttonAnimation = () => {
 	});
 };
 
+function thirdSectionAnimation(){
+
+    let design = document.querySelector("#design");
+    let project = document.querySelector("#project");
+    let execution = document.querySelector("#execution");
+    let para = document.querySelector(".para");
+    let image = document.querySelector(".image");
+    
+    design.addEventListener("click", ()=>{
+        document.querySelector(".verticleBar1").style.backgroundColor = "orangered";
+        document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
+        document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
+        design.style.color = "white";
+        project.style.color = "rgb(80,74,69)";
+        execution.style.color = "rgb(80,74,69)";
+        para.textContent = "Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to 3D renderings.";
+        image.src = "images/project-banner.webp";
+        gsap.from(".para",{
+            opacity: 0,
+            duration: 0.5,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".image",{
+            opacity: 0,
+            duration: 0.5,
+            ease: Expo.easeInOut
+        });
+    });
+    
+    project.addEventListener("click", ()=>{
+        document.querySelector(".verticleBar2").style.backgroundColor = "orangered";
+        document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
+        document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
+        project.style.color = "white";
+        design.style.color = "rgb(80,74,69)";
+        execution.style.color = "rgb(80,74,69)";
+        para.textContent = "Once we have a design, our production team takes the lead in bringing it to life. We manage all stages of the project, from build specifications and technical drawings to site surveys, vendor management, and 2D & 3D production. We have an extensive network of partners to meet each unique design and project need.";
+        image.src = "images/Project-banner2.webp";
+        gsap.from(".para",{
+            opacity: 0,
+            duration: 0.5,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".image",{
+            opacity: 0,
+            duration: 0.5,
+            ease: Expo.easeInOut
+        });
+    });
+    
+    execution.addEventListener("click", ()=>{
+        document.querySelector(".verticleBar3").style.backgroundColor = "orangered";
+        document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
+        document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
+        execution.style.color = "white";
+        project.style.color = "rgb(80,74,69)";
+        design.style.color = "rgb(80,74,69)";
+        para.textContent = "We’re with you every step of the way, from the project initiation to launch day. Our production and design teams are onsite to direct and guide the process down to the last point of completion, ensuring success across the built space and experience.";
+        image.src = "images/Project-banner3.webp";
+        gsap.from(".para",{
+            opacity: 0,
+            duration: 0.5,
+            ease: Expo.easeInOut
+        });
+        gsap.from(".image",{
+            opacity: 0,
+            duration: 0.5,
+            ease: Expo.easeInOut
+        });
+    });
+}
+
 function carSliderAnimation() {
 	const container = document.querySelector(".carSlider");
 
@@ -439,6 +511,8 @@ modelSlider();
 textAnimation();
 
 buttonAnimation();
+
+thirdSectionAnimation();
 
 // horizontalScrollCardAnimation()
 
