@@ -1173,12 +1173,7 @@ img {
     height: 4.5vw;
     background-color: orangered;
 }
-.verticleBar2{
-    width: 2px;
-    height: 4.5vw;
-    background-color: rgb(80,74,69);
-}
-.verticleBar3{
+.verticleBar2, .verticleBar3{
     width: 2px;
     height: 4.5vw;
     background-color: rgb(80,74,69);
@@ -1191,24 +1186,37 @@ img {
     font-size: 4.6vw;
     color: rgb(80,74,69);
 }
-#design{
+.modelName:nth-child(1){
     color: white;
 }
 .information h1:hover{cursor: pointer;}
 
 .information p{
     margin-top: 3vw;
-    letter-spacing: -1px;
+	font-size: 18px;
+    letter-spacing: 1px;
+	font-family: "grotesk2";
     color: white;
 }
 
 .banner{
     width: 55%;
     height: 100%;
+	position: relative;
     border-radius: 20px;
     text-align: right;
     overflow: hidden;
 }
+
+.overlay3{
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+	position: absolute;
+}
+
 .banner img{
     width: 100%;
     height: 100%;

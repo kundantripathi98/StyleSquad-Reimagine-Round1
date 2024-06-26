@@ -366,75 +366,50 @@ let buttonAnimation = () => {
 };
 
 function thirdSectionAnimation(){
-
-    let design = document.querySelector("#design");
-    let project = document.querySelector("#project");
-    let execution = document.querySelector("#execution");
+	const modelName = document.querySelectorAll(".modelName");
     let para = document.querySelector(".para");
     let image = document.querySelector(".image");
-    
-    design.addEventListener("click", ()=>{
-        document.querySelector(".verticleBar1").style.backgroundColor = "orangered";
-        document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
-        document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
-        design.style.color = "white";
-        project.style.color = "rgb(80,74,69)";
-        execution.style.color = "rgb(80,74,69)";
-        para.textContent = "Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
-        image.src = "./assets/images/news/news1.webp";
-        gsap.from(".para",{
-            opacity: 0,
-            duration: 0.5,
-            ease: Expo.easeInOut
-        });
-        gsap.from(".image",{
-            opacity: 0,
-            duration: 0.5,
-            ease: Expo.easeInOut
-        });
-    });
-    
-    project.addEventListener("click", ()=>{
-        document.querySelector(".verticleBar2").style.backgroundColor = "orangered";
-        document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
-        document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
-        project.style.color = "white";
-        design.style.color = "rgb(80,74,69)";
-        execution.style.color = "rgb(80,74,69)";
-        para.textContent = "Once we have a design, our production team takes the lead in bringing it to life. We manage all stages of the project, from build specifications and technical drawings to site surveys, vendor management, and 2D & 3D production. We have an extensive network of partners to meet each unique design and project need.";
-        image.src = "./assets/images/news/news5.webp";
-        gsap.from(".para",{
-            opacity: 0,
-            duration: 0.5,
-            ease: Expo.easeInOut
-        });
-        gsap.from(".image",{
-            opacity: 0,
-            duration: 0.5,
-            ease: Expo.easeInOut
-        });
-    });
-    
-    execution.addEventListener("click", ()=>{
-        document.querySelector(".verticleBar3").style.backgroundColor = "orangered";
-        document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
-        document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
-        execution.style.color = "white";
-        project.style.color = "rgb(80,74,69)";
-        design.style.color = "rgb(80,74,69)";
-        para.textContent = "We’re with you every step of the way, from the project initiation to launch day. Our production and design teams are onsite to direct and guide the process down to the last point of completion, ensuring success across the built space and experience.";
-        image.src = "./assets/images/news/news3.jpg";
-        gsap.from(".para",{
-            opacity: 0,
-            duration: 0.5,
-            ease: Expo.easeInOut
-        });
-        gsap.from(".image",{
-            opacity: 0,
-            duration: 0.5,
-            ease: Expo.easeInOut
-        });
-    });
+
+	modelName.forEach((model, index)=>{
+		model.addEventListener("click", ()=>{
+			if(index === 0){
+				document.querySelector(".verticleBar1").style.backgroundColor = "orangered";
+				document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
+				document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
+				
+				para.textContent = "Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
+				image.src = "./assets/images/news/news1.webp"
+			}
+			else if(index === 1){
+				document.querySelector(".verticleBar2").style.backgroundColor = "orangered";
+				document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
+				document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
+
+				para.textContent = "Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
+				image.src = "./assets/images/news/news5.webp"
+			}
+			else if(index === 2){
+				document.querySelector(".verticleBar3").style.backgroundColor = "orangered";
+				document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
+				document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
+
+				para.textContent = "A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
+				image.src = "./assets/images/news/news3.jpg"
+			}
+
+			model.style.color = "white";
+			gsap.from(".para",{
+				opacity: 0,
+				duration: 0.5,
+				ease: Expo.easeInOut
+			});
+			gsap.from(".image",{
+				opacity: 0,
+				duration: 0.5,
+				ease: Expo.easeInOut
+			});
+		});
+	});
 }
 
 function carSliderAnimation() {
