@@ -13,6 +13,16 @@ window.addEventListener('load', () => {
 	}
   });
 
+let progressScrollBar = () => {
+	let filled = document.querySelector(".filled");
+
+	function update(){
+		filled.style.width = `${((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)}%`;
+		requestAnimationFrame(update);
+	}
+	update();
+}
+
 let scrollTrigger = () =>{
 	let tl = gsap.timeline({
 		scrollTrigger:{
@@ -519,6 +529,8 @@ loadingAnimation();
 video.pause();
 
 afterLoadingAnimation();
+
+progressScrollBar();
 
 innerMenuAnimation();
 

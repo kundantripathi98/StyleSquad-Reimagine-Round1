@@ -237,8 +237,9 @@ nav {
 	height: fit-content;
 	padding: 0 1%;
 	display: flex;
-	position: fixed;
-	z-index: 999;
+	position: relative;
+	/* position: fixed;
+	z-index: 999; */
 	align-items: center;
 	flex-grow: 0;
 	gap: 48vw;
