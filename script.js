@@ -13,6 +13,16 @@ window.addEventListener('load', () => {
 	}
   });
 
+// gsap.to('.boundingelem',{
+// 	y: 0,
+// 	ease: Expo.easeInOut,
+// 	opacity: 1,
+// 	delay: 4,
+// 	duration: 1.3,
+// 	stagger: .3
+// })
+
+
 let progressScrollBar = () => {
 	let filled = document.querySelector(".filled");
 
@@ -176,6 +186,20 @@ function afterLoadingAnimation(){
 		document.body.classList.add('show-scrollbar');
 		scrollTrigger();
 	},4000)
+}
+
+let heroSectionAnimation = () => {
+	let timeline = gsap.timeline();
+
+	timeline.from(".heading",{
+		y: "100%",
+		ease: Expo.easeInOut,
+		opacity: 0,
+		delay: 4,
+		stagger: .3,
+		duration: 1.3,
+	})
+
 }
 
 let modelSlider = () => {
@@ -533,6 +557,8 @@ afterLoadingAnimation();
 progressScrollBar();
 
 innerMenuAnimation();
+
+heroSectionAnimation();
 
 modelSlider();
 

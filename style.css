@@ -65,6 +65,11 @@
 	box-sizing: border-box;
 }
 
+::selection{
+	color: orangered;
+	background-color: transparent;
+}
+
 html,
 body {
 	width: 100%;
@@ -237,17 +242,19 @@ nav {
 	height: fit-content;
 	padding: 0 1%;
 	display: flex;
-	position: relative;
-	/* position: fixed;
-	z-index: 999; */
+	/* position: relative; */
+	position: fixed;
+	z-index: 999;
 	align-items: center;
 	flex-grow: 0;
 	gap: 48vw;
 	justify-content: center;
-	background-color: #dadada;
+	/* background-color: #dadada; */
+	background-color: rgba(218, 218, 218, 0.748);
 	height: 4vw;
-	margin-top: 0.4vw;
+	margin-top: 0.2vw;
 	border-radius: 10px;
+	backdrop-filter: blur(5px);
 }
 
 .nav-columns {
@@ -485,6 +492,7 @@ nav {
 	padding-top: 7vw;
 	color: #dadada;
 	text-align: center;
+	/* border: 1px solid blue; */
 	font-family: nuckle;
 }
 
@@ -515,6 +523,19 @@ nav {
 	/* background-color: red; */
 	height: 40vw;
 	position: relative;
+	/* border: 1px solid yellow; */
+}
+
+.bounding{
+    width: fit-content;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.boundingelem{
+    transform: translateY(100%);
+	color: black;
+	/* opacity: 0; */
 }
 
 /* .hero-text h1{
@@ -547,6 +568,7 @@ nav {
 	font-weight: 900;
 	margin-right: 16vw;
 }
+
 
 .hero-text h1:nth-child(1) {
 	font-family: grotesk;
