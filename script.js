@@ -191,14 +191,31 @@ function afterLoadingAnimation(){
 let heroSectionAnimation = () => {
 	let timeline = gsap.timeline();
 
-	timeline.from(".heading",{
+	timeline.from("nav", {
+		scale: 0.8,
+		opacity: 0,
+		duration: 1,
+		delay: 3.1,
+		ease: Expo.easeInOut
+	})
+
+	.from('.link',{
+		y: -10,
+		opacity: 0,
+		duration: 1,
+		ease: Expo.easeInOut,
+		stagger: 0.2
+	})
+
+	.from(".heading",{
 		y: "100%",
 		ease: Expo.easeInOut,
 		opacity: 0,
-		delay: 4,
 		stagger: .3,
-		duration: 1.3,
+		duration: 1,
 	})
+
+
 
 }
 
