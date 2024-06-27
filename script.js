@@ -13,15 +13,6 @@ window.addEventListener('load', () => {
 	}
   });
 
-// gsap.to('.boundingelem',{
-// 	y: 0,
-// 	ease: Expo.easeInOut,
-// 	opacity: 1,
-// 	delay: 4,
-// 	duration: 1.3,
-// 	stagger: .3
-// })
-
 
 let progressScrollBar = () => {
 	let filled = document.querySelector(".filled");
@@ -189,33 +180,60 @@ function afterLoadingAnimation(){
 }
 
 let heroSectionAnimation = () => {
+	gsap.to('.boundingelem',{
+		y: 0,
+		ease: Expo.easeInOut,
+		opacity: 1,
+		delay: 3,
+		duration: 1.3,
+		stagger: .3
+	})
+
 	let timeline = gsap.timeline();
 
-	timeline.from("nav", {
+	gsap.from("nav", {
 		scale: 0.8,
 		opacity: 0,
 		duration: 1,
 		delay: 3.1,
 		ease: Expo.easeInOut
-	})
-
-	.from('.link',{
+	});
+	
+	timeline.from('.link', {
 		y: -10,
 		opacity: 0,
 		duration: 1,
+		delay: 3.5,
 		ease: Expo.easeInOut,
-		stagger: 0.2
+		stagger: 0.1
 	})
-
-	.from(".heading",{
+	.from(".heading", {
 		y: "100%",
 		ease: Expo.easeInOut,
 		opacity: 0,
 		stagger: .3,
 		duration: 1,
 	})
-
-
+	.addLabel("simultaneousStart", "+=0")
+	.from("#circle", {
+		x: "-=100%",
+		ease: Expo.easeInOut,
+		opacity: 0,
+		duration: 1,
+	}, "simultaneousStart")
+	.from(".hero-video", {
+		x: "100%",
+		ease: Expo.easeInOut,
+		opacity: 0,
+		duration: 1,
+	}, "simultaneousStart")
+	.from("#menuBtn", {
+		y: "100%",
+		ease: Expo.easeInOut,
+		opacity: 0,
+		duration: 1,
+	}, "simultaneousStart");
+	
 
 }
 

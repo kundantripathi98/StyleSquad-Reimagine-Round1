@@ -534,8 +534,6 @@ nav {
 
 .boundingelem{
     transform: translateY(100%);
-	color: black;
-	/* opacity: 0; */
 }
 
 /* .hero-text h1{
