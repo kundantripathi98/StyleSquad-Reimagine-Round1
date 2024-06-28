@@ -32,7 +32,9 @@ window.addEventListener('load', () => {
 	requestAnimationFrame(scrollToTop);
 });
 
-
+let scrollToNextSection = ()=>{
+	document.getElementById('models').scrollIntoView({ behavior: 'smooth' });
+};
 
 let progressScrollBar = () => {
 	let filled = document.querySelector(".filled");
@@ -235,7 +237,7 @@ let heroSectionAnimation = () => {
 		duration: 1,
 	})
 	.addLabel("simultaneousStart", "+=0")
-	.from("#circle", {
+	.from(".circle-text", {
 		x: "-=100%",
 		ease: Expo.easeInOut,
 		opacity: 0,
