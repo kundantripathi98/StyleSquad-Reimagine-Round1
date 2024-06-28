@@ -1251,15 +1251,6 @@ img {
 	margin-bottom: 6vw;
 	background-color: #b8b7b7;
 }
-/* 
-.thirdSection-title{
-	padding-left: 20px;
-	color: white;
-	padding-bottom: 2vw;
-	text-transform: uppercase;
-	font-size: 35px;
-	font-family: "Oswald";
-} */
 
 .thirdSection .about{
     width: 100%;
@@ -1269,8 +1260,7 @@ img {
     align-items: center;
     margin: auto;
     border-radius: 10px;
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
 
 .center{
@@ -1284,7 +1274,10 @@ img {
 }
 
 .information{
-    width: 60%;
+    width: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
 }
 
 .infoTitle{
@@ -1316,10 +1309,9 @@ img {
 .information h1:hover{cursor: pointer;}
 
 .information p{
-    margin-top: 3vw;
 	font-size: 18px;
     letter-spacing: 1px;
-	font-family: "grotesk2";
+	font-family: "Big Shoulders Text";
     color: white;
 }
 
@@ -1330,6 +1322,10 @@ img {
     border-radius: 10px;
     text-align: right;
     overflow: hidden;
+}
+
+.mobileBanner{
+	display: none;
 }
 
 .overlay3{
