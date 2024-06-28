@@ -88,10 +88,9 @@
     .modelSlider {
         margin-top: 0;
         height: 75vh;
-        border: 1px solid red;
     }
 
-    .modelTitle h1 {
+    .sectionTitle h1{
         padding-left: 15px;
         font-size: 28px;
     }
