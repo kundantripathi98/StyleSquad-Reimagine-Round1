@@ -2,16 +2,36 @@ const menuBtn = document.querySelector("#menuBtn");
 const video = document.querySelector("video");
 
 window.addEventListener('load', () => {
-	if (window.location.hash) {
-	  // Remove the hash from the URL
-	  history.replaceState(null, null, window.location.href.split('#')[0]);
-	  
-	  // Ensure the scroll to top happens after the browser finishes loading
-	  setTimeout(() => {
+    if (window.location.hash) {
+        // Remove the hash from the URL
+        history.replaceState(null, null, window.location.href.split('#')[0]);
+
+        // Ensure the scroll to top happens after the browser finishes loading
+        const scrollToTop = () => {
+            console.log('Scrolling to top');
+            window.scrollTo(0, 0);
+        };
+
+        const ensureScrollToTop = () => {
+            console.log('Ensuring scroll to top');
+            requestAnimationFrame(() => {
+                setTimeout(scrollToTop, 50); // Slightly longer delay
+            });
+        };
+
+        ensureScrollToTop();
+        setTimeout(ensureScrollToTop, 200); // Attempt again after 200ms for robustness
+    }
+
+	const scrollToTop = () => {
+
 		window.scrollTo(0, 0);
-	  }, 0);
-	}
-  });
+	};
+
+	scrollToTop();
+	requestAnimationFrame(scrollToTop);
+});
+
 
 
 let progressScrollBar = () => {
