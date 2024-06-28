@@ -1254,7 +1254,8 @@ img {
 
 .thirdSection .about{
     width: 100%;
-    height: 90vh;
+    height: fit-content;
+	padding-bottom: 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1278,6 +1279,10 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
+}
+
+.mobilePara{
+	display: none;
 }
 
 .infoTitle{
@@ -1317,7 +1322,7 @@ img {
 
 .banner{
     width: 55%;
-    height: 100%;
+    height: 90vh;
 	position: relative;
     border-radius: 10px;
     text-align: right;
@@ -1349,14 +1354,16 @@ img {
 }
 
 .overlay3 .topic{
-	font-family: "Syne";
 	text-align: left;
 	color: white;
 }
 .overlay3 .topic h1{
-	font-size: 23px;
+	letter-spacing: 1px;
+	font-family: "Big Shoulders Text";
+	font-size: 1.7vw;
 }
 .overlay3 .topic p{
+	font-family: "Syne";
 	font-size: 16px;
 }
 
@@ -1387,11 +1394,6 @@ img {
 }
 
 .info {
-	/* display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	gap: 30px; */
 	width: 100%;
 	height: 100%;
 	display: flex;

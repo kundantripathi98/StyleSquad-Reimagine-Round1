@@ -144,13 +144,16 @@
 
     /* third section */
     .thirdSection .seperatorLine{
-        width: 94%;
-        margin-bottom: 12vw;
+        width: 100%;
         background-color: #b8b7b7;
     }
 
     .thirdSection{
         width: 92%;
+    }
+
+    .thirdSection .sectionTitle{
+        margin-top: 16vw;
     }
   
     .thirdSection .about{
@@ -160,7 +163,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin: auto;
+        margin: 0 auto 16vw auto;
         border-radius: 10px;
         overflow: hidden;  
     }
@@ -174,6 +177,14 @@
     .information{
         width: 100%;
         gap: 30px;
+    }
+
+    .para{
+        display: none;
+    }
+
+    .mobilePara{
+        display: block;
     }
 
     .infoTitle{
@@ -247,5 +258,14 @@
         width: 92%;
         height: 100vh;
         margin: 15vw auto;
+    }
+
+    .info h1 {
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        z-index: 5;
+        font-family: "Syne", sans-serif;
+        color: white;
     }
   }
