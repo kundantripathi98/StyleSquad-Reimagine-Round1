@@ -364,7 +364,7 @@ nav {
 	transform: translate(-50%, -50%);
 	border-radius: 2px;
 	cursor: pointer;
-	z-index: 999999999999999;
+	z-index: 9999;
 	display: flex;
 	justify-content: space-between;
 }
@@ -1370,6 +1370,8 @@ img {
 }
 
 .fifthSection{
+	width: 100%;
+	height: fit-content;
     overflow: hidden;
 	padding: 60px 0;
 }
