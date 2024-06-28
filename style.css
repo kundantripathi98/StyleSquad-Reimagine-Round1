@@ -1080,6 +1080,11 @@ nav {
 
 .active h1{
     color: white;
+	opacity: 1;
+}
+
+.mobileSlideImages{
+	display: none;
 }
 
 .slide-images{

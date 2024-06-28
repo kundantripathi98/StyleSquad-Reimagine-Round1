@@ -32,6 +32,25 @@ window.addEventListener('load', () => {
 	requestAnimationFrame(scrollToTop);
 });
 
+// gsap.to(".heroSection", {
+// 	scrollTrigger: { 
+// 		trigger: ".heroSection",
+// 		start: "top top",
+// 		end: () =>
+// 			"+=" +
+// 			(window.innerHeight +
+// 				document.querySelector(".modelSlider").offsetHeight * 0.5),
+// 		scrub: 1,
+// 		pin: true,
+// 	},
+// 	y: 250,
+// 	scale: 0.75,
+// 	rotation: -15,
+// 	marker: true,
+// 	opacity: 0,
+// 	ease: "power3.out",
+// });
+
 let scrollToNextSection = ()=>{
 	document.getElementById('models').scrollIntoView({ behavior: 'smooth' });
 };
@@ -306,22 +325,14 @@ let modelSlider = () => {
 		imgTop.src = imgSrc;
 		imgBottom.src = imgSrc;
 
-		// imgTop.style.clipPath = "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)";
-		// imgBottom.style.clipPath = "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)";
-		// imgTop.style.transform = "translateX(-100px)";
-		// imgBottom.style.transform = "translateX(-100px)";
-
 		document.querySelector(".img-top").appendChild(imgTop);
 		document.querySelector(".img-bottom").appendChild(imgBottom);
 
 		gsap.from([imgTop, imgBottom], {
-			// clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
-			// transform: "translateX(100px)",
 			opacity: 0,
 			transform: "translateX(-100px)",
 			duration: 1,
 			ease: "power4.out",
-			// stagger: 0.15,
 			onComplete: trimExcessImages,
 		})
 	}
@@ -625,8 +636,121 @@ buttonAnimation();
 
 thirdSectionAnimation();
 
-// horizontalScrollCardAnimation()
-
 horizontalScroll();
 
-// carSliderAnimation();
+
+
+// javaScript for the devices whose width is equal to 768px or less
+
+let responsiveJs = () => {
+	
+	function modelSlider(){
+		let currentIndex = 1;
+		let totalSlides = 9;
+
+		const updateActiveSlides = () => {
+			document.querySelectorAll(".title").forEach((el, index)=>{
+				if(index === currentIndex){
+					el.classList.add("active");
+				}else{
+					el.classList.remove("active");
+				}
+			})
+		}
+
+		const handleSlider = () => {
+			if(currentIndex < totalSlides){
+				currentIndex++;
+			} else{
+				currentIndex = 1;
+			}
+
+			gsap.to(".slide-titles", {
+				onStart: ()=>{
+					setTimeout(()=>{
+						updateActiveSlides();
+					}, 100);
+
+					if(currentIndex + 1 < 10){
+						updateImages(currentIndex + 1);
+					}else{
+						updateImages(1);
+					}
+				},
+				x: `-${(currentIndex - 1) * 10.490}%`,
+				duration: 2,
+				ease: "power4.out"
+			});
+		}
+
+		const updateImages = (imgNumber) => {
+			let imgSrc = `./assets/images/models/car${imgNumber}-.jpg`;
+			const image = document.createElement("img");
+			// const imgBottom = document.createElement("img");
+
+			image.src = imgSrc;
+			// imgBottom.src = imgSrc;
+
+			document.querySelector(".mobileSlideImages").appendChild(image);
+			// document.querySelector(".img-bottom").appendChild(imgBottom);
+
+			gsap.from([image], {
+				opacity: 0,
+				transform: "translateX(-100px)",
+				duration: 1,
+				ease: "power4.out",
+				onComplete: trimExcessImages,
+			})
+		}
+
+		const trimExcessImages = () => {
+			const container = document.querySelector(".mobileSlideImages");
+			const images = Array.from(container.querySelectorAll("img"));
+			const excessCount = images.length - 1;
+				
+			if(excessCount > 0){
+				images.slice(0, excessCount).forEach((image)=> container.removeChild(image));
+			}
+		}
+
+		document.addEventListener("DOMContentLoaded", ()=>{
+			updateImages(2);
+			let intervalId = setInterval(handleSlider, 3000);
+			let inactivityTimeout;
+
+			function resetInterval() {
+				clearInterval(intervalId);
+		
+				clearTimeout(inactivityTimeout);
+		
+				inactivityTimeout = setTimeout(() => {
+					intervalId = setInterval(handleSlider, 3000);
+				}, 200);
+			}
+
+			document.querySelector(".modelSlider").addEventListener("click", ()=>{
+				clearInterval(intervalId);
+
+				handleSlider();
+				
+				resetInterval();
+			});
+		})
+
+
+	}
+	
+	function handleResize() {
+		const mediaQuery = window.matchMedia("(max-width: 768px)");
+	
+		if (mediaQuery.matches) {
+			// Screen width is less than or equal to 768px
+			modelSlider();
+		}
+	}
+	
+	handleResize();
+	window.addEventListener('resize', handleResize);
+}
+
+responsiveJs();
