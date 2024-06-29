@@ -232,12 +232,43 @@ let heroSectionAnimation = () => {
 
 	let timeline = gsap.timeline();
 
+	gsap.registerPlugin(ScrollTrigger);
+	const navbar = document.querySelector("nav");
+	const navLinks = navbar.querySelectorAll('.nav-links a');
+
 	gsap.from("nav", {
 		scale: 0.8,
 		opacity: 0,
 		duration: 1,
 		delay: 3.1,
-		ease: Expo.easeInOut
+		ease: Expo.easeInOut,
+		onComplete: () => {
+            ScrollTrigger.create({
+				trigger: '.modelSlider',
+				start: 'top top',
+				end: 'bottom top',
+				onEnter: () => {
+					gsap.to(navbar, { width: '5%', duration: 0.5 });
+					gsap.to(navLinks, { opacity: 0, duration: 0.5 });
+				},
+				onLeaveBack: () => {
+					gsap.to(navbar, { width: '97%', duration: 0.5 });
+					gsap.to(navLinks, { opacity: 1, duration: 0.5 });
+				}
+			});
+	
+			navbar.addEventListener('mouseenter', () => {
+				gsap.to(navbar, { width: '97%', duration: 0.5 });
+				gsap.to(navLinks, { opacity: 1, duration: 0.5 });
+			});
+	
+			navbar.addEventListener('mouseleave', () => {
+				if (window.scrollY >= document.querySelector('.modelSlider').offsetTop) {
+					gsap.to(navbar, { width: '5%', duration: 0.5 });
+					gsap.to(navLinks, { opacity: 0, duration: 0.5 });
+				}
+			});
+        }
 	});
 	
 	timeline.from('.link', {
