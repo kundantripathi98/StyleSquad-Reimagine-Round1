@@ -634,10 +634,24 @@ textAnimation();
 
 buttonAnimation();
 
-thirdSectionAnimation();
+// thirdSectionAnimation();
 
 horizontalScroll();
 
+
+//JavaScript only for devices over 768px width
+(()=>{
+	function handleResize() {
+		const mediaQuery = window.matchMedia("(min-width: 768px)");
+	
+		if (mediaQuery.matches) {
+			thirdSectionAnimation();
+		}
+	}
+	
+	handleResize();
+	window.addEventListener('resize', handleResize);
+})();
 
 
 // javaScript for the devices whose width is equal to 768px or less
@@ -746,6 +760,8 @@ let responsiveJs = () => {
 		let power = document.querySelector("#mobilePower");
 		let speed = document.querySelector("#mobileSpeed");
 		let time = document.querySelector("#mobileTime");
+		console.log(time);
+
 		modelName[0].style.color = "white";
 		  previousModel = modelName[0]
 		let image = document.querySelector(".mobieImage");
@@ -763,6 +779,10 @@ let responsiveJs = () => {
 					power.textContent = "666 CV / 490 kW";
 					speed.textContent = "306 km/h";
 					time.textContent = "3.3s";
+
+					power.style.opacity = 1;
+					speed.style.opacity = 1;
+					time.style.opacity = 1;
 					
 					para.textContent = "Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
 					image.src = "./assets/images/news/news1.webp"
@@ -775,6 +795,10 @@ let responsiveJs = () => {
 					power.textContent = "814 CV / 599 kW";
 					speed.textContent = "355 km/h";
 					time.textContent = "2.8s";
+
+					power.style.opacity = 1;
+					speed.style.opacity = 1;
+					time.style.opacity = 1;
 	
 					para.textContent = "Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
 					image.src = "./assets/images/news/news5.webp"
@@ -787,6 +811,10 @@ let responsiveJs = () => {
 					power.textContent = "640 CV / 470 kW";
 					speed.textContent = "310 km/h";
 					time.textContent = "3.0s";
+
+					power.style.opacity = 1;
+					speed.style.opacity = 1;
+					time.style.opacity = 1;
 	
 					para.textContent = "A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
 					image.src = "./assets/images/news/news3.jpg"
@@ -795,19 +823,19 @@ let responsiveJs = () => {
 				model.style.color = "white";
 				previousModel = model;
 	
-				gsap.from(".para",{
+				gsap.from(".mobilePara",{
 					opacity: 0,
 					duration: 0.5,
 					ease: Expo.easeInOut
 				});
 	
-				gsap.from(".topic",{
+				gsap.from(".mobileTopic",{
 					opacity: 0,
 					duration: 0.5,
 					ease: Expo.easeInOut
 				});
 	
-				gsap.from(".image",{
+				gsap.from(".mobieImage",{
 					opacity: 0,
 					duration: 0.5,
 					ease: Expo.easeInOut

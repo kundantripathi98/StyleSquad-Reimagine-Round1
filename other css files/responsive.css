@@ -93,7 +93,7 @@
 
     .modelSlider {
         margin-top: 0;
-        height: 75vh;
+        height: 95vh;
     }
 
     .sectionTitle h1{
@@ -187,6 +187,10 @@
         display: block;
     }
 
+    #mobilePower, #mobileSpeed, #mobileTime{
+        opacity: 1;
+    }
+
     .infoTitle{
         padding-top: 50px;
         display: flex;
@@ -245,12 +249,12 @@
         align-items: start;
     }
 
-    .overlay3 .topic h1{
-        font-size: 18px;
+    .overlay3 .mobileTopic h1{
+        font-size: 21px;
         color: rgb(206, 206, 206);
     }
-    .overlay3 .topic p{
-        font-size: 14px;
+    .overlay3 .mobileTopic p{
+        font-size: 18px;
         color: rgb(121, 121, 120);
     }
 

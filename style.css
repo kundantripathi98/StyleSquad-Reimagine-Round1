@@ -1333,6 +1333,10 @@ img {
 	display: none;
 }
 
+#mobilePower, #mobileSpeed, #mobileTime{
+	opacity: 1;
+}
+
 .overlay3{
 	left: 0;
 	bottom: 0;
