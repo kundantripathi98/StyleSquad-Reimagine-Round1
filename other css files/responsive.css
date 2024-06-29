@@ -68,20 +68,6 @@
         display: none;
     }
 
-    .fourthSection{
-        height: 400px;
-    }
-
-    .info{
-        width: 400px;
-        gap: 130px;
-    }
-
-    .info button{
-        padding: 16px 75px;
-        font-size: 14px;
-    }
-
     .test{
         width: 100%;
         height: 100vh;
@@ -258,18 +244,40 @@
         color: rgb(121, 121, 120);
     }
 
+    /* .info{
+        width: 400px;
+        gap: 130px;
+    } */
+
+    .info button{
+        padding: 16px 75px;
+        font-size: 14px;
+    }
+
     .fourthSection {
         width: 92%;
-        height: 100vh;
-        margin: 15vw auto;
+        height: 50vh;
+        margin: 17vw auto;
+        overflow: hidden;
     }
 
     .info h1 {
         text-align: center;
-        font-size: 25px;
+        font-size: 35px;
         position: relative;
         z-index: 5;
         font-family: "Syne", sans-serif;
         color: white;
     }
+
+    .info button {
+        padding: 12px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    
   }
