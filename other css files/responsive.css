@@ -79,6 +79,54 @@
         object-position: center;
     }
 
+    .navigation-content{
+        display: none;
+    }
+
+    .mobileNav-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 94.5%;
+        margin: 0 auto;
+    }
+
+    .mobileNav-content .links{
+        color: #C0CAC9;
+        font-size: 14.5vw;
+        font-family: "Big Shoulders Text";
+    }
+
+    .socials{
+        gap: 6vw;
+    }
+
+    .socials p {
+        font-size: 5.2vw;
+    }
+
+    .links-left-right a {
+        font-size: 4.3vw;
+    }
+
+    .links-division {
+        gap: 4vw;
+    }
+    
+    .links-left-right {
+        gap: 0.5vw;
+    }
+    
+    .links-division img {
+        height: 2.2vw;
+    }
+
+    .logo-img {
+        height: 20vw;
+        width: 20vw;
+    }
+
     .text-area, .text-area-hover{
         left: 19%;
         font-size: 22px;
@@ -293,5 +341,17 @@
         border-radius: 10px;
         font-size: 16px;
     }
-    
+
+    .fifthSection{
+        display: none;
+    }
+
+    .mobileFifthSection{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+
+        width: 100%;
+        background-color: red;
+    }
   }

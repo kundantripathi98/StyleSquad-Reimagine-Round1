@@ -501,6 +501,108 @@ nav {
 	line-height: 3.3vw;
 }
 
+
+.column1 {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	margin-top: 1vw;
+	height: 18vw;
+	color: white;
+}
+
+.column2 {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 3.6vw;
+	height: 18vw;
+}
+
+.column3 {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	margin-top: 6.1vw;
+	height: 18vw;
+}
+
+.mobileNav-content{
+	display: none;
+}
+
+/* End-menu */
+.video-socials {
+	height: fit-content;
+	width: 94.5%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 15vw;
+	justify-content: space-between;
+}
+
+/* Socials */
+
+.socials{
+	display: flex;
+	flex-direction: column;
+	gap: 2vw;
+}
+
+.socials p {
+	font-size: 1.2vw;
+	color: #C0CAC9;
+	font-family: grotesk;
+}
+
+.links-division {
+	display: flex;
+	justify-content: space-between;
+	gap: 4vw;
+}
+
+.links-left-right {
+	display: flex;
+	flex-direction: column;
+}
+
+.links-division img {
+	height: 0.7vw;
+}
+
+.links-division a span {
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect to rotate the image by 45 degrees */
+.links-division a:hover span {
+	transform: rotate(45deg);
+}
+
+.links-left-right a {
+	font-size: 1.3vw;
+	/* color: #222222; */
+	color: #C0CAC9;
+	font-family: Pp2;
+}
+
+/* nav Logo */
+
+
+.logo-img {
+	height: 12vw;
+	width: 11vw;
+}
+
+.logo-img img {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* Hero section  */
 .hero-tagline {
 	display: flex;
@@ -746,138 +848,7 @@ nav {
 }
 
  
-.column1 {
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	margin-top: 1vw;
-	height: 18vw;
-	color: white;
-}
 
-.column2 {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	margin-top: 3.6vw;
-	height: 18vw;
-}
-
-.column3 {
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	margin-top: 6.1vw;
-	height: 18vw;
-}
-
-/* End-menu */
-.video-socials {
-	height: fit-content;
-	width: 100%;
-	padding: 0vw 1vw 0 1.5vw;
-	display: flex;
-	align-items: center;
-	gap: 15vw;
-	justify-content: space-between;
-}
-.video-socials video {
-	height: 63%;
-	width: 100%;
-	object-fit: cover;
-	margin-top: 3vw;
-	border-radius: 7px;
-}
-
-.video-section {
-	width: 23%;
-	height: 100%;
-}
-
-.video-section p {
-	padding-top: 1vw;
-}
-
-.playreel {
-	display: flex;
-	justify-content: space-between;
-}
-
-.playreel img {
-	margin-top: 1vw;
-}
-
-/* Socials */
-
-.socials p {
-	margin-top: 1vw;
-	padding-bottom: 1.5vw;
-	padding-left: 3.1vw;
-	color: #C0CAC9;
-	font-family: grotesk;
-}
-
-.links-division {
-	display: flex;
-	justify-content: space-between;
-	gap: 4vw;
-	margin-left: 3.2vw;
-}
-
-.links-left-right {
-	display: flex;
-	flex-direction: column;
-}
-
-.links-division img {
-	height: 0.7vw;
-}
-
-.links-division a span {
-	display: inline-block;
-	transition: all 0.3s ease-in-out;
-}
-
-/* Hover effect to rotate the image by 45 degrees */
-.links-division a:hover span {
-	transform: rotate(45deg);
-}
-
-.links-left-right a {
-	font-size: 1.3vw;
-	/* color: #222222; */
-	color: #C0CAC9;
-	font-family: Pp2;
-}
-
-/* nav Logo */
-
-/* .logo-img {
-	height: 47%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 6.3vw;
-	margin-left: 1vw;
-}
-
-.logo-img img {
-	height: 11vw;
-} */
-
-.logo-img {
-	height: 1%;
-	width: 19%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 6.3vw;
-	margin-left: 1vw;
-}
-
-.logo-img img {
-	height: 11vw;
-}
 
 /* Rolling Text Effect */
 
@@ -1492,7 +1463,7 @@ img {
 	padding-right: 30px;
     width: fit-content;
     display: flex;
-	gap: 90px;
+	gap: 5vw;
     flex-direction: row;
 	align-items: center;
     position: relative;
@@ -1568,7 +1539,7 @@ img {
 }
 
 .description h1{
-	font-size: 42px;
+	font-size: 2.75vw;
 	font-family: "Big Shoulders Text";
 	font-weight: 900;
 	color: white;
@@ -1646,6 +1617,11 @@ img {
 	font-size: 35px;
 	text-transform: uppercase;
   font-family: "Oswald";
+}
+
+
+.mobileFifthSection{
+	display: none;
 }
 
 
