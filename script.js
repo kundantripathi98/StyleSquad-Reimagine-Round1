@@ -416,15 +416,19 @@ let innerMenuAnimation = () => {
 		text = document.querySelectorAll(".nav-text"),
 		menu = document.querySelector(".menu");
 
+		const links = document.querySelectorAll(".links");
+		const hiddenLink = document.querySelector(".hidden-link");
+		const backBtn = document.querySelector(".backBtn");
+
 	timeline.to(menu, {
-		duration: 0.3,
+		duration: 0.1,
 		opacity: 1,
 	});
 
 	timeline.to(
 		menu,
 		{
-			duration: 1,
+			duration: 0.5,
 			ease: "power3.inOut",
 			clipPath: "polygon(49.75% 0%, 50.25% 0%, 50.25% 100%, 49.75% 100%)",
 		},
@@ -432,7 +436,7 @@ let innerMenuAnimation = () => {
 	);
 
 	timeline.to(menu, {
-		duration: 1,
+		duration: 0.5,
 		ease: "power3.inOut",
 		clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 		pointerEvents: "all",
@@ -441,12 +445,60 @@ let innerMenuAnimation = () => {
 	timeline.to(
 		text,
 		{
-			duration: 0.3,
+			duration: 0.1,
 			opacity: 1,
 			stagger: 0.1,
 		},
 		"+=0.1"
 	);
+
+	timeline.from(links,{
+		opacity: 0,
+		duration: 0.2,
+		stagger: 0.1,
+	})
+	.from(hiddenLink,{
+		opacity: 0,
+		duration: 0.2,
+		stagger: 0.1,
+	});
+
+	hiddenLink.addEventListener("click", ()=>{
+		links.forEach((link)=>{
+			link.style.opacity = 0;
+		});
+		hiddenLink.style.opacity = 0;
+
+		let tl = gsap.timeline();
+
+		tl.to(".hiddenLinks",{
+			y: "0%",
+			duration: 0.9,
+			ease: Expo.easeInOut
+		})
+	})
+
+	backBtn.addEventListener("click", ()=>{
+		let tl = gsap.timeline();
+		tl.to(".hiddenLinks",{
+			y: "100%",
+			duration: 0.9,
+			ease: Expo.easeInOut
+		})
+		.to(links,{
+			opacity: 1,
+			duration: 0.9,
+			// delay: 0.5,
+			stagger: 0.1,
+			ease: Expo.easeInOut
+		})
+		.to(hiddenLink,{
+			opacity: 1,
+			duration: 0.9,
+			// delay: 0.5,
+			ease: Expo.easeInOut
+		})
+	})
 
 	menuBtn.addEventListener("click", () => {
 		if (isOpen) {
@@ -467,6 +519,19 @@ let innerMenuAnimation = () => {
 
 		isOpen = !isOpen;
 	});
+
+	links.forEach((link)=>{
+		link.addEventListener("click",()=>{
+			if (isOpen) {
+				timeline.reverse();
+			}
+			else{
+				timeline.play();
+			}
+
+			isOpen = !isOpen;
+		});
+	})
 };
 
 // // Rolling Text Effect

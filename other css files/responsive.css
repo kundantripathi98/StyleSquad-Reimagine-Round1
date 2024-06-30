@@ -90,12 +90,72 @@
         align-items: center;
         width: 94.5%;
         margin: 0 auto;
+        overflow: hidden;
+        position: relative;
     }
 
     .mobileNav-content .links{
         color: #C0CAC9;
         font-size: 14.5vw;
         font-family: "Big Shoulders Text";
+    }
+
+    .hidden-link{
+        color: #C0CAC9;
+        font-size: 14.5vw;
+        font-family: "Big Shoulders Text";
+    }
+
+    .hiddenLinks{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+        display: flex;
+        /* background-color: rgb(221, 103, 103); */
+    }
+
+    .col{
+        flex: 1;
+        font-family: "Big Shoulders Text";
+        text-transform: uppercase;
+    }
+
+    .col1{
+        display: flex;
+        align-items: start;
+    }
+
+    .col2{
+        display: flex;
+        align-items: center;
+    }
+
+    .col3{
+        flex: 3;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: right;
+        align-items: end;
+    }
+
+    .backBtn{
+        color: #C0CAC9;
+        font-size: 7vw;
+    }
+
+    .col-link{
+        display: flex;
+        gap: 1vw;
+        flex-direction: column;
+    }
+
+    .col-link a{
+        color: #C0CAC9;
+        font-size: 7vw;
     }
 
     .socials{
@@ -126,6 +186,8 @@
         height: 20vw;
         width: 20vw;
     }
+
+    
 
     .text-area, .text-area-hover{
         left: 19%;
