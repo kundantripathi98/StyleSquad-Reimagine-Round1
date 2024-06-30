@@ -50,6 +50,35 @@
         bottom: 5vh;
     }
 
+    .menu {
+        padding: 3vw 0;
+    }
+
+    .nav-head{
+        width: 94.5%;
+        gap: 2.5vw;
+    }
+
+    .navigation-head p {
+        color: #C0CAC9;
+        font-size: 5.2vw;
+        font-family: grotesk;
+    }
+
+    .closeBtn{
+        display: flex;
+        display: flex;
+        justify-content: end;
+        height: 12vw;
+        width: 12vw;
+    }
+    .closeBtn img {
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
     .text-area, .text-area-hover{
         left: 19%;
         font-size: 22px;

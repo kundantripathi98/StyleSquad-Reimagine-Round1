@@ -615,36 +615,6 @@ let horizontalScroll = () => {
     });
 }
 
-// let horizontalScrollCardAnimation = () => {
-// 	let card = document.querySelector(".newsCard");
-// 	const overlay = document.querySelector(".colorDiv");
-
-// 	// cards.forEach((card)=>{
-// 		card.addEventListener("mouseenter", ()=>{
-// 			// card.style.backgroundColor = "green";
-// 			gsap.from(".colorDiv", {
-// 				y: "-=100%",
-// 				opacity: 0,
-// 				duration: 1,
-// 				ease: "power4.out"
-// 			})
-
-// 		})
-
-// 		card.addEventListener("mouseleave", ()=>{
-// 			// card.style.backgroundColor = "black";
-// 		})
-// 	// })
-// }
-
-// function cursor(){
-//     Shery.mouseFollower({
-//         //Parameters are optional.
-//         skew: false,
-//         ease: "cubic-bezier(1, 1, 1, 1)",
-//         duration: 1,
-//       });
-// }
 
 customCursor();
 
