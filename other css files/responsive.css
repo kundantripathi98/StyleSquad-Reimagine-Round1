@@ -329,8 +329,12 @@
 	}
 
 	.sectionTitle h1 {
-		padding-left: 15px;
+		padding-left: 0px;
 		font-size: 36px;
+	}
+
+	.modelTitle{
+		padding-left: 15px;
 	}
 
 	.slide-titles {
@@ -647,34 +651,22 @@
         font-size: 4.5vw;
     }
 
-    .image{
+	/* .sixthSection  .image{
         width: 100%;
         overflow: hidden;
     }
 
     .container {
-        padding-top:5vw ;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding-top: 15vw;
         width: 97%;
-        gap: 60px;
-        margin: auto;
     }
     
     .content {
         padding-right: 20px;
-    }
-    
-    .title-owner{
-        margin-bottom: 5vw;
-        font-size: 35px;
-          text-transform: uppercase;
-        font-family: "Oswald";
-    }
+    } */
     
     
-    .title {
+   /* .sixthSection  .title {
         font-size: 15px;
         margin-bottom: 40px;
         display: flex;
@@ -691,9 +683,7 @@
     
     .text h1{
         padding-left: 2vw;
-        /* text-align: right; */
         font-family: "Big Shoulders Text";
-        /* font-family: "Radio Canada Big"; */
         font-size: 45px;
     }
     
@@ -715,35 +705,39 @@
         height: 100%;
         object-fit: cover;
         object-position: center;  
-    }
+    } */
      /* resonsive */
-     
+	
+	 .sixthSection .seperatorLine h1{
+		padding-left: 0;
+	 }
      
         .container {
-            gap: 20px;
+			padding: 13vw 0;
+            gap: 8vw;
+			width: 92%;
         }
         
-        .title-owner {
+        /* .title-owner {
             font-size: 24px;
             text-align: left;
-        }
+        } */
     
-        .title {
-            font-size: 12px;
+        .sixthSection .title {
+            font-size: 3vw;
             margin-bottom: 20px;
-            margin-right: 3px;/* just for now*/
-            justify-content: right;
+			text-align: right;
+            float: right;
         }
     
         .text h1 {
-            font-size: 22px; /* just for now actual 28px */
-            padding-left: 3px; /* just for now actual 0px */
-            text-align: left;
+            font-size: 22px;
+            padding-left: 3px;
         }
     
         .text .num {
-            text-align: left;
-            font-size: 15px;
+            font-size: 4.5vw;
+			font-family: "Syne";
         }
     
         .content {
@@ -760,10 +754,6 @@
         }
         .title-owner{
             font-size: 45px;
-        }
-    
-        .text .num {
-            font-size: 30px;
         }
     
         .title{
