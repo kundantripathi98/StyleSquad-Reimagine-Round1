@@ -542,12 +542,231 @@
 		display: none;
 	}
 
-	.mobileFifthSection {
+    .mobileFifthSection {
 		display: flex;
-		height: 100vh;
-		flex-direction: column;
-
-		width: 100%;
-		background-color: red;
+		height: fit-content;
+		flex-direction:column; /* just for now */
+		width: fit-content;
+        overflow: auto;
+        position: relative;
+        width: 92%;
+	    margin: 18vw auto;
+        gap: 14vw;
 	}
-}
+
+    .fifth-title{
+        display: flex;
+        position: sticky;
+	    gap: 20px;
+        top: 0;
+        left: 0;
+
+	    flex-direction: column;
+	    align-items: start;
+    }
+
+    .fifth-title h4{
+        font-size: 4.2vw;
+        font-family: "Syne";
+        color: rgb(161, 156, 156);
+    }
+    
+    .fifth-title h1{
+        text-align: left;
+        color: white;
+        font-size: 11vw;
+        font-weight: 900;
+        line-height: 100%;
+        font-family: "Space Mono";
+    }
+
+    .cardContainer{
+        display: flex;
+        align-items: center;
+        gap: 8vw;
+        width: fit-content;
+        overflow-x: auto;
+        height: fit-content;
+    }
+
+    /* .cardContainer::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 10px;
+    }
+
+    .cardContainer::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px;
+      }
+      
+      .cardContainer::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+
+      .scrollable-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      } */
+
+    .newsCard{
+        width: 82vw;
+        /* height: 70vh; */
+        height: 85vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .description{
+        gap: 5.5vw;
+    }
+    
+    .description .no{
+        color: white;
+        font-family: "Syne";
+        font-size: 4vw;
+    }
+
+    #date{
+        font-size: 5vw;
+        text-align: end;
+        font-family: "Big Shoulders Text";
+        font-weight: 700;
+        color: rgb(194, 190, 190);
+    }
+
+    .description h1{
+        font-size: 7.75vw;
+    }
+
+    .description p{
+        font-size: 4.5vw;
+    }
+
+    .image{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .container {
+        padding-top:5vw ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 97%;
+        gap: 60px;
+        margin: auto;
+    }
+    
+    .content {
+        padding-right: 20px;
+    }
+    
+    .title-owner{
+        margin-bottom: 5vw;
+        font-size: 35px;
+          text-transform: uppercase;
+        font-family: "Oswald";
+    }
+    
+    
+    .title {
+        font-size: 15px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: end;
+        opacity: .5;
+    }
+    
+    .text {
+        line-height: 1.5;
+        margin-bottom: 20px;
+        margin-top: 20px;
+     
+    }
+    
+    .text h1{
+        padding-left: 2vw;
+        /* text-align: right; */
+        font-family: "Big Shoulders Text";
+        /* font-family: "Radio Canada Big"; */
+        font-size: 45px;
+    }
+    
+    .text .num{
+        font-size: 18px;
+        color: rgb(168, 166, 166);
+    
+    }
+    .image-container {
+        width:75% ;
+        height: 450px;
+        overflow: hidden;
+        border-radius: 10px;
+        float: right;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;  
+    }
+     /* resonsive */
+     
+     
+        .container {
+            gap: 20px;
+        }
+        
+        .title-owner {
+            font-size: 24px;
+            text-align: left;
+        }
+    
+        .title {
+            font-size: 12px;
+            margin-bottom: 20px;
+            margin-right: 3px;/* just for now*/
+            justify-content: right;
+        }
+    
+        .text h1 {
+            font-size: 22px; /* just for now actual 28px */
+            padding-left: 3px; /* just for now actual 0px */
+            text-align: left;
+        }
+    
+        .text .num {
+            text-align: left;
+            font-size: 15px;
+        }
+    
+        .content {
+            padding-right: 0;
+            margin-top: 4px;
+        }
+    
+        .image-container {
+            width: 100%;
+            height: 200px;
+            margin: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+        .title-owner{
+            font-size: 45px;
+        }
+    
+        .text .num {
+            font-size: 30px;
+        }
+    
+        .title{
+            font-size: 28px;
+        }
+  }

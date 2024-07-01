@@ -659,7 +659,7 @@ function carSliderAnimation() {
 	});
 }
 
-let horizontalScroll = () => {
+let fifthSection = () => {
 	gsap.registerPlugin(ScrollTrigger);
 
 	const sectionWidth = document.querySelector(".scroll-section-inner").offsetWidth;
@@ -683,7 +683,7 @@ let horizontalScroll = () => {
 
 customCursor();
 
-loadingAnimation();
+// loadingAnimation();
 video.pause();
 
 afterLoadingAnimation();
@@ -702,7 +702,7 @@ buttonAnimation();
 
 // thirdSectionAnimation();
 
-horizontalScroll();
+fifthSection();
 
 
 //JavaScript only for devices over 768px width
