@@ -1113,6 +1113,13 @@ nav {
 	background-color: #b8b7b7;
 }
 
+.seperatorLineHero {
+	width: 97%;
+	margin: auto;
+	height: 1px;
+	background-color: #b8b7b7;
+}
+
 .secondSection {
 	background-color: rgb(92, 34, 12);
 	width: 100%;

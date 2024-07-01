@@ -88,8 +88,8 @@
 
 	/* Navbar Ends*/
 	.heroSection {
-		min-height: 150vh;
-		width: 97%;
+		height: 106vh;
+		width: 100%;
 		margin: auto;
 	}
 	.hero-tagline {
@@ -114,12 +114,13 @@
 	.hero-text {
 		display: flex;
 		flex-direction: column;
-		margin-top: -3vw;
+		margin-top: 21vw;
 		/* background-color: red; */
 		height: 60vw;
 		width: 100%;
-		padding-left: 11vw;
+		padding-left: 18vw;
 		position: relative;
+		justify-content: center;
 		/* border: 1px solid yellow; */
 	}
 
@@ -324,7 +325,7 @@
 
 	.modelSlider {
 		margin-top: 0;
-		height: 95vh;
+		height: 69vh;
 	}
 
 	.sectionTitle h1 {
@@ -369,6 +370,10 @@
 		opacity: 0.5;
 	}
 
+	.seperatorLineHero {
+		width: 92%;
+		margin-top: 75%;
+	}
 	.seperatorLine {
 		width: 92%;
 	}
