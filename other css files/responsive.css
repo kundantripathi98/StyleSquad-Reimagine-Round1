@@ -650,63 +650,6 @@
     .description p{
         font-size: 4.5vw;
     }
-
-	/* .sixthSection  .image{
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .container {
-        padding-top: 15vw;
-        width: 97%;
-    }
-    
-    .content {
-        padding-right: 20px;
-    } */
-    
-    
-   /* .sixthSection  .title {
-        font-size: 15px;
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: end;
-        opacity: .5;
-    }
-    
-    .text {
-        line-height: 1.5;
-        margin-bottom: 20px;
-        margin-top: 20px;
-     
-    }
-    
-    .text h1{
-        padding-left: 2vw;
-        font-family: "Big Shoulders Text";
-        font-size: 45px;
-    }
-    
-    .text .num{
-        font-size: 18px;
-        color: rgb(168, 166, 166);
-    
-    }
-    .image-container {
-        width:75% ;
-        height: 450px;
-        overflow: hidden;
-        border-radius: 10px;
-        float: right;
-    }
-    
-    .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;  
-    } */
-     /* resonsive */
 	
 	 .sixthSection .seperatorLine h1{
 		padding-left: 0;
