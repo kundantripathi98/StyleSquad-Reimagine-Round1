@@ -684,7 +684,7 @@ let fifthSection = () => {
 
 customCursor();
 
-// loadingAnimation();
+loadingAnimation();
 video.pause();
 
 afterLoadingAnimation();
