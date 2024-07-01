@@ -518,6 +518,7 @@ let innerMenuAnimation = () => {
 		}
 
 		isOpen = !isOpen;
+		backBtn.click();
 	});
 
 	links.forEach((link)=>{
