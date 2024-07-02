@@ -1624,6 +1624,7 @@ img {
 .sixthSection {
 	overflow: hidden;
 	color: white;
+	padding-bottom: 4vw;
 }
 .container {
 	padding-top: 5vw;
@@ -1714,7 +1715,7 @@ footer {
 	overflow: hidden;
 	bottom: 0;
 	background-color: #000;
-	padding: 1.7vw;
+	padding: 0 1.7vw;
 }
 .footer-wrapper {
 	height: 80vw;
@@ -1741,7 +1742,7 @@ footer {
 	z-index: 9999;
 	font-size: 14.9vw;
 	left: 0.69%;
-	top: 11%;
+	top: -1%;
 	font-weight: 400;
 	color: #e3e9e8;
 	font-family: NeueRoman;

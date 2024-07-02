@@ -193,7 +193,6 @@ let loadingAnimation = () => {
 	updateLoading();
 	gsapAnimation();
 };
-
 function afterLoadingAnimation() {
 	setTimeout(() => {
 		video.play();
