@@ -1039,7 +1039,7 @@ nav {
 .sectionTitle h1 {
 	padding-left: 35px;
 	color: white;
-	font-family: "Oswald";
+	font-family: "Space Mono";
 	text-transform: uppercase;
 	font-size: 35px;
 }
@@ -1641,7 +1641,7 @@ img {
 	/* font-size: 18px; */
 	line-height: 1.5;
 	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-top: 71px;
 	/* width: 80%; */
 }
 
@@ -1650,12 +1650,14 @@ img {
 	font-family: "Big Shoulders Text";
 	/* font-family: "Radio Canada Big"; */
 	font-size: 45px;
+	opacity: 0.9;
 }
 
 .text .num {
 	font-size: 18px;
 	color: rgb(168, 166, 166);
 	margin-bottom: 20px;
+	margin-left: 2vw;
 }
 .image-container {
 	width: 75%;
