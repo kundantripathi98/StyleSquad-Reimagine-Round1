@@ -1947,7 +1947,7 @@ ul li:hover a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 24vw;
+	padding-top: 3vw;
 }
 
 .middle-footer2 p {
@@ -2350,7 +2350,7 @@ ul li:hover a {
 
 	#middle-footer {
 		gap: 14vw;
-		margin-top: 5vw;
+		margin-top: -9vw;
 		display: flex;
 		flex-direction: column;
 	}
