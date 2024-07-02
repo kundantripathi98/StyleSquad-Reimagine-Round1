@@ -194,6 +194,10 @@ main {
 	align-items: center;
 }
 
+.heroSection .seperatorLine{
+	margin-top: 7vw;
+}
+
 .videoDiv {
 	top: 0;
 	left: 0;
@@ -1113,9 +1117,13 @@ nav {
 
 .seperatorLine {
 	width: 97%;
-	margin: auto;
+	margin: 0 auto;
 	height: 1px;
 	background-color: #b8b7b7;
+}
+
+.seperatorLineHero{
+	display: none;
 }
 
 .secondSection {
@@ -1234,12 +1242,12 @@ img {
 	height: fit-content;
 }
 
-/* .thirdSection .seperatorLine{
+.thirdSection .seperatorLine{
 	width: 100%;
 	height: 0.2px;
 	margin-bottom: 6vw;
 	background-color: #b8b7b7;
-} */
+}
 
 .thirdSection .about {
 	width: 100%;
