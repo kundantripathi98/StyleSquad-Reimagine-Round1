@@ -107,8 +107,8 @@
 	}
 	.contact-link {
 		position: relative;
-		text-decoration: none; /* Remove default underline */
-		color: #000; /* Change color if needed */
+		text-decoration: none;
+		color: #000;
 	}
 	.contact-link::after {
 		content: "";

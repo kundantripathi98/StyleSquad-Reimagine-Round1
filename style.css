@@ -43,6 +43,15 @@
 	src: url(assets/fonts/RightGrotesk-Medium.otf);
 }
 
+@font-face {
+	font-family: aeonik;
+	src: url(assets/fonts/Aeonik-Regular.e07e9c8f.woff2);
+}
+
+@font-face {
+	font-family: NeueRoman;
+	src: url(assets/fonts/NeueHaasDisplayRoman.woff2);
+}
 ::-webkit-scrollbar {
 	width: 5px;
 	border-radius: 10px;
@@ -119,6 +128,7 @@ main {
 	width: 100%;
 	position: relative;
 	background-color: #0e0e0c;
+	z-index: 895;
 }
 
 .progressBar {
@@ -1614,7 +1624,6 @@ img {
 	overflow: hidden;
 	color: white;
 }
-
 .container {
 	padding-top: 5vw;
 	display: flex;
@@ -1643,6 +1652,8 @@ img {
 	line-height: 1.5;
 	margin-bottom: 20px;
 	margin-top: 71px;
+	font-family: "aeonik";
+	color: white;
 	/* width: 80%; */
 }
 
@@ -1692,18 +1703,29 @@ footer h1 {
 
 footer {
 	cursor: pointer;
-	width: 97%;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 120px;
+	position: fixed;
+	z-index: 890;
+	overflow: hidden;
+	bottom: 0;
+	background-color: #000;
+	padding: 1.7vw;
+}
+.footer-wrapper {
+	height: 80vw;
+	width: 100%;
+	background-color: #000;
 }
 
 .header-top {
 	display: flex;
 	flex-direction: column;
-	gap: 1.2vw;
+	gap: 0.7vw;
 	/* flex: 1; */
 }
 
@@ -1717,12 +1739,12 @@ footer {
 .header-top .main-heading {
 	position: absolute;
 	z-index: 9999;
-	font-size: 10.9vw;
-	left: 10.67%;
-	/* top: 17%; */
-	scale: 1.27;
+	font-size: 14.9vw;
+	left: 0.69%;
+	top: 11%;
 	font-weight: 400;
 	color: #e3e9e8;
+	font-family: NeueRoman;
 }
 
 .header-top p {
@@ -1764,9 +1786,26 @@ footer {
 	padding: 0;
 }
 .header-top a {
-	text-decoration: underline;
+	/* text-decoration: underline; */
 	font-size: 1.87vw;
 	color: white;
+	font-family: aeonik;
+	width: 43%;
+}
+.mail-footer {
+	position: relative;
+	text-decoration: none;
+	color: #000;
+}
+.mail-footer::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	width: 87.7%;
+	height: 2px;
+	background-color: white;
+	margin-left: 0.5vh;
 }
 
 .header-top a span svg {
@@ -1784,6 +1823,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+	font-family: grotesk2;
 }
 
 .section1 p {
@@ -1813,7 +1853,7 @@ footer {
 .section1 .navi p {
 	text-transform: capitalize;
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 400;
 }
 
 #middle-footer .section2 {
@@ -1834,10 +1874,14 @@ footer {
 .call1 p:nth-child(1) {
 	text-transform: uppercase;
 	font-size: 21px;
+	opacity: 0.8;
+	font-weight: 500;
 }
 
 .call1 p:nth-child(2) {
 	font-size: 18px;
+	font-weight: 300;
+	opacity: 1;
 }
 
 .social {
@@ -1866,7 +1910,7 @@ ul li::after {
 	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: #aeb1b1;
+	background-color: #ffffff;
 	font-weight: 100;
 	position: absolute;
 	left: 0;
@@ -1885,7 +1929,7 @@ ul li a {
 	position: relative;
 	color: #bbc5c4;
 	text-decoration: none;
-	font-family: neuhassmediu;
+	font-family: NeueRoman;
 	z-index: 9;
 	font-size: 1vw;
 	font-weight: 600;
@@ -1920,10 +1964,12 @@ ul li:hover a {
 	font-weight: 600;
 	color: #bbc5c4;
 	font-size: 1.6vw;
+	font-family: aeonik;
 }
 
 .middle-footer2 p {
 	margin-top: 20px;
+	font-family: NeueRoman;
 }
 
 .scrolling-text-container-footer {
@@ -1941,6 +1987,7 @@ ul li:hover a {
 	display: inline-block;
 	white-space: nowrap;
 	animation: scroll 40s linear infinite;
+	font-family: aeonik;
 }
 
 @keyframes scroll {
@@ -2040,13 +2087,12 @@ ul li:hover a {
 
 	.parent-nav .gap {
 		display: block;
-		display: fle;
 	}
 
 	.section1 .navi p {
 		text-transform: capitalize;
 		font-size: 24px;
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	#middle-footer .section2 {
@@ -2096,6 +2142,7 @@ ul li:hover a {
 	}
 	ul li a {
 		font-size: 22px;
+		font-family: NeueRoman;
 	}
 	.middle-footer2 p {
 		font-size: 24px;
