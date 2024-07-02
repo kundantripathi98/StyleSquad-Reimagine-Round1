@@ -1852,7 +1852,7 @@ footer {
 .parent-nav .navi {
 	display: flex;
 	flex-direction: column;
-	gap: 25px;
+	gap: 21px;
 }
 
 .section1 .navi p {
@@ -1966,10 +1966,11 @@ ul li:hover a {
 	object-position: center;
 }
 .middle-footer2 .middle-text {
-	font-weight: 600;
+	font-weight: 400;
 	color: #bbc5c4;
 	font-size: 1.6vw;
 	font-family: aeonik;
+	padding-top: 2vw;
 }
 
 .middle-footer2 p {
@@ -2473,7 +2474,7 @@ ul li:hover a {
 		font-size: 13px;
 	}
 	.middle-footer2 .middle-text {
-		font-weight: 600;
+		font-weight: 400;
 		padding: 0;
 		color: #bbc5c4;
 		font-size: 4vw;
