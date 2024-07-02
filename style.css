@@ -1718,7 +1718,7 @@ footer{
     z-index: 9999;
     font-size: 10.9vw;
     left: 10.67%;
-    top: -17%;
+    /* top: 17%; */
     scale: 1.27;
     font-weight: 400;
     color:#e3e9e8;
@@ -1928,7 +1928,7 @@ ul li:hover a{
     margin-top: 20px;
 }
 
-.scrolling-text-container {
+.scrolling-text-container-footer {
     margin-top: 1vw;
     width: 100%;
     overflow: hidden;
@@ -1936,10 +1936,10 @@ ul li:hover a{
     border-top: 1px solid white;
     padding: 10px 6px 6px 6px;
     box-sizing: border-box;
-    background-color: #111; /* Adjust as needed */
+	color: white;
 }
 
-.scrolling-text {
+.scrolling-text-footer {
     display: inline-block;
     white-space: nowrap;
     animation: scroll 40s linear infinite;
@@ -1960,6 +1960,30 @@ ul li:hover a{
     footer{
         height: auto;
     }
+	.scrolling-text-container-footer {
+		margin-top: 1vw;
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		border-top: 1px solid white;
+		padding: 10px 6px 6px 6px;
+		box-sizing: border-box;
+	}
+	
+	.scrolling-text-footer {
+		display: inline-block;
+		white-space: nowrap;
+		animation: scroll 40s linear infinite;
+	}
+	
+	@keyframes scroll {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
 }
 
 
@@ -2236,7 +2260,7 @@ ul li:hover a{
         margin-top:0px;
     }
 
-    .scrolling-text-container {
+    .scrolling-text-container-footer {
         margin-top: .1vw;
         width: 100%;
         overflow: hidden;
@@ -2247,7 +2271,7 @@ ul li:hover a{
         background-color: #111; /* Adjust as needed */
     }
     
-    .scrolling-text {
+	.scrolling-text-footer {
         display: inline-block;
         white-space: nowrap;
         animation: scroll 40s linear infinite;
@@ -2410,7 +2434,7 @@ ul li:hover a{
         margin-top:0px;
     }
 
-    .scrolling-text-container {
+    .scrolling-text-container-footer {
         margin-top: .1vw;
         width: 100%;
         overflow: hidden;
@@ -2422,7 +2446,7 @@ ul li:hover a{
         /* background-color: #111; Adjust as needed */
     }
     
-    .scrolling-text {
+    .scrolling-text-footer {
         display: inline-block;
 		color: white;
         white-space: nowrap;

@@ -963,3 +963,8 @@ let responsiveJs = () => {
 };
 
 responsiveJs();
+
+// footer
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
