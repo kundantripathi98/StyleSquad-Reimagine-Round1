@@ -1548,11 +1548,11 @@ img {
 	transition: all 0.5s cubic-bezier(0.5, 1, 0.75, 1);
 }
 
-/* .newsCard:hover .description h1, .newsCard:hover .description .no, .newsCard:hover .description p, .newsCard:hover #date{color: #0E0E0C;}
+.newsCard:hover .description h1, .newsCard:hover .description .no, .newsCard:hover .description p, .newsCard:hover #date{color: #0E0E0C;}
 
 .newsCard:hover .colorDiv{
 	transform: translateY(0%);
-} */
+}
 
 .description {
 	display: flex;
@@ -1703,7 +1703,6 @@ footer h1 {
 /* footer section */
 
 footer {
-	cursor: pointer;
 	width: 100%;
 	margin: auto;
 	display: flex;
