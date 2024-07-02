@@ -1,3 +1,16 @@
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+	console.log(e);
+});
+
+function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 const menuBtn = document.querySelector("#menuBtn");
 const video = document.querySelector("video");
 
@@ -812,9 +825,8 @@ heroSectionAnimation();
 
 thirdSectionAnimation();
 
-
-if(window.innerWidth<768){
-	mobileThirdSectionAnimation()
+if (window.innerWidth < 768) {
+	mobileThirdSectionAnimation();
 	console.log(window.innerWidth);
 }
 
@@ -941,7 +953,6 @@ let responsiveJs = () => {
 		});
 	}
 
-
 	function handleResize() {
 		const mediaQuery = window.matchMedia("(max-width: 768px)");
 
@@ -959,5 +970,5 @@ responsiveJs();
 
 // footer
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+	window.scrollTo({ top: 0, behavior: "smooth" });
 }

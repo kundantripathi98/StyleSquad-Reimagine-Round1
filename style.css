@@ -84,8 +84,10 @@ body {
 	width: 100%;
 	position: relative;
 	cursor: none;
-	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
 }
 
 .cursor-dot {
