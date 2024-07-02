@@ -1947,7 +1947,7 @@ ul li:hover a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 2vw;
+	padding-top: 24vw;
 }
 
 .middle-footer2 p {
@@ -2350,7 +2350,7 @@ ul li:hover a {
 
 	#middle-footer {
 		gap: 14vw;
-		margin-top: -11vw;
+		margin-top: 5vw;
 		display: flex;
 		flex-direction: column;
 	}
@@ -2358,7 +2358,7 @@ ul li:hover a {
 	#middle-footer .section1 {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 8px;
 	}
 
 	.section1 p {
@@ -2373,6 +2373,7 @@ ul li:hover a {
 	.section1 .tags {
 		display: block;
 		font-weight: 100;
+		font-size: 3vw;
 	}
 	.section1 .parent-nav {
 		justify-content: left;
@@ -2465,7 +2466,7 @@ ul li:hover a {
 		height: 150px;
 	}
 	ul li a {
-		font-size: 18px;
+		font-size: 14px;
 		padding: 9vw 2vw;
 	}
 	.middle-footer2 p {
