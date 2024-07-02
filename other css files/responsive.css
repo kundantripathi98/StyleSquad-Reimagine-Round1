@@ -435,32 +435,39 @@
 	}
 
 	/* third section */
-	.thirdSection .seperatorLine {
+	.mobileThirdSection .seperatorLine {
 		width: 100%;
 		background-color: #b8b7b7;
 	}
 
 	.thirdSection {
-		width: 92%;
+		display: none;
 	}
 
-	.thirdSection .sectionTitle {
+	.mobileThirdSection{
+		display: block;
+		width: 92%;
+		margin: auto;
+	}
+
+	.mobileThirdSection .sectionTitle {
 		margin-top: 16vw;
 	}
 
-	.thirdSection .about {
+	.mobileThirdSection .about {
 		width: 100%;
 		height: fit-content;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+		/* gap: 50px; */
 		margin: 0 auto 16vw auto;
 		border-radius: 10px;
 		overflow: hidden;
 	}
 
-	.center {
+	.mobileThirdSection .center {
 		width: 100%;
 		height: 100%;
 		padding-left: 0px;
@@ -469,14 +476,6 @@
 	.information {
 		width: 100%;
 		gap: 30px;
-	}
-
-	.para {
-		display: none;
-	}
-
-	.mobilePara {
-		display: block;
 	}
 
 	#mobilePower,
@@ -492,13 +491,13 @@
 		align-items: center;
 	}
 
-	.verticleBar1 {
+	.mobileVerticleBar1 {
 		width: 2px;
 		height: 10vw;
 		background-color: orangered;
 	}
-	.verticleBar2,
-	.verticleBar3 {
+	.mobileVerticleBar2,
+	.mobileVerticleBar3 {
 		width: 2px;
 		height: 10vw;
 		background-color: rgb(80, 74, 69);
@@ -510,11 +509,14 @@
 		color: rgb(80, 74, 69);
 	}
 
-	.banner {
-		display: none;
+	.para {
+		font-size: 18px;
+		letter-spacing: 1px;
+		font-family: "Big Shoulders Text";
+		color: white;
 	}
 
-	.mobileBanner {
+	.banner {
 		display: block;
 		width: 100%;
 		height: 380px;
@@ -523,7 +525,7 @@
 		text-align: right;
 		overflow: hidden;
 	}
-	.mobileBanner img {
+	.banner img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -549,11 +551,11 @@
 		align-items: start;
 	}
 
-	.overlay3 .mobileTopic h1 {
+	.overlay3 .topic h1 {
 		font-size: 21px;
 		color: rgb(206, 206, 206);
 	}
-	.overlay3 .mobileTopic p {
+	.overlay3 .topic p {
 		font-size: 18px;
 		color: rgb(121, 121, 120);
 	}

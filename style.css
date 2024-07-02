@@ -1254,7 +1254,11 @@ img {
 	height: fit-content;
 }
 
-.thirdSection .seperatorLine {
+.mobileThirdSection{
+	display: none;
+}
+
+.thirdSection .seperatorLine{
 	width: 100%;
 	height: 0.2px;
 	margin-bottom: 6vw;
@@ -1290,9 +1294,6 @@ img {
 	gap: 50px;
 }
 
-.mobilePara {
-	display: none;
-}
 
 .infoTitle {
 	display: flex;
