@@ -127,7 +127,7 @@ a {
 main {
 	width: 100%;
 	position: relative;
-	background-color: #030303;
+	background-color: #0e0e0c;
 	z-index: 895;
 }
 
@@ -2346,7 +2346,6 @@ ul li:hover a {
 		flex-direction: column;
 		height: 100vh;
 		padding-left: 2vw;
-		background-color: #001514;
 	}
 
 	#middle-footer {
