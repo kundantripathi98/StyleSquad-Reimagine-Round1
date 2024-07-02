@@ -87,15 +87,54 @@
 	}
 
 	/* Navbar Ends*/
+	.nav-responsive {
+		display: block;
+		height: 10%;
+		/* background-color: red; */
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 2vw;
+		padding-left: 1vw;
+		font-family: "Space Mono";
+	}
+	.nav-responsive .logo-phone {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding-top: 2vh;
+	}
+	.contact-link {
+		position: relative;
+		text-decoration: none; /* Remove default underline */
+		color: #000; /* Change color if needed */
+	}
+	.contact-link::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		width: 95%;
+		height: 1px;
+		background-color: white;
+		margin-left: 0.1vh;
+	}
+	.nav-responsive a {
+		text-decoration: none;
+		color: white;
+		font-size: 5vw;
+	}
 	.heroSection {
-		height: 106vh;
+		height: 100vh;
 		width: 92%;
 		border-bottom: 1px solid #b8b7b7;
 		margin: auto;
 	}
 	.hero-tagline {
-		margin-top: 34vw;
+		margin-top: 9vw;
 		padding: 4vw;
+		margin-left: 7vw;
 	}
 	.hero-text {
 		display: none;
@@ -111,12 +150,12 @@
 	.hero-video {
 		position: relative;
 		height: 50vh;
-		width: 101vw;
+		width: 98vw;
 		top: 26%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding-left: 6vw;
+		margin-left: 5vw;
 	}
 	.hero-video video {
 		position: relative;
@@ -171,13 +210,13 @@
 		z-index: 1000;
 		position: relative;
 		margin-left: 10vw;
-		margin-top: 27vw;
+		margin-top: 31vw;
 	}
 	.circle-text i {
 		color: white;
 		opacity: 0.5;
 		font-size: 30px;
-		margin-top: 26vh;
+		margin-top: 29vh;
 		margin-left: 19vw;
 	}
 
@@ -338,7 +377,7 @@
 
 	.modelSlider {
 		margin-top: 10vh;
-		height: 69vh;
+		height: 54vh;
 	}
 
 	.sectionTitle h1 {
@@ -391,7 +430,7 @@
 		width: 92%;
 	}
 
-	.heroSection .seperatorLine{
+	.heroSection .seperatorLine {
 		display: none;
 	}
 
