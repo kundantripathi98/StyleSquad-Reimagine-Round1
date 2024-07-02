@@ -1254,11 +1254,11 @@ img {
 	height: fit-content;
 }
 
-.mobileThirdSection{
+.mobileThirdSection {
 	display: none;
 }
 
-.thirdSection .seperatorLine{
+.thirdSection .seperatorLine {
 	width: 100%;
 	height: 0.2px;
 	margin-bottom: 6vw;
@@ -1293,7 +1293,6 @@ img {
 	flex-direction: column;
 	gap: 50px;
 }
-
 
 .infoTitle {
 	display: flex;
@@ -1548,9 +1547,14 @@ img {
 	transition: all 0.5s cubic-bezier(0.5, 1, 0.75, 1);
 }
 
-.newsCard:hover .description h1, .newsCard:hover .description .no, .newsCard:hover .description p, .newsCard:hover #date{color: #0E0E0C;}
+.newsCard:hover .description h1,
+.newsCard:hover .description .no,
+.newsCard:hover .description p,
+.newsCard:hover #date {
+	color: #0e0e0c;
+}
 
-.newsCard:hover .colorDiv{
+.newsCard:hover .colorDiv {
 	transform: translateY(0%);
 }
 
@@ -1718,7 +1722,7 @@ footer {
 	padding: 0 1.7vw;
 }
 .footer-wrapper {
-	height: 80vw;
+	height: 100vh;
 	width: 100%;
 	background-color: #000;
 }
@@ -2328,23 +2332,25 @@ ul li:hover a {
 
 @media (max-width: 480px) {
 	.header-top .main-heading {
-		font-size: 9vw;
+		font-size: 9.5vw;
 		position: absolute;
-		top: -2%;
+		top: 2%;
 		left: 18%;
 		scale: 1.56;
 	}
 	footer {
 		cursor: pointer;
-		width: 97%;
+		width: 100%;
 		margin: auto;
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
+		padding-left: 2vw;
 	}
 
 	#middle-footer {
-		margin-top: 0vw;
+		gap: 14vw;
+		margin-top: -11vw;
 		display: flex;
 		flex-direction: column;
 	}
@@ -2366,12 +2372,13 @@ ul li:hover a {
 	}
 	.section1 .tags {
 		display: block;
+		font-weight: 100;
 	}
 	.section1 .parent-nav {
 		justify-content: left;
 		display: flex;
 		align-items: center;
-		gap: 3px;
+		gap: 47px;
 	}
 
 	.parent-nav .navi {
@@ -2423,17 +2430,21 @@ ul li:hover a {
 	.call1 p:nth-child(1) {
 		text-transform: uppercase;
 		font-size: 17px;
-		margin-top: 13px;
+		margin-top: 15px;
+		font-weight: 300;
+		font-weight: 300;
 	}
 
 	.call1 p:nth-child(2) {
 		font-size: 14px;
+		font-weight: 300;
 	}
 
 	.social {
 		display: flex;
 		justify-content: flex-start;
 		margin-top: 10px;
+		gap: 6vw;
 	}
 
 	ul {
@@ -2441,7 +2452,7 @@ ul li:hover a {
 		align-items: flex-start;
 		flex-direction: column;
 		justify-content: flex-start;
-		gap: 2vw;
+		gap: 3vw;
 	}
 
 	.header-top p {
@@ -2455,6 +2466,7 @@ ul li:hover a {
 	}
 	ul li a {
 		font-size: 18px;
+		padding: 9vw 2vw;
 	}
 	.middle-footer2 p {
 		font-size: 13px;

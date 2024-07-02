@@ -444,7 +444,7 @@
 		display: none;
 	}
 
-	.mobileThirdSection{
+	.mobileThirdSection {
 		display: block;
 		width: 92%;
 		margin: auto;
@@ -750,5 +750,11 @@
 
 	.title {
 		font-size: 28px;
+	}
+	.header-top a {
+		width: 83%;
+	}
+	.images {
+		width: 246%;
 	}
 }
