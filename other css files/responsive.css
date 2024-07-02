@@ -96,53 +96,65 @@
 		margin-top: 34vw;
 		padding: 4vw;
 	}
-	.hero-text .heading {
+	.hero-text {
+		display: none;
+	}
+
+	.hero-text-responsive {
 		position: relative;
+		line-height: 2vw;
+	}
+	.hero-text .heading {
+		display: none;
 	}
 	.hero-video {
 		position: relative;
 		height: 50vh;
 		width: 101vw;
-		top: 42%;
+		top: 26%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-left: 6vw;
 	}
 	.hero-video video {
 		position: relative;
 		height: 100%;
-		width: 92%;
+		width: 98%;
 	}
 
-	.hero-text {
+	.hero-text-responsive {
 		display: flex;
 		flex-direction: column;
-		margin-top: 21vw;
+		/* margin-top: 21vw; */
 		/* background-color: red; */
 		height: 60vw;
 		width: 100%;
-		padding-left: 18vw;
+		padding-left: 4vw;
 		position: relative;
 		justify-content: center;
 		/* border: 1px solid yellow; */
 	}
 
-	.hero-text h1 {
+	.hero-text-responsive h1 {
 		display: flex;
 		flex-direction: column;
 		color: #e4e1d9;
 		/* transform: translateY(100px); */
 		text-transform: uppercase;
 		/* font-family: molitor; */
-		line-height: 191px;
+		line-height: 16vw;
 		font-weight: 900;
 		margin-right: 16vw;
 	}
 
-	.hero-text h1:nth-child(1) {
+	.hero-text-responsive h1:nth-child(1) {
 		font-family: "Big Shoulders Text";
 		font-size: 17vw;
 		position: relative;
 	}
 
-	.hero-text h1:nth-child(2) {
+	.hero-text-responsive h1:nth-child(2) {
 		font-family: "Big Shoulders Text";
 		font-size: 19.1vw;
 		margin-top: -16vh;
@@ -157,15 +169,15 @@
 		scale: 3.3;
 		z-index: 1000;
 		position: relative;
-		margin-left: 6vw;
-		margin-top: 32vw;
+		margin-left: 10vw;
+		margin-top: 27vw;
 	}
 	.circle-text i {
 		color: white;
 		opacity: 0.5;
 		font-size: 30px;
-		margin-top: 34vh;
-		margin-left: 12vw;
+		margin-top: 26vh;
+		margin-left: 19vw;
 	}
 
 	#menuBtn {
@@ -333,7 +345,7 @@
 		font-size: 36px;
 	}
 
-	.modelTitle{
+	.modelTitle {
 		padding-left: 15px;
 	}
 
@@ -380,6 +392,7 @@
 	}
 	.seperatorLine {
 		width: 92%;
+		margin-top: 20vh;
 	}
 
 	/* third section */
@@ -546,54 +559,54 @@
 		display: none;
 	}
 
-    .mobileFifthSection {
+	.mobileFifthSection {
 		display: flex;
 		height: fit-content;
-		flex-direction:column; /* just for now */
+		flex-direction: column; /* just for now */
 		width: fit-content;
-        overflow: auto;
-        position: relative;
-        width: 92%;
-	    margin: 18vw auto;
-        gap: 14vw;
+		overflow: auto;
+		position: relative;
+		width: 92%;
+		margin: 18vw auto;
+		gap: 14vw;
 	}
 
-    .fifth-title{
-        display: flex;
-        position: sticky;
-	    gap: 20px;
-        top: 0;
-        left: 0;
+	.fifth-title {
+		display: flex;
+		position: sticky;
+		gap: 20px;
+		top: 0;
+		left: 0;
 
-	    flex-direction: column;
-	    align-items: start;
-    }
+		flex-direction: column;
+		align-items: start;
+	}
 
-    .fifth-title h4{
-        font-size: 4.2vw;
-        font-family: "Syne";
-        color: rgb(161, 156, 156);
-    }
-    
-    .fifth-title h1{
-        text-align: left;
-        color: white;
-        font-size: 11vw;
-        font-weight: 900;
-        line-height: 100%;
-        font-family: "Space Mono";
-    }
+	.fifth-title h4 {
+		font-size: 4.2vw;
+		font-family: "Syne";
+		color: rgb(161, 156, 156);
+	}
 
-    .cardContainer{
-        display: flex;
-        align-items: center;
-        gap: 8vw;
-        width: fit-content;
-        overflow-x: auto;
-        height: fit-content;
-    }
+	.fifth-title h1 {
+		text-align: left;
+		color: white;
+		font-size: 11vw;
+		font-weight: 900;
+		line-height: 100%;
+		font-family: "Space Mono";
+	}
 
-    /* .cardContainer::-webkit-scrollbar {
+	.cardContainer {
+		display: flex;
+		align-items: center;
+		gap: 8vw;
+		width: fit-content;
+		overflow-x: auto;
+		height: fit-content;
+	}
+
+	/* .cardContainer::-webkit-scrollbar {
         width: 5px;
         border-radius: 10px;
     }
@@ -612,88 +625,88 @@
         border-radius: 10px;
       } */
 
-    .newsCard{
-        width: 82vw;
-        height: 85vh;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        justify-content: space-between;
-        overflow: hidden;
-    }
+	.newsCard {
+		width: 82vw;
+		height: 85vh;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		justify-content: space-between;
+		overflow: hidden;
+	}
 
-    .description{
-        gap: 5.5vw;
-    }
-    
-    .description .no{
-        color: white;
-        font-family: "Syne";
-        font-size: 4vw;
-    }
+	.description {
+		gap: 5.5vw;
+	}
 
-    #date{
-        font-size: 5vw;
-        text-align: end;
-        font-family: "Big Shoulders Text";
-        font-weight: 700;
-        color: rgb(194, 190, 190);
-    }
+	.description .no {
+		color: white;
+		font-family: "Syne";
+		font-size: 4vw;
+	}
 
-    .description h1{
-        font-size: 7.75vw;
-    }
+	#date {
+		font-size: 5vw;
+		text-align: end;
+		font-family: "Big Shoulders Text";
+		font-weight: 700;
+		color: rgb(194, 190, 190);
+	}
 
-    .description p{
-        font-size: 4.5vw;
-    }
-	
-	 .sixthSection .seperatorLine h1{
+	.description h1 {
+		font-size: 7.75vw;
+	}
+
+	.description p {
+		font-size: 4.5vw;
+	}
+
+	.sixthSection .seperatorLine h1 {
 		padding-left: 0;
-	 }
-     
-        .container {
-			padding: 13vw 0;
-            gap: 8vw;
-			width: 92%;
-        }
+	}
 
-        .sixthSection .title {
-            font-size: 3vw;
-            margin-bottom: 20px;
-			text-align: right;
-            float: right;
-        }
-    
-        .text h1 {
-            font-size: 22px;
-            padding-left: 3px;
-        }
-    
-        .text .num {
-            font-size: 4.5vw;
-			font-family: "Syne";
-        }
-    
-        .content {
-            padding-right: 0;
-            margin-top: 4px;
-        }
-    
-        .image-container {
-            width: 100%;
-            height: 200px;
-            margin: auto;
-            object-fit: cover;
-            object-position: center;
-        }
-        .title-owner{
-            font-size: 45px;
-        }
-    
-        .title{
-            font-size: 28px;
-        }
-  }
+	.container {
+		padding: 13vw 0;
+		gap: 8vw;
+		width: 92%;
+	}
+
+	.sixthSection .title {
+		font-size: 3vw;
+		margin-bottom: 20px;
+		text-align: right;
+		float: right;
+	}
+
+	.text h1 {
+		font-size: 22px;
+		padding-left: 3px;
+	}
+
+	.text .num {
+		font-size: 4.5vw;
+		font-family: "Syne";
+	}
+
+	.content {
+		padding-right: 0;
+		margin-top: 4px;
+	}
+
+	.image-container {
+		width: 100%;
+		height: 200px;
+		margin: auto;
+		object-fit: cover;
+		object-position: center;
+	}
+	.title-owner {
+		font-size: 45px;
+	}
+
+	.title {
+		font-size: 28px;
+	}
+}

@@ -1,30 +1,29 @@
 const menuBtn = document.querySelector("#menuBtn");
 const video = document.querySelector("video");
 
-window.addEventListener('load', () => {
-    if (window.location.hash) {
-        // Remove the hash from the URL
-        history.replaceState(null, null, window.location.href.split('#')[0]);
+window.addEventListener("load", () => {
+	if (window.location.hash) {
+		// Remove the hash from the URL
+		history.replaceState(null, null, window.location.href.split("#")[0]);
 
-        // Ensure the scroll to top happens after the browser finishes loading
-        const scrollToTop = () => {
-            console.log('Scrolling to top');
-            window.scrollTo(0, 0);
-        };
+		// Ensure the scroll to top happens after the browser finishes loading
+		const scrollToTop = () => {
+			console.log("Scrolling to top");
+			window.scrollTo(0, 0);
+		};
 
-        const ensureScrollToTop = () => {
-            console.log('Ensuring scroll to top');
-            requestAnimationFrame(() => {
-                setTimeout(scrollToTop, 50); // Slightly longer delay
-            });
-        };
+		const ensureScrollToTop = () => {
+			console.log("Ensuring scroll to top");
+			requestAnimationFrame(() => {
+				setTimeout(scrollToTop, 50); // Slightly longer delay
+			});
+		};
 
-        ensureScrollToTop();
-        setTimeout(ensureScrollToTop, 200); // Attempt again after 200ms for robustness
-    }
+		ensureScrollToTop();
+		setTimeout(ensureScrollToTop, 200); // Attempt again after 200ms for robustness
+	}
 
 	const scrollToTop = () => {
-
 		window.scrollTo(0, 0);
 	};
 
@@ -33,7 +32,7 @@ window.addEventListener('load', () => {
 });
 
 // gsap.to(".heroSection", {
-// 	scrollTrigger: { 
+// 	scrollTrigger: {
 // 		trigger: ".heroSection",
 // 		start: "top top",
 // 		end: () =>
@@ -51,70 +50,72 @@ window.addEventListener('load', () => {
 // 	ease: "power3.out",
 // });
 
-let scrollToNextSection = ()=>{
-	document.getElementById('models').scrollIntoView({ behavior: 'smooth' });
+let scrollToNextSection = () => {
+	document.getElementById("models").scrollIntoView({ behavior: "smooth" });
 };
 
 let progressScrollBar = () => {
 	let filled = document.querySelector(".filled");
 
-	function update(){
-		filled.style.width = `${((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)}%`;
+	function update() {
+		filled.style.width = `${
+			(window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+		}%`;
 		requestAnimationFrame(update);
 	}
 	update();
-}
+};
 
-let scrollTrigger = () =>{
+let scrollTrigger = () => {
 	let tl = gsap.timeline({
-		scrollTrigger:{
-			trigger: '#dealership',
-			start: '10% 50%',
-			end: '50% 50%',
+		scrollTrigger: {
+			trigger: "#dealership",
+			start: "10% 50%",
+			end: "50% 50%",
 			// markers: true,
 			scrub: 1,
 		},
-	})
-	
+	});
+
 	// tl.to(".text-area-hover",{
 	// 	width: '100%',
 	// 	duration: 1
 	// })
-	tl.from("#dealership button",{
+	tl.from("#dealership button", {
 		opacity: 0,
-		scale: .2,
+		scale: 0.2,
 		ease: "power4.inOut",
-		duration: 2
-	})
-}
+		duration: 2,
+	});
+};
 
 let smoothScroll = () => {
-	const lenis = new Lenis()
+	const lenis = new Lenis();
 
-	lenis.on('scroll', (e) => {
-	console.log(e)
-	})
+	lenis.on("scroll", (e) => {
+		console.log(e);
+	});
 
 	function raf(time) {
-	lenis.raf(time)
-	requestAnimationFrame(raf)
-	};
+		lenis.raf(time);
+		requestAnimationFrame(raf);
+	}
 
 	requestAnimationFrame(raf);
-}
+};
 
-let customCursor = ()=>{
+let customCursor = () => {
 	const cursorDot = document.querySelector(".cursor-dot");
 	const cursorOutline = document.querySelector(".cursor-outline");
 
-	setTimeout(()=>{
+	setTimeout(() => {
 		cursorDot.style.opacity = 1;
 		cursorOutline.style.opacity = 1;
-	},4000)
+	}, 4000);
 
-	window.addEventListener("mousemove", (e)=>{
-		const posX =e.clientX;
-		const posY =e.clientY;
+	window.addEventListener("mousemove", (e) => {
+		const posX = e.clientX;
+		const posY = e.clientY;
 
 		cursorDot.style.left = `${posX}px`;
 		cursorDot.style.top = `${posY}px`;
@@ -122,12 +123,15 @@ let customCursor = ()=>{
 		cursorOutline.style.left = `${posX}px`;
 		cursorOutline.style.top = `${posY}px`;
 
-		cursorOutline.animate({
-			left: `${posX}px`,
-			top: `${posY}px`
-		}, {duration: 500, fill: "forwards"})
-	})
-}
+		cursorOutline.animate(
+			{
+				left: `${posX}px`,
+				top: `${posY}px`,
+			},
+			{ duration: 500, fill: "forwards" }
+		);
+	});
+};
 
 let loadingAnimation = () => {
 	const loaderNum = document.querySelector(".loaderNum");
@@ -190,10 +194,12 @@ let loadingAnimation = () => {
 	gsapAnimation();
 };
 
-function afterLoadingAnimation(){
-	setTimeout(()=>{video.play()}, 3500);
+function afterLoadingAnimation() {
+	setTimeout(() => {
+		video.play();
+	}, 3500);
 
-	setTimeout(()=>{
+	setTimeout(() => {
 		// const secondSection = document.querySelector(".secondSection");
 		// const thirdSection = document.querySelector(".thirdSection");
 		// const  circleDiv = document.querySelector("#circle");
@@ -215,26 +221,26 @@ function afterLoadingAnimation(){
 		// thirdSection.classList.add('visible');
 		// // cursor();
 
-		document.body.classList.add('show-scrollbar');
+		document.body.classList.add("show-scrollbar");
 		scrollTrigger();
-	},4000)
+	}, 4000);
 }
 
 let heroSectionAnimation = () => {
-	gsap.to('.boundingelem',{
+	gsap.to(".boundingelem", {
 		y: 0,
 		ease: Expo.easeInOut,
 		opacity: 1,
 		delay: 3,
 		duration: 1.3,
-		stagger: .3
-	})
+		stagger: 0.3,
+	});
 
 	let timeline = gsap.timeline();
 
 	gsap.registerPlugin(ScrollTrigger);
 	const navbar = document.querySelector("nav");
-	const navLinks = navbar.querySelectorAll('.nav-links a');
+	const navLinks = navbar.querySelectorAll(".nav-links a");
 
 	gsap.from("nav", {
 		scale: 0.8,
@@ -243,110 +249,123 @@ let heroSectionAnimation = () => {
 		delay: 3.1,
 		ease: Expo.easeInOut,
 		onComplete: () => {
-            ScrollTrigger.create({
-				trigger: '.modelSlider',
-				start: 'top top',
-				end: 'bottom top',
+			ScrollTrigger.create({
+				trigger: ".modelSlider",
+				start: "top top",
+				end: "bottom top",
 				onEnter: () => {
-					gsap.to(navbar, { width: '5%', duration: 0.5 });
+					gsap.to(navbar, { width: "5%", duration: 0.5 });
 					gsap.to(navLinks, { opacity: 0, duration: 0.5 });
 				},
 				onLeaveBack: () => {
-					gsap.to(navbar, { width: '97%', duration: 0.5 });
+					gsap.to(navbar, { width: "97%", duration: 0.5 });
 					gsap.to(navLinks, { opacity: 1, duration: 0.5 });
-				}
+				},
 			});
-	
-			navbar.addEventListener('mouseenter', () => {
-				gsap.to(navbar, { width: '97%', duration: 0.5 });
+
+			navbar.addEventListener("mouseenter", () => {
+				gsap.to(navbar, { width: "97%", duration: 0.5 });
 				gsap.to(navLinks, { opacity: 1, duration: 0.5 });
 			});
-	
-			navbar.addEventListener('mouseleave', () => {
-				if (window.scrollY >= document.querySelector('.modelSlider').offsetTop) {
-					gsap.to(navbar, { width: '5%', duration: 0.5 });
+
+			navbar.addEventListener("mouseleave", () => {
+				if (
+					window.scrollY >= document.querySelector(".modelSlider").offsetTop
+				) {
+					gsap.to(navbar, { width: "5%", duration: 0.5 });
 					gsap.to(navLinks, { opacity: 0, duration: 0.5 });
 				}
 			});
-        }
+		},
 	});
-	
-	timeline.from('.link', {
-		y: -10,
-		opacity: 0,
-		duration: 1,
-		delay: 3.5,
-		ease: Expo.easeInOut,
-		stagger: 0.1
-	})
-	.from(".heading", {
-		y: "100%",
-		ease: Expo.easeInOut,
-		opacity: 0,
-		stagger: .3,
-		duration: 1,
-	})
-	.addLabel("simultaneousStart", "+=0")
-	.from(".circle-text", {
-		x: "-=100%",
-		ease: Expo.easeInOut,
-		opacity: 0,
-		duration: 1,
-	}, "simultaneousStart")
-	.from(".hero-video", {
-		x: "100%",
-		ease: Expo.easeInOut,
-		opacity: 0,
-		duration: 1,
-	}, "simultaneousStart")
-	.from("#menuBtn", {
-		y: "100%",
-		ease: Expo.easeInOut,
-		opacity: 0,
-		duration: 1,
-	}, "simultaneousStart");
-	
 
-}
+	timeline
+		.from(".link", {
+			y: -10,
+			opacity: 0,
+			duration: 1,
+			delay: 3.5,
+			ease: Expo.easeInOut,
+			stagger: 0.1,
+		})
+		.from(".heading", {
+			y: "100%",
+			ease: Expo.easeInOut,
+			opacity: 0,
+			stagger: 0.3,
+			duration: 1,
+		})
+		.addLabel("simultaneousStart", "+=0")
+		.from(
+			".circle-text",
+			{
+				x: "-=100%",
+				ease: Expo.easeInOut,
+				opacity: 0,
+				duration: 1,
+			},
+			"simultaneousStart"
+		)
+		.from(
+			".hero-video",
+			{
+				x: "100%",
+				ease: Expo.easeInOut,
+				opacity: 0,
+				duration: 1,
+			},
+			"simultaneousStart"
+		)
+		.from(
+			"#menuBtn",
+			{
+				y: "100%",
+				ease: Expo.easeInOut,
+				opacity: 0,
+				duration: 1,
+			},
+			"simultaneousStart"
+		);
+};
 
 let modelSlider = () => {
 	let currentIndex = 1;
 	let totalSlides = 9;
 
 	const updateActiveSlides = () => {
-		document.querySelectorAll(".title").forEach((el, index)=>{
-			if(index === currentIndex){
+		document.querySelectorAll(".title").forEach((el, index) => {
+			if (index === currentIndex) {
 				el.classList.add("active");
-			}else{
+			} else {
 				el.classList.remove("active");
 			}
-		})
-	}
+		});
+	};
 
 	const handleSlider = () => {
-		if(currentIndex < totalSlides){
+		if (currentIndex < totalSlides) {
 			currentIndex++;
-		} else{
+		} else {
 			currentIndex = 1;
 		}
 
 		gsap.to(".slide-titles", {
-			onStart: ()=>{
-				setTimeout(()=>{
+			onStart: () => {
+				setTimeout(() => {
 					updateActiveSlides();
 				}, 100);
 
-				if(currentIndex + 1 < 10){
+				if (currentIndex + 1 < 10) {
 					updateImages(currentIndex + 1);
-				}else{
+				} else {
 					updateImages(1);
 				}
 			},
-			x: `-${(currentIndex - 1) * 8.690}%`,
+			x: `-${(currentIndex - 1) * 8.69}%`,
 			duration: 2,
-			ease: "power4.out"
+			ease: "power4.out",
 		});
-	}
+	};
 
 	const updateImages = (imgNumber) => {
 		let imgSrc = `./assets/images/models/car${imgNumber}-.jpg`;
@@ -365,49 +384,49 @@ let modelSlider = () => {
 			duration: 1,
 			ease: "power4.out",
 			onComplete: trimExcessImages,
-		})
-	}
+		});
+	};
 
 	const trimExcessImages = () => {
 		const selectors = [".img-top", ".img-bottom"];
 
-		selectors.forEach((selector)=>{
+		selectors.forEach((selector) => {
 			const container = document.querySelector(selector);
 			const images = Array.from(container.querySelectorAll("img"));
 			const excessCount = images.length - 1;
-			
-			if(excessCount > 0){
-				images.slice(0, excessCount).forEach((image)=> container.removeChild(image));
-			}
-		})
-	}
 
-	document.addEventListener("DOMContentLoaded", ()=>{
+			if (excessCount > 0) {
+				images
+					.slice(0, excessCount)
+					.forEach((image) => container.removeChild(image));
+			}
+		});
+	};
+
+	document.addEventListener("DOMContentLoaded", () => {
 		updateImages(2);
 		let intervalId = setInterval(handleSlider, 3000);
 		let inactivityTimeout;
 
 		function resetInterval() {
 			clearInterval(intervalId);
-	
+
 			clearTimeout(inactivityTimeout);
-	
+
 			inactivityTimeout = setTimeout(() => {
 				intervalId = setInterval(handleSlider, 3000);
 			}, 200);
 		}
 
-		document.querySelector(".modelSlider").addEventListener("click", ()=>{
+		document.querySelector(".modelSlider").addEventListener("click", () => {
 			clearInterval(intervalId);
 
 			handleSlider();
-			
+
 			resetInterval();
 		});
-	})
-
-
-}
+	});
+};
 
 let innerMenuAnimation = () => {
 	let isOpen = false;
@@ -416,9 +435,9 @@ let innerMenuAnimation = () => {
 		text = document.querySelectorAll(".nav-text"),
 		menu = document.querySelector(".menu");
 
-		const links = document.querySelectorAll(".links");
-		const hiddenLink = document.querySelector(".hidden-link");
-		const backBtn = document.querySelector(".backBtn");
+	const links = document.querySelectorAll(".links");
+	const hiddenLink = document.querySelector(".hidden-link");
+	const backBtn = document.querySelector(".backBtn");
 
 	timeline.to(menu, {
 		duration: 0.1,
@@ -452,53 +471,54 @@ let innerMenuAnimation = () => {
 		"+=0.1"
 	);
 
-	timeline.from(links,{
-		opacity: 0,
-		duration: 0.2,
-		stagger: 0.1,
-	})
-	.from(hiddenLink,{
-		opacity: 0,
-		duration: 0.2,
-		stagger: 0.1,
-	});
+	timeline
+		.from(links, {
+			opacity: 0,
+			duration: 0.2,
+			stagger: 0.1,
+		})
+		.from(hiddenLink, {
+			opacity: 0,
+			duration: 0.2,
+			stagger: 0.1,
+		});
 
-	hiddenLink.addEventListener("click", ()=>{
-		links.forEach((link)=>{
+	hiddenLink.addEventListener("click", () => {
+		links.forEach((link) => {
 			link.style.opacity = 0;
 		});
 		hiddenLink.style.opacity = 0;
 
 		let tl = gsap.timeline();
 
-		tl.to(".hiddenLinks",{
+		tl.to(".hiddenLinks", {
 			y: "0%",
 			duration: 0.9,
-			ease: Expo.easeInOut
-		})
-	})
+			ease: Expo.easeInOut,
+		});
+	});
 
-	backBtn.addEventListener("click", ()=>{
+	backBtn.addEventListener("click", () => {
 		let tl = gsap.timeline();
-		tl.to(".hiddenLinks",{
+		tl.to(".hiddenLinks", {
 			y: "100%",
 			duration: 0.9,
-			ease: Expo.easeInOut
+			ease: Expo.easeInOut,
 		})
-		.to(links,{
-			opacity: 1,
-			duration: 0.9,
-			// delay: 0.5,
-			stagger: 0.1,
-			ease: Expo.easeInOut
-		})
-		.to(hiddenLink,{
-			opacity: 1,
-			duration: 0.9,
-			// delay: 0.5,
-			ease: Expo.easeInOut
-		})
-	})
+			.to(links, {
+				opacity: 1,
+				duration: 0.9,
+				// delay: 0.5,
+				stagger: 0.1,
+				ease: Expo.easeInOut,
+			})
+			.to(hiddenLink, {
+				opacity: 1,
+				duration: 0.9,
+				// delay: 0.5,
+				ease: Expo.easeInOut,
+			});
+	});
 
 	menuBtn.addEventListener("click", () => {
 		if (isOpen) {
@@ -521,18 +541,17 @@ let innerMenuAnimation = () => {
 		backBtn.click();
 	});
 
-	links.forEach((link)=>{
-		link.addEventListener("click",()=>{
+	links.forEach((link) => {
+		link.addEventListener("click", () => {
 			if (isOpen) {
 				timeline.reverse();
-			}
-			else{
+			} else {
 				timeline.play();
 			}
 
 			isOpen = !isOpen;
 		});
-	})
+	});
 };
 
 // // Rolling Text Effect
@@ -576,77 +595,87 @@ let buttonAnimation = () => {
 	});
 };
 
-function thirdSectionAnimation(){
+function thirdSectionAnimation() {
 	const modelName = document.querySelectorAll(".modelName");
-    let para = document.querySelector(".para");
+	let para = document.querySelector(".para");
 	let power = document.querySelector("#power");
 	let speed = document.querySelector("#speed");
 	let time = document.querySelector("#time");
 	modelName[0].style.color = "white";
-  	previousModel = modelName[0]
-    let image = document.querySelector(".image");
+	previousModel = modelName[0];
+	let image = document.querySelector(".image");
 
-	modelName.forEach((model, index)=>{
-		model.addEventListener("click", ()=>{
+	modelName.forEach((model, index) => {
+		model.addEventListener("click", () => {
 			if (previousModel) {
 				previousModel.style.color = "rgb(80,74,69)";
 			}
-			if(index === 0){
-				document.querySelector(".verticleBar1").style.backgroundColor = "orangered";
-				document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
-				document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
+			if (index === 0) {
+				document.querySelector(".verticleBar1").style.backgroundColor =
+					"orangered";
+				document.querySelector(".verticleBar2").style.backgroundColor =
+					"rgb(80,74,69)";
+				document.querySelector(".verticleBar3").style.backgroundColor =
+					"rgb(80,74,69)";
 
 				power.textContent = "666 CV / 490 kW";
 				speed.textContent = "306 km/h";
 				time.textContent = "3.3s";
-				
-				para.textContent = "Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
-				image.src = "./assets/images/news/news1.webp"
-			}
-			else if(index === 1){
-				document.querySelector(".verticleBar2").style.backgroundColor = "orangered";
-				document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
-				document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
+
+				para.textContent =
+					"Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
+				image.src = "./assets/images/news/news1.webp";
+			} else if (index === 1) {
+				document.querySelector(".verticleBar2").style.backgroundColor =
+					"orangered";
+				document.querySelector(".verticleBar1").style.backgroundColor =
+					"rgb(80,74,69)";
+				document.querySelector(".verticleBar3").style.backgroundColor =
+					"rgb(80,74,69)";
 
 				power.textContent = "814 CV / 599 kW";
 				speed.textContent = "355 km/h";
 				time.textContent = "2.8s";
 
-				para.textContent = "Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
-				image.src = "./assets/images/news/news5.webp"
-			}
-			else if(index === 2){
-				document.querySelector(".verticleBar3").style.backgroundColor = "orangered";
-				document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
-				document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
+				para.textContent =
+					"Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
+				image.src = "./assets/images/news/news5.webp";
+			} else if (index === 2) {
+				document.querySelector(".verticleBar3").style.backgroundColor =
+					"orangered";
+				document.querySelector(".verticleBar1").style.backgroundColor =
+					"rgb(80,74,69)";
+				document.querySelector(".verticleBar2").style.backgroundColor =
+					"rgb(80,74,69)";
 
 				power.textContent = "640 CV / 470 kW";
 				speed.textContent = "310 km/h";
 				time.textContent = "3.0s";
 
-				para.textContent = "A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
-				image.src = "./assets/images/news/news3.jpg"
+				para.textContent =
+					"A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
+				image.src = "./assets/images/news/news3.jpg";
 			}
 
 			model.style.color = "white";
 			previousModel = model;
 
-			gsap.from(".para",{
+			gsap.from(".para", {
 				opacity: 0,
 				duration: 0.5,
-				ease: Expo.easeInOut
+				ease: Expo.easeInOut,
 			});
 
-			gsap.from(".topic",{
+			gsap.from(".topic", {
 				opacity: 0,
 				duration: 0.5,
-				ease: Expo.easeInOut
+				ease: Expo.easeInOut,
 			});
 
-			gsap.from(".image",{
+			gsap.from(".image", {
 				opacity: 0,
 				duration: 0.5,
-				ease: Expo.easeInOut
+				ease: Expo.easeInOut,
 			});
 		});
 	});
@@ -663,24 +692,25 @@ function carSliderAnimation() {
 let fifthSection = () => {
 	gsap.registerPlugin(ScrollTrigger);
 
-	const sectionWidth = document.querySelector(".scroll-section-inner").offsetWidth;
+	const sectionWidth = document.querySelector(
+		".scroll-section-inner"
+	).offsetWidth;
 	let amountToScroll = sectionWidth - window.innerWidth;
 
-	gsap.to(".scroll-section-inner",{
-        x: -amountToScroll,
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-            trigger: ".scroll-section-inner",
-            start: "top top",
-            end: `+=${sectionWidth}px`,
-            pin: true,
-            scrub: 1,
-            // markers: true
-        },
-    });
-}
-
+	gsap.to(".scroll-section-inner", {
+		x: -amountToScroll,
+		ease: "none",
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".scroll-section-inner",
+			start: "top top",
+			end: `+=${sectionWidth}px`,
+			pin: true,
+			scrub: 1,
+			// markers: true
+		},
+	});
+};
 
 customCursor();
 
@@ -705,64 +735,61 @@ buttonAnimation();
 
 fifthSection();
 
-
 //JavaScript only for devices over 768px width
-(()=>{
+(() => {
 	function handleResize() {
 		const mediaQuery = window.matchMedia("(min-width: 768px)");
-	
+
 		if (mediaQuery.matches) {
 			thirdSectionAnimation();
 		}
 	}
-	
-	handleResize();
-	window.addEventListener('resize', handleResize);
-})();
 
+	handleResize();
+	window.addEventListener("resize", handleResize);
+})();
 
 // javaScript for the devices whose width is equal to 768px or less
 
 let responsiveJs = () => {
-	
-	function modelSlider(){
+	function modelSlider() {
 		let currentIndex = 1;
 		let totalSlides = 9;
 
 		const updateActiveSlides = () => {
-			document.querySelectorAll(".title").forEach((el, index)=>{
-				if(index === currentIndex){
+			document.querySelectorAll(".title").forEach((el, index) => {
+				if (index === currentIndex) {
 					el.classList.add("active");
-				}else{
+				} else {
 					el.classList.remove("active");
 				}
-			})
-		}
+			});
+		};
 
 		const handleSlider = () => {
-			if(currentIndex < totalSlides){
+			if (currentIndex < totalSlides) {
 				currentIndex++;
-			} else{
+			} else {
 				currentIndex = 1;
 			}
 
 			gsap.to(".slide-titles", {
-				onStart: ()=>{
-					setTimeout(()=>{
+				onStart: () => {
+					setTimeout(() => {
 						updateActiveSlides();
 					}, 100);
 
-					if(currentIndex + 1 < 10){
+					if (currentIndex + 1 < 10) {
 						updateImages(currentIndex + 1);
-					}else{
+					} else {
 						updateImages(1);
 					}
 				},
-				x: `-${(currentIndex - 1) * 10.490}%`,
+				x: `-${(currentIndex - 1) * 10.49}%`,
 				duration: 2,
-				ease: "power4.out"
+				ease: "power4.out",
 			});
-		}
+		};
 
 		const updateImages = (imgNumber) => {
 			let imgSrc = `./assets/images/models/car${imgNumber}-.jpg`;
@@ -781,47 +808,47 @@ let responsiveJs = () => {
 				duration: 1,
 				ease: "power4.out",
 				onComplete: trimExcessImages,
-			})
-		}
+			});
+		};
 
 		const trimExcessImages = () => {
 			const container = document.querySelector(".mobileSlideImages");
 			const images = Array.from(container.querySelectorAll("img"));
 			const excessCount = images.length - 1;
-				
-			if(excessCount > 0){
-				images.slice(0, excessCount).forEach((image)=> container.removeChild(image));
-			}
-		}
 
-		document.addEventListener("DOMContentLoaded", ()=>{
+			if (excessCount > 0) {
+				images
+					.slice(0, excessCount)
+					.forEach((image) => container.removeChild(image));
+			}
+		};
+
+		document.addEventListener("DOMContentLoaded", () => {
 			updateImages(2);
 			let intervalId = setInterval(handleSlider, 3000);
 			let inactivityTimeout;
 
 			function resetInterval() {
 				clearInterval(intervalId);
-		
+
 				clearTimeout(inactivityTimeout);
-		
+
 				inactivityTimeout = setTimeout(() => {
 					intervalId = setInterval(handleSlider, 3000);
 				}, 200);
 			}
 
-			document.querySelector(".modelSlider").addEventListener("click", ()=>{
+			document.querySelector(".modelSlider").addEventListener("click", () => {
 				clearInterval(intervalId);
 
 				handleSlider();
-				
+
 				resetInterval();
 			});
-		})
-
-
+		});
 	}
 
-	function thirdSectionAnimation(){
+	function thirdSectionAnimation() {
 		const modelName = document.querySelectorAll(".modelName");
 		let para = document.querySelector(".mobilePara");
 		let power = document.querySelector("#mobilePower");
@@ -830,19 +857,22 @@ let responsiveJs = () => {
 		console.log(time);
 
 		modelName[0].style.color = "white";
-		  previousModel = modelName[0]
+		previousModel = modelName[0];
 		let image = document.querySelector(".mobieImage");
-	
-		modelName.forEach((model, index)=>{
-			model.addEventListener("click", ()=>{
+
+		modelName.forEach((model, index) => {
+			model.addEventListener("click", () => {
 				if (previousModel) {
 					previousModel.style.color = "rgb(80,74,69)";
 				}
-				if(index === 0){
-					document.querySelector(".verticleBar1").style.backgroundColor = "orangered";
-					document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
-					document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
-	
+				if (index === 0) {
+					document.querySelector(".verticleBar1").style.backgroundColor =
+						"orangered";
+					document.querySelector(".verticleBar2").style.backgroundColor =
+						"rgb(80,74,69)";
+					document.querySelector(".verticleBar3").style.backgroundColor =
+						"rgb(80,74,69)";
+
 					power.textContent = "666 CV / 490 kW";
 					speed.textContent = "306 km/h";
 					time.textContent = "3.3s";
@@ -850,15 +880,18 @@ let responsiveJs = () => {
 					power.style.opacity = 1;
 					speed.style.opacity = 1;
 					time.style.opacity = 1;
-					
-					para.textContent = "Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
-					image.src = "./assets/images/news/news1.webp"
-				}
-				else if(index === 1){
-					document.querySelector(".verticleBar2").style.backgroundColor = "orangered";
-					document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
-					document.querySelector(".verticleBar3").style.backgroundColor = "rgb(80,74,69)";
-	
+
+					para.textContent =
+						"Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
+					image.src = "./assets/images/news/news1.webp";
+				} else if (index === 1) {
+					document.querySelector(".verticleBar2").style.backgroundColor =
+						"orangered";
+					document.querySelector(".verticleBar1").style.backgroundColor =
+						"rgb(80,74,69)";
+					document.querySelector(".verticleBar3").style.backgroundColor =
+						"rgb(80,74,69)";
+
 					power.textContent = "814 CV / 599 kW";
 					speed.textContent = "355 km/h";
 					time.textContent = "2.8s";
@@ -866,15 +899,18 @@ let responsiveJs = () => {
 					power.style.opacity = 1;
 					speed.style.opacity = 1;
 					time.style.opacity = 1;
-	
-					para.textContent = "Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
-					image.src = "./assets/images/news/news5.webp"
-				}
-				else if(index === 2){
-					document.querySelector(".verticleBar3").style.backgroundColor = "orangered";
-					document.querySelector(".verticleBar1").style.backgroundColor = "rgb(80,74,69)";
-					document.querySelector(".verticleBar2").style.backgroundColor = "rgb(80,74,69)";
-	
+
+					para.textContent =
+						"Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
+					image.src = "./assets/images/news/news5.webp";
+				} else if (index === 2) {
+					document.querySelector(".verticleBar3").style.backgroundColor =
+						"orangered";
+					document.querySelector(".verticleBar1").style.backgroundColor =
+						"rgb(80,74,69)";
+					document.querySelector(".verticleBar2").style.backgroundColor =
+						"rgb(80,74,69)";
+
 					power.textContent = "640 CV / 470 kW";
 					speed.textContent = "310 km/h";
 					time.textContent = "3.0s";
@@ -882,47 +918,48 @@ let responsiveJs = () => {
 					power.style.opacity = 1;
 					speed.style.opacity = 1;
 					time.style.opacity = 1;
-	
-					para.textContent = "A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
-					image.src = "./assets/images/news/news3.jpg"
+
+					para.textContent =
+						"A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
+					image.src = "./assets/images/news/news3.jpg";
 				}
-	
+
 				model.style.color = "white";
 				previousModel = model;
-	
-				gsap.from(".mobilePara",{
+
+				gsap.from(".mobilePara", {
 					opacity: 0,
 					duration: 0.5,
-					ease: Expo.easeInOut
+					ease: Expo.easeInOut,
 				});
-	
-				gsap.from(".mobileTopic",{
+
+				gsap.from(".mobileTopic", {
 					opacity: 0,
 					duration: 0.5,
-					ease: Expo.easeInOut
+					ease: Expo.easeInOut,
 				});
-	
-				gsap.from(".mobieImage",{
+
+				gsap.from(".mobieImage", {
 					opacity: 0,
 					duration: 0.5,
-					ease: Expo.easeInOut
+					ease: Expo.easeInOut,
 				});
 			});
 		});
 	}
-	
+
 	function handleResize() {
 		const mediaQuery = window.matchMedia("(max-width: 768px)");
-	
+
 		if (mediaQuery.matches) {
 			// Screen width is less than or equal to 768px
 			modelSlider();
 			thirdSectionAnimation();
 		}
 	}
-	
+
 	handleResize();
-	window.addEventListener('resize', handleResize);
-}
+	window.addEventListener("resize", handleResize);
+};
 
 responsiveJs();
