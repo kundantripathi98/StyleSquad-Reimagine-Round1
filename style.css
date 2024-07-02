@@ -2476,11 +2476,11 @@ ul li:hover a {
 		font-weight: 600;
 		padding: 0;
 		color: #bbc5c4;
-		font-size: 15px;
+		font-size: 3vw;
 	}
 
 	.middle-footer2 p {
-		margin-top: 0px;
+		font-size: 2vw;
 	}
 
 	.scrolling-text-container-footer {
