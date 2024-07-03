@@ -1,16 +1,3 @@
-const lenis = new Lenis();
-
-lenis.on("scroll", (e) => {
-	console.log(e);
-});
-
-function raf(time) {
-	lenis.raf(time);
-	requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
 const menuBtn = document.querySelector("#menuBtn");
 const video = document.querySelector("video");
 
@@ -44,14 +31,14 @@ window.addEventListener("load", () => {
 	requestAnimationFrame(scrollToTop);
 });
 
-// gsap.to(".heroSection", {
+// gsap.to(".fourthSection", {
 // 	scrollTrigger: {
-// 		trigger: ".heroSection",
+// 		trigger: ".fourthSection",
 // 		start: "top top",
 // 		end: () =>
 // 			"+=" +
 // 			(window.innerHeight +
-// 				document.querySelector(".modelSlider").offsetHeight * 0.5),
+// 				document.querySelector(".fifthSection").offsetHeight * 0.5),
 // 		scrub: 1,
 // 		pin: true,
 // 	},
@@ -106,7 +93,7 @@ let smoothScroll = () => {
 	const lenis = new Lenis();
 
 	lenis.on("scroll", (e) => {
-		console.log(e);
+
 	});
 
 	function raf(time) {
@@ -206,6 +193,7 @@ let loadingAnimation = () => {
 	updateLoading();
 	gsapAnimation();
 };
+
 function afterLoadingAnimation() {
 	setTimeout(() => {
 		video.play();
@@ -815,6 +803,8 @@ customCursor();
 loadingAnimation();
 video.pause();
 
+smoothScroll();
+
 afterLoadingAnimation();
 
 progressScrollBar();
@@ -972,3 +962,9 @@ responsiveJs();
 function scrollToTop() {
 	window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+document.querySelector(".contact-link")
+.addEventListener("click", (e)=>{
+	e.preventDefault();
+	document.querySelector(".footer-wrapper").scrollIntoView({ behavior: "smooth" });
+});
