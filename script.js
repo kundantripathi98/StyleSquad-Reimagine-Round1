@@ -855,6 +855,19 @@ let scrollAnimation = () =>{
 		ease: "power1.out",
 		duration: 3,
 	})
+
+	tl.from("#s-line2",{
+		scrollTrigger: {
+			trigger: ".modelSlider",
+			start: "90% 90%",
+			end: "110% 100%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		width: "0%",
+		duration: 2,
+	});
 }
 
 scrollAnimation();
