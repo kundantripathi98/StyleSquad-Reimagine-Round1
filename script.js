@@ -826,23 +826,8 @@ textAnimation();
 
 buttonAnimation();
 
-// thirdSectionAnimation();
-
 fifthSection();
 
-//JavaScript only for devices over 768px width
-// (() => {
-// 	function handleResize() {
-// 		const mediaQuery = window.matchMedia("(min-width: 768px)");
-
-// 		if (mediaQuery.matches) {
-// 			thirdSectionAnimation();
-// 		}
-// 	}
-
-// 	handleResize();
-// 	window.addEventListener("resize", handleResize);
-// })();
 
 // javaScript for the devices whose width is equal to 768px or less
 
@@ -963,8 +948,7 @@ function scrollToTop() {
 	window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-document.querySelector(".contact-link")
-.addEventListener("click", (e)=>{
+document.querySelector(".contact-link").addEventListener("click", (e)=>{
 	e.preventDefault();
 	document.querySelector(".footer-wrapper").scrollIntoView({ behavior: "smooth" });
 });
