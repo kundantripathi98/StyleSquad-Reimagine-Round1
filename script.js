@@ -250,8 +250,8 @@ let heroSectionAnimation = () => {
 		ease: Expo.easeInOut,
 		onComplete: () => {
 			ScrollTrigger.create({
-				trigger: ".modelSlider",
-				start: "top top",
+				trigger: ".heroSection",
+				start: "30% 30%",
 				end: "bottom top",
 				onEnter: () => {
 					gsap.to(navbar, { width: "5%", duration: 0.5 });
@@ -797,6 +797,67 @@ let fifthSection = () => {
 		},
 	});
 };
+
+let scrollAnimation = () =>{
+	gsap.registerPlugin(ScrollTrigger);
+
+	let tl = gsap.timeline();
+
+	gsap.from("#s-line1",{
+		scrollTrigger: {
+			trigger: ".heroSection",
+			start: "90% 90%",
+			end: "110% 100%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		width: "0%",
+		duration: 2,
+	});
+
+	tl.from(".modelTitle",{
+		scrollTrigger: {
+			trigger: ".modelSlider",
+			start: "top 50%",
+			end: "50% 90%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		ease: "power1.inOut",
+		x: "-=100%",
+		duration: 1,
+	})
+
+	.from(".slide-titles",{
+		scrollTrigger: {
+			trigger: ".modelSlider",
+			start: "30% 50%",
+			end: "90% 90%",
+			scrub: true
+		},
+		opacity: 0,
+		ease: "power1.out",
+		duration: 2,
+	})
+
+	.from(".slide-images",{
+		scrollTrigger: {
+			trigger: ".modelSlider",
+			start: "30% 50%",
+			end: "90% 90%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		scale: 1.2,
+		ease: "power1.out",
+		duration: 3,
+	})
+}
+
+scrollAnimation();
 
 customCursor();
 
