@@ -31,25 +31,6 @@ window.addEventListener("load", () => {
 	requestAnimationFrame(scrollToTop);
 });
 
-// gsap.to(".fourthSection", {
-// 	scrollTrigger: {
-// 		trigger: ".fourthSection",
-// 		start: "top top",
-// 		end: () =>
-// 			"+=" +
-// 			(window.innerHeight +
-// 				document.querySelector(".fifthSection").offsetHeight * 0.5),
-// 		scrub: 1,
-// 		pin: true,
-// 	},
-// 	y: 250,
-// 	scale: 0.75,
-// 	rotation: -15,
-// 	marker: true,
-// 	opacity: 0,
-// 	ease: "power3.out",
-// });
-
 let scrollToNextSection = () => {
 	document.getElementById("models").scrollIntoView({ behavior: "smooth" });
 };
@@ -800,6 +781,51 @@ let fifthSection = () => {
 
 let scrollAnimation = () =>{
 	gsap.registerPlugin(ScrollTrigger);
+	
+	gsap.to(".heroSection", {
+		scrollTrigger: {
+			trigger: ".heroSection",
+			start: "top top",
+			// end: "90% 100%",
+			end: () =>
+				"+=" +
+				(window.innerHeight +
+					document.querySelector(".modelSlider").offsetHeight * 0.5),
+			scrub: 1,
+			pin: true,
+			markers: true
+		},
+		y: 250,
+		scale: 0.75,
+		rotation: -15,
+		opacity: 0,
+		ease: "power3.out",
+	});
+
+	gsap.fromTo(
+		".modelSlider",
+		{
+			x: -100,
+			scale: 0.3,
+			backgroundColor : "#525252",
+			rotation: 15,
+		},
+		{
+			scrollTrigger: {
+				trigger: ".modelSlider",
+				start: "top 200%",
+				end: "top 50%",
+				// markers: true,
+				scrub: 1,
+			},
+			x: 0,
+			scale: 1,
+			backgroundColor : "#0e0e0c",
+			rotation: 0,
+			ease: "power3. out",
+		}
+	);
+
 
 	let tl = gsap.timeline();
 
@@ -830,31 +856,31 @@ let scrollAnimation = () =>{
 		duration: 3,
 	})
 
-	.from(".slide-titles",{
-		scrollTrigger: {
-			trigger: ".modelSlider",
-			start: "30% 50%",
-			end: "90% 90%",
-			scrub: true
-		},
-		opacity: 0,
-		ease: "power1.out",
-		duration: 2,
-	})
+	// .from(".slide-titles",{
+	// 	scrollTrigger: {
+	// 		trigger: ".modelSlider",
+	// 		start: "30% 50%",
+	// 		end: "90% 90%",
+	// 		scrub: true
+	// 	},
+	// 	opacity: 0,
+	// 	ease: "power1.out",
+	// 	duration: 2,
+	// })
 
-	.from(".slide-images",{
-		scrollTrigger: {
-			trigger: ".modelSlider",
-			start: "30% 50%",
-			end: "90% 90%",
-			// markers: true,
-			scrub: true
-		},
-		opacity: 0,
-		scale: 1.2,
-		ease: "power1.out",
-		duration: 3,
-	})
+	// .from(".slide-images",{
+	// 	scrollTrigger: {
+	// 		trigger: ".modelSlider",
+	// 		start: "30% 50%",
+	// 		end: "90% 90%",
+	// 		// markers: true,
+	// 		scrub: true
+	// 	},
+	// 	opacity: 0,
+	// 	scale: 1.2,
+	// 	ease: "power1.out",
+	// 	duration: 3,
+	// })
 
 	tl.from("#s-line2",{
 		scrollTrigger: {

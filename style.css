@@ -200,6 +200,7 @@ main {
 .heroSection {
 	position: relative;
 	width: 100%;
+	background-color: rgb(34, 33, 33);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
