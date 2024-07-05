@@ -793,7 +793,7 @@ let scrollAnimation = () =>{
 					document.querySelector(".modelSlider").offsetHeight * 0.5),
 			scrub: 1,
 			pin: true,
-			markers: true
+			// markers: true
 		},
 		y: 250,
 		scale: 0.75,
