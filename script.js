@@ -827,7 +827,7 @@ let scrollAnimation = () =>{
 		opacity: 0,
 		ease: "power1.inOut",
 		x: "-=100%",
-		duration: 1,
+		duration: 3,
 	})
 
 	.from(".slide-titles",{
