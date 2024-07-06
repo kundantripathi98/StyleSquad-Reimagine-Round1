@@ -612,7 +612,8 @@ function thirdSectionAnimation() {
 
 				para.textContent =
 					"Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
-				image.src = "./assets/images/news/news1.webp";
+				image.src = "./assets/images/specification/urus.jpg";
+				image.alt = "urus";
 			} else if (index === 1) {
 				document.querySelector(".verticleBar2").style.backgroundColor =
 					"orangered";
@@ -627,8 +628,9 @@ function thirdSectionAnimation() {
 
 				para.textContent =
 					"Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
-				image.src = "./assets/images/news/news5.webp";
-			} else if (index === 2) {
+					image.src = "./assets/images/specification/countach.jpg";
+					image.alt = "countach";
+				} else if (index === 2) {
 				document.querySelector(".verticleBar3").style.backgroundColor =
 					"orangered";
 				document.querySelector(".verticleBar1").style.backgroundColor =
@@ -642,8 +644,8 @@ function thirdSectionAnimation() {
 
 				para.textContent =
 					"A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
-				image.src = "./assets/images/news/news3.jpg";
-			}
+					image.src = "./assets/images/specification/huracan.jpg";
+					image.alt = "huracan";			}
 
 			model.style.color = "white";
 			previousModel = model;
@@ -698,7 +700,8 @@ function mobileThirdSectionAnimation() {
 
 				para.textContent =
 					"Lamborghini Urus is the first Super Sport Utility Vehicle in the world, merging the soul of a super sports car with the practical functionality of an SUV. Powered by Lamborghini’s 4.0-liter twin turbo V8 engine and, in the case of Urus SE, a powerful electric motor, the Urus embodies a performance mindset that combines Fun-to-Drive with astounding vehicle capabilities. The design, performance, driving dynamics, and unbridled emotion flow effortlessly into this visionary realization of authentic Lamborghini DNA, revolutionizing an entire segment.";
-				image.src = "./assets/images/news/news1.webp";
+				// image.src = "./assets/images/news/news1.webp";
+				image.src = "./assets/images/specification/urus.jpg";
 			} else if (index === 1) {
 				document.querySelector(".mobileVerticleBar2").style.backgroundColor =
 					"orangered";
@@ -713,7 +716,8 @@ function mobileThirdSectionAnimation() {
 
 				para.textContent =
 					"Fifty years since its unveiling at the Geneva Motor Show, the legendary Lamborghini Countach is making headlines again with a limited-series hybrid supercar celebrating the visionary design that revolutionized modern sports cars forever and laid the foundations of the Lamborghini legacy. This is the new Countach LPI 800-4. Inspired by the past, made for the future.";
-				image.src = "./assets/images/news/news5.webp";
+				// image.src = "./assets/images/news/news5.webp";
+				image.src = "./assets/images/specification/countach.jpg";
 			} else if (index === 2) {
 				document.querySelector(".mobileVerticleBar3").style.backgroundColor =
 					"orangered";
@@ -728,7 +732,8 @@ function mobileThirdSectionAnimation() {
 
 				para.textContent =
 					"A super-sports car created with a singular purpose, the Huracán STO delivers all the feel and technology of a genuine race car in a road-legal model. Lamborghini’s years-long motorsport know-how, intensified by a winning heritage, is concentrated in the new Huracán STO. Its extreme aerodynamics, track-honed handling dynamics, lightweight contents and the highest-performing V10 engine to date come together, ready to trigger all the emotions of the racetrack in your everyday life.";
-				image.src = "./assets/images/news/news3.jpg";
+				// image.src = "./assets/images/news/news3.jpg";
+				image.src = "./assets/images/specification/huracan.jpg";
 			}
 
 			model.style.color = "white";
