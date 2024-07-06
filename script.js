@@ -920,20 +920,7 @@ let scrollAnimation = () =>{
 		duration: 5,
 	});
 
-	// second section starts from here
-	gsap.from("#s-line3",{
-		scrollTrigger: {
-			trigger: ".thirdSection",
-			start: "90% 70%",
-			end: "110% 80%",
-			// markers: true,
-			scrub: true
-		},
-		opacity: 0,
-		width: "0%",
-		duration: 5,
-	});
-
+	// three section starts from here
 	tl.from(".thirdSection .sectionTitle",{
 		scrollTrigger: {
 			trigger: ".thirdSection",
@@ -974,6 +961,80 @@ let scrollAnimation = () =>{
 		ease: "power1",
 		x: 100,
 		duration: 2,
+	})
+
+	.from(".overlay3", {
+		scrollTrigger: {
+			trigger: ".thirdSection",
+			start: "top 10%",
+			end: "40% 30%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		ease: "power1",
+		y: 100,
+		duration: 2,
+	});
+
+	gsap.from("#s-line3",{
+		scrollTrigger: {
+			trigger: ".thirdSection",
+			start: "90% 70%",
+			end: "110% 80%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		width: "0%",
+		ease: "power1",
+		duration: 5,
+	});
+
+	// fourth section starts from here
+	gsap.from(".fourthSection", {
+		scrollTrigger: {
+			trigger: ".fourthSection",
+			start: "top 60%",
+			end: "top 0%",
+			// markers: true,
+			scrub: true
+		},
+		scale: 0.8,
+		duration: 2,
+		opacity: 0,
+		ease: "power1",
+	})
+
+	const char = document.querySelector(".info h1");
+	const text = new SplitType(char, {
+		types: 'chars'
+	});
+
+	gsap.from(text.chars, {
+		scrollTrigger: {
+			trigger: char,
+			start: "top 80%",
+			end: "top 20%",
+			scrub: true,
+			// markers: true
+		},
+		opacity: 0.2,
+		stagger: 0.1
+	});
+
+	gsap.from("#s-line6", {
+		scrollTrigger: {
+			trigger: "#s-line6",
+			start: "top 90%",
+			end: "top 70%",
+			scrub: true,
+			// markers: true
+		},
+		opacity: 0,
+		width: "0%",
+		ease: "power1",
+		duration: 5,
 	})
 }
 
