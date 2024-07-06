@@ -32,8 +32,14 @@ window.addEventListener("load", () => {
 });
 
 let scrollToNextSection = () => {
-	document.getElementById("models").scrollIntoView({ behavior: "smooth" });
+    const nextSection = document.getElementById("models");
+    const offsetTop = nextSection.offsetTop;
+    window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
+    });
 };
+
 
 let progressScrollBar = () => {
 	let filled = document.querySelector(".filled");
@@ -232,8 +238,9 @@ let heroSectionAnimation = () => {
 		onComplete: () => {
 			ScrollTrigger.create({
 				trigger: ".heroSection",
-				start: "30% 30%",
+				start: "40% 30%",
 				end: "bottom top",
+				// markers: true,
 				onEnter: () => {
 					gsap.to(navbar, { width: "5%", duration: 0.5 });
 					gsap.to(navLinks, { opacity: 0, duration: 0.5 });

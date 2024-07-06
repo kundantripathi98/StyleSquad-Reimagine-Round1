@@ -263,6 +263,7 @@ nav {
 	padding: 0 1%;
 	display: flex;
 	position: fixed;
+	margin-left: 1vw;
 	/* left: 3.5%;
 	transform: translateX(-3.5%); */	
 	z-index: 999;
