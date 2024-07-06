@@ -71,7 +71,7 @@ let scrollTrigger = () => {
 	tl.from("#dealership button", {
 		opacity: 0,
 		scale: 0.2,
-		ease: "power4.inOut",
+		ease: "bounce",
 		duration: 2,
 	});
 };
@@ -216,7 +216,7 @@ function afterLoadingAnimation() {
 let heroSectionAnimation = () => {
 	gsap.to(".boundingelem", {
 		y: 0,
-		ease: Expo.easeInOut,
+		ease: "elastic",
 		opacity: 1,
 		delay: 3,
 		duration: 1.3,
@@ -234,7 +234,7 @@ let heroSectionAnimation = () => {
 		opacity: 0,
 		duration: 1,
 		delay: 3.1,
-		ease: Expo.easeInOut,
+		ease: "elastic",
 		onComplete: () => {
 			ScrollTrigger.create({
 				trigger: ".heroSection",
@@ -273,12 +273,12 @@ let heroSectionAnimation = () => {
 			opacity: 0,
 			duration: 1,
 			delay: 3.5,
-			ease: Expo.easeInOut,
+			ease: "bounce",
 			stagger: 0.1,
 		})
 		.from(".heading", {
 			y: "100%",
-			ease: Expo.easeInOut,
+			ease: "bounce",
 			opacity: 0,
 			stagger: 0.3,
 			duration: 1,
@@ -288,9 +288,9 @@ let heroSectionAnimation = () => {
 			".circle-text",
 			{
 				x: "-=100%",
-				ease: Expo.easeInOut,
+				ease: "elastic",
 				opacity: 0,
-				duration: 1,
+				duration: 2,
 			},
 			"simultaneousStart"
 		)
@@ -298,9 +298,9 @@ let heroSectionAnimation = () => {
 			".hero-video",
 			{
 				x: "100%",
-				ease: Expo.easeInOut,
+				ease: "elastic",
 				opacity: 0,
-				duration: 1,
+				duration: 5,
 			},
 			"simultaneousStart"
 		)
@@ -308,7 +308,7 @@ let heroSectionAnimation = () => {
 			"#menuBtn",
 			{
 				y: "100%",
-				ease: Expo.easeInOut,
+				ease: "bounce",
 				opacity: 0,
 				duration: 1,
 			},
@@ -920,7 +920,7 @@ let scrollAnimation = () =>{
 		duration: 5,
 	});
 
-	// three section starts from here
+	// third section starts from here
 	tl.from(".thirdSection .sectionTitle",{
 		scrollTrigger: {
 			trigger: ".thirdSection",
@@ -930,7 +930,7 @@ let scrollAnimation = () =>{
 			scrub: true
 		},
 		opacity: 0,
-		ease: "power1",
+		ease: "bounce",
 		y: 100,
 		duration: 2,
 	})
@@ -944,7 +944,7 @@ let scrollAnimation = () =>{
 			scrub: true
 		},
 		opacity: 0,
-		ease: "power1",
+		ease: "bounce",
 		x: -100,
 		duration: 2,
 	})
@@ -958,7 +958,7 @@ let scrollAnimation = () =>{
 			scrub: true
 		},
 		opacity: 0,
-		ease: "power1",
+		ease: "bounce",
 		x: 100,
 		duration: 2,
 	})
@@ -1035,7 +1035,10 @@ let scrollAnimation = () =>{
 		width: "0%",
 		ease: "power1",
 		duration: 5,
-	})
+	});
+
+	// fifth section starts from here
+
 }
 
 scrollAnimation();
@@ -1059,7 +1062,7 @@ thirdSectionAnimation();
 
 if (window.innerWidth < 768) {
 	mobileThirdSectionAnimation();
-	console.log(window.innerWidth);
+	// console.log(window.innerWidth);
 }
 
 modelSlider();
