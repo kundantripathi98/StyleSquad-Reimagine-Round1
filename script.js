@@ -809,13 +809,15 @@ let scrollAnimation = () =>{
 		ease: "power3.out",
 	});
 
+	// second section starts from here
+	let tl = gsap.timeline();
 	gsap.fromTo(
 		".modelSlider",
 		{
-			x: -100,
+			x: -40,
 			scale: 0.3,
-			backgroundColor : "#525252",
-			rotation: 15,
+			// backgroundColor : "#525252",
+			rotation: 85,
 		},
 		{
 			scrollTrigger: {
@@ -833,9 +835,6 @@ let scrollAnimation = () =>{
 		}
 	);
 
-
-	let tl = gsap.timeline();
-
 	gsap.from("#s-line1",{
 		scrollTrigger: {
 			trigger: ".heroSection",
@@ -852,55 +851,125 @@ let scrollAnimation = () =>{
 	tl.from(".modelTitle",{
 		scrollTrigger: {
 			trigger: ".modelSlider",
-			start: "top 50%",
-			end: "50% 90%",
+			start: "top 40%",
+			end: "80% 80%",
 			// markers: true,
 			scrub: true
 		},
 		opacity: 0,
-		ease: "power1.inOut",
-		x: "-=100%",
-		duration: 3,
+		ease: "power1",
+		y: 100,
+		duration: 2,
 	})
 
-	// .from(".slide-titles",{
-	// 	scrollTrigger: {
-	// 		trigger: ".modelSlider",
-	// 		start: "30% 50%",
-	// 		end: "90% 90%",
-	// 		scrub: true
-	// 	},
-	// 	opacity: 0,
-	// 	ease: "power1.out",
-	// 	duration: 2,
-	// })
-
-	// .from(".slide-images",{
-	// 	scrollTrigger: {
-	// 		trigger: ".modelSlider",
-	// 		start: "30% 50%",
-	// 		end: "90% 90%",
-	// 		// markers: true,
-	// 		scrub: true
-	// 	},
-	// 	opacity: 0,
-	// 	scale: 1.2,
-	// 	ease: "power1.out",
-	// 	duration: 3,
-	// })
-
-	tl.from("#s-line2",{
+	.from(".slide-images",{
+		opacity: 0,
+		scale: 0.2,
+		ease: "power1.out",
+		duration: 1,
 		scrollTrigger: {
 			trigger: ".modelSlider",
-			start: "90% 90%",
-			end: "110% 100%",
+			start: "top 40%",
+			end: "30% 50%",
+			scrub: true,
+			// markers: true
+		},
+	})
+
+	.from(".slide-titles",{
+		scrollTrigger: {
+			trigger: ".modelSlider",
+			start: "top 30%",
+			end: "30% 40%",
+			scrub: true,
+		},
+		delay: 1,
+		opacity: 0,
+		ease: "power1.out",
+		duration: 2,
+	})
+
+	gsap.to("#s-line1",{
+		scrollTrigger: {
+			trigger: ".modelSlider",
+			start: "top 60%",
+			end: "40% 40%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 1,
+		width: "97%",
+		duration: 5,
+	});
+
+	gsap.from("#s-line2",{
+		scrollTrigger: {
+			trigger: ".modelSlider",
+			start: "90% 75%",
+			end: "110% 85%",
 			// markers: true,
 			scrub: true
 		},
 		opacity: 0,
 		width: "0%",
-		duration: 2,
+		duration: 5,
 	});
+
+	// second section starts from here
+	gsap.from("#s-line3",{
+		scrollTrigger: {
+			trigger: ".thirdSection",
+			start: "90% 70%",
+			end: "110% 80%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		width: "0%",
+		duration: 5,
+	});
+
+	tl.from(".thirdSection .sectionTitle",{
+		scrollTrigger: {
+			trigger: ".thirdSection",
+			start: "top 40%",
+			end: "80% 80%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		ease: "power1",
+		y: 100,
+		duration: 2,
+	})
+
+	.from(".center",{
+		scrollTrigger: {
+			trigger: ".thirdSection",
+			start: "top 20%",
+			end: "50% 40%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		ease: "power1",
+		x: -100,
+		duration: 2,
+	})
+
+	.from(".banner",{
+		scrollTrigger: {
+			trigger: ".thirdSection",
+			start: "top 20%",
+			end: "50% 40%",
+			// markers: true,
+			scrub: true
+		},
+		opacity: 0,
+		ease: "power1",
+		x: 100,
+		duration: 2,
+	})
 }
 
 scrollAnimation();

@@ -206,10 +206,10 @@ main {
 	flex-direction: column;
 	align-items: center;
 }
-
+/* 
 .heroSection .seperatorLine {
 	margin-top: 7vw;
-}
+} */
 
 .videoDiv {
 	top: 0;
@@ -1038,8 +1038,10 @@ nav {
 .modelSlider {
 	width: 100vw;
 	height: 100vh;
-	margin-top: 7vw;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 4vw;
 	font-family: "Big Shoulders Text";
 }
 
@@ -1131,6 +1133,11 @@ nav {
 
 .slide-images:hover .img-bottom {
 	clip-path: polygon(90% 50%, 10% 50%, 10% 100%, 90% 100%);
+}
+
+#s-line1{
+	width: 0;
+	opacity: 0;
 }
 
 .seperatorLine {
