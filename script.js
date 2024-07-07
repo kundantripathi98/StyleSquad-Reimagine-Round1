@@ -777,16 +777,14 @@ function carSliderAnimation() {
 		container.style.setProperty("--position", `${e.target.value}%`);
 	});
 }
-
+let scrollTween;
 let fifthSection = () => {
 	gsap.registerPlugin(ScrollTrigger);
 
-	const sectionWidth = document.querySelector(
-		".scroll-section-inner"
-	).offsetWidth;
+	const sectionWidth = document.querySelector(".scroll-section-inner").offsetWidth;
 	let amountToScroll = sectionWidth - window.innerWidth;
 
-	gsap.to(".scroll-section-inner", {
+	scrollTween = gsap.to(".scroll-section-inner", {
 		x: -amountToScroll,
 		ease: "none",
 		duration: 1,
@@ -1060,7 +1058,7 @@ let scrollAnimation = () =>{
 		x: -50,
 		duration: 2,
 		ease: "power1"
-	})
+	});
 
 	gsap.from(".scroll-section-inner .title h1", {
 		scrollTrigger: {
@@ -1074,7 +1072,7 @@ let scrollAnimation = () =>{
 		y: 50,
 		duration: 1.4,
 		ease: "bounce"
-	})
+	});
 
 	gsap.from(".newsCard", {
 		scrollTrigger: {
@@ -1085,10 +1083,11 @@ let scrollAnimation = () =>{
 			// markers: true
 		},
 		opacity: 0,
+		stagger: 1,
 		x: 50,
 		duration: 2,
 		ease: "bounce"
-	})
+	});
 
 }
 
