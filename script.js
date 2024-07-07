@@ -799,6 +799,46 @@ let fifthSection = () => {
 	});
 };
 
+let sixthSection = () => {
+	
+gsap.utils.toArray(".elements").forEach((el) => {
+  
+    const image = el.querySelector("img.pic"),
+          setX = gsap.quickSetter(image, "x", "px"),
+          setY = gsap.quickSetter(image, "y", "px"),
+          align = e => {
+            const top = el.getBoundingClientRect().top;
+            setX(e.clientX );
+            setY(e.clientY - top);
+          },
+          startFollow = () => document.addEventListener("mousemove", align),
+          stopFollow = () => document.removeEventListener("mousemove", align),
+          fade = gsap.to(image, {autoAlpha: 1, ease: "none", paused: true, onReverseComplete: stopFollow});
+    
+    el.addEventListener('mouseenter', (e) => {
+      fade.play();
+      startFollow();
+      align(e);
+    });
+    
+    el.addEventListener('mouseleave', () => fade.reverse());
+   
+  });
+
+document.querySelectorAll(".elements").forEach(function(elem){
+    var rotate = 0;
+    var diff = 0;
+    elem.addEventListener("mousemove", function(dets){
+       diff = dets.clientX - rotate;
+       rotate = dets.clientX;
+
+       gsap.to(elem.querySelector("img.pic"),{
+        rotate: gsap.utils.clamp(-20,20,diff)
+       });
+    });
+});
+}
+
 let scrollAnimation = () =>{
 	gsap.registerPlugin(ScrollTrigger);
 	
@@ -1121,6 +1161,8 @@ textAnimation();
 buttonAnimation();
 
 fifthSection();
+
+sixthSection();
 
 
 // javaScript for the devices whose width is equal to 768px or less
