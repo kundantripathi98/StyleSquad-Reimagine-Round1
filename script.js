@@ -40,7 +40,6 @@ let scrollToNextSection = () => {
     });
 };
 
-
 let progressScrollBar = () => {
 	let filled = document.querySelector(".filled");
 
@@ -77,10 +76,10 @@ let scrollTrigger = () => {
 };
 
 let smoothScroll = () => {
-	const lenis = new Lenis();
-
-	lenis.on("scroll", (e) => {
-
+	const lenis = new Lenis({
+		duration: 1,
+        easing: (t) => t,
+        smooth: true,
 	});
 
 	function raf(time) {
@@ -89,6 +88,17 @@ let smoothScroll = () => {
 	}
 
 	requestAnimationFrame(raf);
+
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function(e) {
+			e.preventDefault();
+
+			const targetId = this.getAttribute('href');
+			const targetElement = document.querySelector(targetId);
+
+			lenis.scrollTo(targetElement);
+		});
+	});
 };
 
 let customCursor = () => {
@@ -1038,7 +1048,24 @@ let scrollAnimation = () =>{
 	});
 
 	// fifth section starts from here
+	// document.querySelectorAll(".newsCard")
+	// .forEach((card)=>{
+	// 	let text = card.querySelectorAll(".anim");
 
+	// 	gsap.from(text,{
+	// 		x: -10,
+	// 		opacity: 0,
+	// 		duration: 2,
+	// 		ease: "elastic",
+	// 		stagger: 0.1,
+	// 		scrollTrigger: {
+	// 			trigger: card,
+	// 			// containerAnimation: ".scroll-section-inner",
+	// 			start: "top center",
+	// 			markers: true,
+	// 		}
+	// 	})
+	// })
 }
 
 scrollAnimation();

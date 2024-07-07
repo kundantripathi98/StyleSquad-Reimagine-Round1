@@ -1494,6 +1494,7 @@ img {
 
 .fifthSection {
 	width: 100%;
+	background-color: rgb(226, 86, 26);
 	height: fit-content;
 	overflow: hidden;
 	padding: 60px 0;
