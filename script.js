@@ -1088,7 +1088,6 @@ let scrollAnimation = () =>{
 		duration: 2,
 		ease: "bounce"
 	});
-
 }
 
 scrollAnimation();
