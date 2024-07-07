@@ -77,7 +77,7 @@ let scrollTrigger = () => {
 
 let smoothScroll = () => {
 	const lenis = new Lenis({
-		duration: 1,
+		duration: 0.6,
         easing: (t) => t,
         smooth: true,
 	});
@@ -1048,24 +1048,48 @@ let scrollAnimation = () =>{
 	});
 
 	// fifth section starts from here
-	// document.querySelectorAll(".newsCard")
-	// .forEach((card)=>{
-	// 	let text = card.querySelectorAll(".anim");
+	gsap.from(".scroll-section-inner .title h4", {
+		scrollTrigger: {
+			trigger: ".fifthSection",
+			start: "20% 80%",
+			end: "20% 60%",
+			scrub: true,
+			// markers: true
+		},
+		opacity: 0,
+		x: -50,
+		duration: 2,
+		ease: "power1"
+	})
 
-	// 	gsap.from(text,{
-	// 		x: -10,
-	// 		opacity: 0,
-	// 		duration: 2,
-	// 		ease: "elastic",
-	// 		stagger: 0.1,
-	// 		scrollTrigger: {
-	// 			trigger: card,
-	// 			// containerAnimation: ".scroll-section-inner",
-	// 			start: "top center",
-	// 			markers: true,
-	// 		}
-	// 	})
-	// })
+	gsap.from(".scroll-section-inner .title h1", {
+		scrollTrigger: {
+			trigger: ".fifthSection",
+			start: "20% 60%",
+			end: "20% 40%",
+			scrub: true,
+			// markers: true
+		},
+		opacity: 0,
+		y: 50,
+		duration: 1.4,
+		ease: "bounce"
+	})
+
+	gsap.from(".newsCard", {
+		scrollTrigger: {
+			trigger: ".fifthSection",
+			start: "20% 40%",
+			end: "20% 20%",
+			scrub: true,
+			// markers: true
+		},
+		opacity: 0,
+		x: 50,
+		duration: 2,
+		ease: "bounce"
+	})
+
 }
 
 scrollAnimation();
