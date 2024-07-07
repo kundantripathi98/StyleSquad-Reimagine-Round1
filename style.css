@@ -1869,16 +1869,18 @@ footer {
 .header-top a {
 	/* text-decoration: underline; */
 	font-size: 1.87vw;
+	padding-bottom: 0.4vw;
+	border-bottom: 1px solid white;
 	color: white;
 	font-family: aeonik;
-	width: 43%;
+	width: fit-content;
 }
 .mail-footer {
 	position: relative;
 	text-decoration: none;
 	color: #000;
 }
-.mail-footer::after {
+/* .mail-footer::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -1887,7 +1889,7 @@ footer {
 	height: 2px;
 	background-color: white;
 	margin-left: 0.5vh;
-}
+} */
 
 .header-top a span svg {
 	width: 26px;
@@ -2487,10 +2489,10 @@ ul li:hover a {
 		display: inline-block;
 		height: 220px;
 		margin: 0;
-		animation: scroll 12s linear infinite;
+		animation: scroll1 12s linear infinite;
 		background-size: cover;
 	}
-	@keyframes scroll {
+	@keyframes scroll1 {
 		0% {
 			transform: translateX(0%);
 		}

@@ -760,9 +760,19 @@
 		font-size: 28px;
 	}
 	.header-top a {
-		width: 83%;
+		font-size: 4.2vw;
+	}
+
+	
+	.header-top p{
+		font-size: 8.5vw;	
 	}
 	.images {
 		width: 246%;
 	}
+
+	.images img {
+		animation: scroll1 4s linear infinite;
+	}
+
 }
