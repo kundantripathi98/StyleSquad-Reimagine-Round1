@@ -811,7 +811,7 @@ nav {
 		animation-timing-function: ease-out;
 	}
 	20% {
-		transform: translate(-50%, -50%) translateY(-20px);
+		transform: translate(-50%, -50%) translateY(-2vw);
 		animation-timing-function: ease-in;
 	}
 	40% {
@@ -819,7 +819,7 @@ nav {
 		animation-timing-function: ease-out;
 	}
 	60% {
-		transform: translate(-50%, -50%) translateY(-15px);
+		transform: translate(-50%, -50%) translateY(-1.5vw);
 		animation-timing-function: ease-in;
 	}
 	80% {
@@ -827,7 +827,7 @@ nav {
 		animation-timing-function: ease-out;
 	}
 	90% {
-		transform: translate(-50%, -50%) translateY(-4px);
+		transform: translate(-50%, -50%) translateY(-0.4vw);
 		animation-timing-function: ease-in;
 	}
 	100% {
