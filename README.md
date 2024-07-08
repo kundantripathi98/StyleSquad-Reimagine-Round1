@@ -17,3 +17,6 @@ For seamless navigation, we implemented smooth scrolling using Lenis. This techn
 
 ## Design Philosophy
 This redesign is more than just a visual upgrade; it's a comprehensive overhaul aimed at offering both aesthetic allure and exceptional usability. Every detail has been meticulously crafted to reflect Lamborghini’s commitment to luxury and innovation. From the choice of animations to the custom cursor and smooth scrolling, each element is designed to provide a memorable and dynamic online presence.
+
+## Conclusion
+In summary, this project captures the spirit of Lamborghini by creating a digital experience that is as exhilarating and refined as the cars themselves. We hope you enjoy exploring the site as much as we enjoyed creating it. Thank you for visiting, and we welcome any feedback or contributions to further enhance this project.
