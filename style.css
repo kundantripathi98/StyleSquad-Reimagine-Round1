@@ -52,6 +52,10 @@
 	font-family: NeueRoman;
 	src: url(assets/fonts/NeueHaasDisplayRoman.woff2);
 }
+@font-face {
+	font-family: big;
+	src: url(assets/fonts/BigShouldersDisplayVariableFont.ttf);
+}
 ::-webkit-scrollbar {
 	width: 5px;
 	border-radius: 10px;
@@ -275,7 +279,7 @@ nav {
 	backdrop-filter: blur(5px);
 }
 
-.active{
+.active {
 	display: block;
 }
 
@@ -319,7 +323,7 @@ nav {
 	height: 2vw;
 }
 
-.link{
+.link {
 	color: #222222;
 	font-family: formulaCondensed;
 	letter-spacing: 1.5px;
@@ -1110,7 +1114,7 @@ nav {
 	clip-path: polygon(90% 50%, 10% 50%, 10% 100%, 90% 100%);
 }
 
-#s-line1{
+#s-line1 {
 	width: 0;
 	opacity: 0;
 }
@@ -1264,7 +1268,6 @@ img {
 	border-radius: 10px;
 	overflow: hidden;
 }
-
 .center {
 	width: 55%;
 	height: 100%;
@@ -1314,7 +1317,7 @@ img {
 }
 
 .information p {
-	font-size: 18px;
+	font-size: 17.5px;
 	letter-spacing: 1px;
 	font-family: "Big Shoulders Text";
 	color: white;
@@ -1371,11 +1374,13 @@ img {
 .overlay3 .topic h1 {
 	letter-spacing: 1px;
 	font-family: "Big Shoulders Text";
-	font-size: 1.7vw;
+	font-size: 1.4vw;
 }
 .overlay3 .topic p {
-	font-family: "Syne";
-	font-size: 16px;
+	font-family: nb;
+	font-size: 13px;
+	margin-top: 3px;
+	opacity: 0.9;
 }
 
 .banner img {
@@ -1546,7 +1551,7 @@ img {
 .newsCard:hover .description .no,
 .newsCard:hover .description p,
 .newsCard:hover #date {
-    color: #0e0e0c;
+	color: #0e0e0c;
 }
 
 .newsCard:hover .colorDiv {
@@ -1620,7 +1625,7 @@ img {
 	display: none;
 }
 
-.sixthSectionDesktop{
+.sixthSectionDesktop {
 	width: 97%;
 	margin: auto;
 	height: fit-content;
@@ -1628,51 +1633,51 @@ img {
 	/* background-color: red; */
 }
 
-.sixthSectionDesktop .sectionTitle h1{
+.sixthSectionDesktop .sectionTitle h1 {
 	padding-left: 2vw;
 	padding-bottom: 4vw;
 }
 
-.elements{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    /* margin-left: 40px; */
-    border-top: 1px solid rgb(169, 169, 169);
-    padding: 4vw 2vw;
-    padding-right: 0;
+.elements {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	/* margin-left: 40px; */
+	border-top: 1px solid rgb(169, 169, 169);
+	padding: 4vw 2vw;
+	padding-right: 0;
 }
 
- /* .elements h1:hover{
+/* .elements h1:hover{
     transform: translateX(7%);
     opacity: 0.4;
 } */
 
-.elem-content{
+.elem-content {
 	display: flex;
 	flex-direction: column;
 	gap: 2vw;
 }
 
-.elem-content p{
+.elem-content p {
 	font-family: "Syne";
 	font-size: 18px;
 	color: rgb(168, 166, 166);
 }
 
-.elements h1{
-    font-size: 2.5vw;
+.elements h1 {
+	font-size: 2.5vw;
 	width: 80%;
-    font-weight: 400;
-    color: rgb(243, 240, 240);
+	font-weight: 400;
+	color: rgb(243, 240, 240);
 	font-family: "Big Shoulders Text";
-    transition: 0.5s ease;
+	transition: 0.5s ease;
 }
 
-.elements h5{
-    font-size: 15px;
+.elements h5 {
+	font-size: 15px;
 	color: rgb(169, 169, 169);
 	display: flex;
 	text-transform: uppercase;
@@ -1682,22 +1687,22 @@ img {
 	font-family: nuckle;
 }
 
-.elemlast{
-    border-bottom: 1px solid rgb(169, 169, 169);
+.elemlast {
+	border-bottom: 1px solid rgb(169, 169, 169);
 }
 
-.elements img{
-    /* display: none; */
-    opacity: 0;
+.elements img {
+	/* display: none; */
+	opacity: 0;
 	width: 500px;
-    height: 140%;
-    position: absolute;
-    z-index: 999;
-    top: -70%;
-    left: -20%;
-    transform: translate(50% ,50%);
-    object-fit: cover;
-    pointer-events: none;
+	height: 140%;
+	position: absolute;
+	z-index: 999;
+	top: -70%;
+	left: -20%;
+	transform: translate(50%, 50%);
+	object-fit: cover;
+	pointer-events: none;
 }
 
 .sixthSection {
